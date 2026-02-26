@@ -1,0 +1,55 @@
+.euvatr-wrap h1 {
+    margin-bottom: 20px;
+}
+
+.euvatr-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    max-width: 960px;
+}
+
+.euvatr-card h2 {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.euvatr-status-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 540px;
+}
+
+.euvatr-status-table th,
+.euvatr-status-table td {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f1;
+    vertical-align: top;
+    font-size: 13px;
+}
+
+.euvatr-status-table th {
+    width: 160px;
+    color: #646970;
+    font-weight: 400;
+}
+
+.euvatr-rates-table {
+    margin-top: 8px;
+}
+
+.euvatr-rates-table th,
+.euvatr-rates-table td {
+    font-size: 13px;
+}
+
+.euvatr-rates-table code {
+    background: #f0f0f1;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
