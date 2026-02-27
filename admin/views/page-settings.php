@@ -18,10 +18,54 @@
         </div>
     <?php endif; ?>
 
+    <?php if ( ! $is_pro ) : ?>
+    <!-- Upgrade banner (free users only) -->
+    <div class="euvatr-upgrade-banner">
+        <div class="euvatr-upgrade-banner__icon">⚡</div>
+        <div class="euvatr-upgrade-banner__body">
+            <strong><?php esc_html_e( 'Auto-sync is a Pro feature', 'eu-vat-rates-woo' ); ?></strong>
+            <p>
+                <?php esc_html_e( 'EU VAT rates change — Estonia alone raised its rate twice in two years. Pro syncs your WooCommerce tax table every day automatically, so you never charge the wrong rate.', 'eu-vat-rates-woo' ); ?>
+            </p>
+        </div>
+        <a href="https://vatnode.dev/plugins/eu-vat-rates#upgrade" target="_blank" rel="noopener noreferrer" class="button button-primary euvatr-upgrade-banner__cta">
+            <?php esc_html_e( 'Upgrade to Pro — $39/year', 'eu-vat-rates-woo' ); ?>
+        </a>
+    </div>
+    <?php endif; ?>
+
     <!-- Status card -->
     <div class="euvatr-card">
         <h2><?php esc_html_e( 'Sync status', 'eu-vat-rates-woo' ); ?></h2>
         <table class="euvatr-status-table">
+            <tr>
+                <th><?php esc_html_e( 'Plan', 'eu-vat-rates-woo' ); ?></th>
+                <td>
+                    <?php if ( $is_pro ) : ?>
+                        <span class="euvatr-badge euvatr-badge--pro"><?php esc_html_e( 'Pro', 'eu-vat-rates-woo' ); ?></span>
+                    <?php else : ?>
+                        <span class="euvatr-badge euvatr-badge--free"><?php esc_html_e( 'Free', 'eu-vat-rates-woo' ); ?></span>
+                        &nbsp;
+                        <a href="https://vatnode.dev/plugins/eu-vat-rates#upgrade" target="_blank" rel="noopener noreferrer">
+                            <?php esc_html_e( 'Upgrade →', 'eu-vat-rates-woo' ); ?>
+                        </a>
+                    <?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th><?php esc_html_e( 'Auto-sync', 'eu-vat-rates-woo' ); ?></th>
+                <td>
+                    <?php if ( $is_pro ) : ?>
+                        <span class="euvatr-status-active">&#10003; <?php esc_html_e( 'Active — daily at midnight UTC', 'eu-vat-rates-woo' ); ?></span>
+                    <?php else : ?>
+                        <span class="euvatr-status-inactive"><?php esc_html_e( 'Disabled', 'eu-vat-rates-woo' ); ?></span>
+                        &nbsp;·&nbsp;
+                        <a href="https://vatnode.dev/plugins/eu-vat-rates#upgrade" target="_blank" rel="noopener noreferrer">
+                            <?php esc_html_e( 'Enable with Pro', 'eu-vat-rates-woo' ); ?>
+                        </a>
+                    <?php endif; ?>
+                </td>
+            </tr>
             <tr>
                 <th><?php esc_html_e( 'Last sync', 'eu-vat-rates-woo' ); ?></th>
                 <td><?php echo $last_sync ? esc_html( $last_sync ) : '<em>' . esc_html__( 'Never', 'eu-vat-rates-woo' ) . '</em>'; ?></td>
@@ -30,16 +74,16 @@
                 <th><?php esc_html_e( 'Data version', 'eu-vat-rates-woo' ); ?></th>
                 <td><?php echo $last_ver ? esc_html( $last_ver ) : '—'; ?></td>
             </tr>
+            <?php if ( $is_pro ) : ?>
             <tr>
                 <th><?php esc_html_e( 'Next auto-sync', 'eu-vat-rates-woo' ); ?></th>
                 <td><?php echo esc_html( $next_run ); ?></td>
             </tr>
+            <?php endif; ?>
             <tr>
                 <th><?php esc_html_e( 'Source', 'eu-vat-rates-woo' ); ?></th>
                 <td>
-                    <a href="https://github.com/vatnode/eu-vat-rates-data" target="_blank" rel="noopener noreferrer">
-                        vatnode/eu-vat-rates-data
-                    </a>
+                    <a href="https://github.com/vatnode/eu-vat-rates-data" target="_blank" rel="noopener noreferrer">vatnode/eu-vat-rates-data</a>
                     <?php esc_html_e( '(European Commission TEDB)', 'eu-vat-rates-woo' ); ?>
                 </td>
             </tr>

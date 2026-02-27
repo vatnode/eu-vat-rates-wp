@@ -10,7 +10,13 @@ class EUVATR_Scheduler {
     const INTERVAL = 'daily';
 
     public static function init(): void {
-        add_action( self::HOOK, [ EUVATR_Sync::class, 'run' ] );
+        // The cron event is always registered so upgrading to Pro activates
+        // auto-sync without any extra setup. The handler is gated by license.
+        add_action( self::HOOK, function (): void {
+            if ( euvatr_is_pro() ) {
+                EUVATR_Sync::run();
+            }
+        } );
     }
 
     public static function schedule(): void {

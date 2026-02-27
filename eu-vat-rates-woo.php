@@ -49,6 +49,25 @@ function euvatr_fs(): mixed {
 // do_action( 'euvatr_fs_loaded' );
 
 // ---------------------------------------------------------------------------
+// Pro license check
+// ---------------------------------------------------------------------------
+
+/**
+ * Returns true if the current site has an active Pro license or trial.
+ *
+ * When the Freemius SDK is not installed (local dev), returns true so the
+ * full plugin is testable without a live account. In production the SDK
+ * is always present and the Freemius check is authoritative.
+ */
+function euvatr_is_pro(): bool {
+    if ( ! function_exists( 'fs_dynamic_init' ) ) {
+        // SDK not installed — local dev fallback.
+        return true;
+    }
+    return euvatr_fs()->is_paying() || euvatr_fs()->is_trial();
+}
+
+// ---------------------------------------------------------------------------
 // Bootstrap
 // ---------------------------------------------------------------------------
 require_once EUVATR_DIR . 'includes/class-data.php';

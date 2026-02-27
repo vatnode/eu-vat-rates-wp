@@ -53,3 +53,73 @@
     border-radius: 3px;
     font-size: 12px;
 }
+
+/* Upgrade banner */
+.euvatr-upgrade-banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #f0f6fc;
+    border: 1px solid #72aee6;
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    max-width: 960px;
+}
+
+.euvatr-upgrade-banner__icon {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.euvatr-upgrade-banner__body {
+    flex: 1;
+}
+
+.euvatr-upgrade-banner__body strong {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.euvatr-upgrade-banner__body p {
+    margin: 0;
+    color: #3c434a;
+    font-size: 13px;
+}
+
+.euvatr-upgrade-banner__cta {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* Badges */
+.euvatr-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.euvatr-badge--pro {
+    background: #00a32a;
+    color: #fff;
+}
+
+.euvatr-badge--free {
+    background: #dcdcde;
+    color: #3c434a;
+}
+
+/* Status indicators */
+.euvatr-status-active {
+    color: #00a32a;
+    font-weight: 500;
+}
+
+.euvatr-status-inactive {
+    color: #787c82;
+}

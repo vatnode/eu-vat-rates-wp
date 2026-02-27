@@ -57,6 +57,7 @@ class EUVATR_Admin {
         $last_ver  = EUVATR_Sync::last_version();
         $last_err  = EUVATR_Sync::last_error();
         $next_run  = EUVATR_Scheduler::next_run();
+        $is_pro    = euvatr_is_pro();
         // phpcs:ignore WordPress.Security.NonceVerification.Recommended
         $synced    = sanitize_key( $_GET['synced'] ?? '' );
 
