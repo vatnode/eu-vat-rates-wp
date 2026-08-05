@@ -19,8 +19,8 @@ class EUVATR_Admin {
     public static function add_menu(): void {
         add_submenu_page(
             'woocommerce',
-            __( 'EU VAT Rates', 'eu-vat-rates-woo' ),
-            __( 'EU VAT Rates', 'eu-vat-rates-woo' ),
+            __( 'EU VAT Rates', 'vatnode-eu-vat-rates' ),
+            __( 'EU VAT Rates', 'vatnode-eu-vat-rates' ),
             'manage_woocommerce',
             'eu-vat-rates',
             [ __CLASS__, 'render_page' ]
@@ -38,24 +38,27 @@ class EUVATR_Admin {
     public static function handle_save_settings(): void {
         self::guard( 'euvatr_save_settings' );
 
-        // phpcs:ignore WordPress.Security.NonceVerification.Missing -- verified in guard().
-        $post = wp_unslash( $_POST );
+        // phpcs:disable WordPress.Security.NonceVerification.Missing -- verified in guard().
+        $remove_key = isset( $_POST['remove_key'] );
+        $key        = isset( $_POST['api_key'] )
+            ? sanitize_text_field( wp_unslash( $_POST['api_key'] ) )
+            : '';
+        $validation = isset( $_POST['validation_enabled'] );
+        $required   = isset( $_POST['field_required'] );
+        // phpcs:enable WordPress.Security.NonceVerification.Missing
 
-        if ( ! empty( $post['remove_key'] ) ) {
+        if ( $remove_key ) {
             delete_option( EUVATR_Settings::OPTION_API_KEY );
             delete_option( EUVATR_Settings::OPTION_KEY_STATUS );
-        } else {
-            $key = sanitize_text_field( (string) ( $post['api_key'] ?? '' ) );
+        } elseif ( $key !== '' ) {
             // An empty box means "leave the stored key alone", not "delete it" —
             // the field never renders the real key back to the browser.
-            if ( $key !== '' ) {
-                update_option( EUVATR_Settings::OPTION_API_KEY, $key );
-                EUVATR_Settings::set_key_status( 'unknown' );
-            }
+            update_option( EUVATR_Settings::OPTION_API_KEY, $key );
+            EUVATR_Settings::set_key_status( 'unknown' );
         }
 
-        update_option( EUVATR_Settings::OPTION_VALIDATION, ! empty( $post['validation_enabled'] ) );
-        update_option( EUVATR_Settings::OPTION_FIELD_REQ, ! empty( $post['field_required'] ) );
+        update_option( EUVATR_Settings::OPTION_VALIDATION, $validation );
+        update_option( EUVATR_Settings::OPTION_FIELD_REQ, $required );
 
         self::redirect( [ 'saved' => '1' ] );
     }
@@ -67,7 +70,7 @@ class EUVATR_Admin {
 
         self::redirect( [
             'tested'  => $result['ok'] ? 'success' : 'error',
-            'message' => rawurlencode( $result['message'] ),
+            'message' => $result['message'],
         ] );
     }
 
@@ -98,10 +101,10 @@ class EUVATR_Admin {
         $signup_url = self::SIGNUP_URL;
 
         // phpcs:disable WordPress.Security.NonceVerification.Recommended -- read-only view state.
-        $synced  = sanitize_key( $_GET['synced'] ?? '' );
-        $saved   = sanitize_key( $_GET['saved'] ?? '' );
-        $tested  = sanitize_key( $_GET['tested'] ?? '' );
-        $message = sanitize_text_field( rawurldecode( (string) ( $_GET['message'] ?? '' ) ) );
+        $synced  = isset( $_GET['synced'] ) ? sanitize_key( wp_unslash( $_GET['synced'] ) ) : '';
+        $saved   = isset( $_GET['saved'] ) ? sanitize_key( wp_unslash( $_GET['saved'] ) ) : '';
+        $tested  = isset( $_GET['tested'] ) ? sanitize_key( wp_unslash( $_GET['tested'] ) ) : '';
+        $message = isset( $_GET['message'] ) ? sanitize_text_field( wp_unslash( $_GET['message'] ) ) : '';
         // phpcs:enable WordPress.Security.NonceVerification.Recommended
 
         require EUVATR_DIR . 'admin/views/page-settings.php';
@@ -109,7 +112,7 @@ class EUVATR_Admin {
 
     private static function guard( string $nonce_action ): void {
         if ( ! current_user_can( 'manage_woocommerce' ) ) {
-            wp_die( esc_html__( 'Insufficient permissions.', 'eu-vat-rates-woo' ) );
+            wp_die( esc_html__( 'Insufficient permissions.', 'vatnode-eu-vat-rates' ) );
         }
         check_admin_referer( $nonce_action );
     }

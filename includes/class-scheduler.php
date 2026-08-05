@@ -31,7 +31,7 @@ class EUVATR_Scheduler {
     public static function next_run(): string {
         $ts = wp_next_scheduled( self::HOOK );
         if ( ! $ts ) {
-            return __( 'Not scheduled', 'eu-vat-rates-woo' );
+            return __( 'Not scheduled', 'vatnode-eu-vat-rates' );
         }
         return (string) wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $ts );
     }

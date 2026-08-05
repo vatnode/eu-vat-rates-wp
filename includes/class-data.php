@@ -31,7 +31,7 @@ class EUVATR_Data {
     public static function fetch(): ?array {
         $response = wp_remote_get( self::SOURCE_URL, [
             'timeout'    => 15,
-            'user-agent' => 'eu-vat-rates-woo/' . EUVATR_VERSION . '; ' . home_url(),
+            'user-agent' => 'vatnode-eu-vat-rates/' . EUVATR_VERSION . '; ' . home_url(),
         ] );
 
         if ( is_wp_error( $response ) ) {

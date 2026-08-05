@@ -62,7 +62,7 @@ class EUVATR_Validator {
                 self::STATUS_NOT_ELIGIBLE,
                 false,
                 false,
-                __( 'Reverse charge applies only to stores based in the EU.', 'eu-vat-rates-woo' ),
+                __( 'Reverse charge applies only to stores based in the EU.', 'vatnode-eu-vat-rates' ),
                 $vat_number,
                 $format['country_code']
             );
@@ -73,7 +73,7 @@ class EUVATR_Validator {
                 self::STATUS_FORMAT_INVALID,
                 false,
                 true,
-                __( 'This does not look like a valid EU VAT number. Check it, or leave the field empty.', 'eu-vat-rates-woo' ),
+                __( 'This does not look like a valid EU VAT number. Check it, or leave the field empty.', 'vatnode-eu-vat-rates' ),
                 $vat_number,
                 $format['country_code']
             );
@@ -88,7 +88,7 @@ class EUVATR_Validator {
                 true,
                 sprintf(
                     /* translators: 1: VAT number country code, 2: billing country code */
-                    __( 'The VAT number is registered in %1$s but the billing address is in %2$s. They must match.', 'eu-vat-rates-woo' ),
+                    __( 'The VAT number is registered in %1$s but the billing address is in %2$s. They must match.', 'vatnode-eu-vat-rates' ),
                     $vat_country,
                     $billing_country
                 ),
@@ -102,7 +102,7 @@ class EUVATR_Validator {
                 self::STATUS_DOMESTIC,
                 false,
                 false,
-                __( 'Domestic sale — VAT is charged as usual.', 'eu-vat-rates-woo' ),
+                __( 'Domestic sale — VAT is charged as usual.', 'vatnode-eu-vat-rates' ),
                 $vat_number,
                 $vat_country
             );
@@ -113,7 +113,7 @@ class EUVATR_Validator {
                 self::STATUS_UNVERIFIED,
                 false,
                 false,
-                __( 'VAT number could not be verified — VAT charged as usual.', 'eu-vat-rates-woo' ),
+                __( 'VAT number could not be verified — VAT charged as usual.', 'vatnode-eu-vat-rates' ),
                 $vat_number,
                 $vat_country
             );
@@ -127,7 +127,7 @@ class EUVATR_Validator {
                     self::STATUS_FORMAT_INVALID,
                     false,
                     true,
-                    __( 'This does not look like a valid EU VAT number. Check it, or leave the field empty.', 'eu-vat-rates-woo' ),
+                    __( 'This does not look like a valid EU VAT number. Check it, or leave the field empty.', 'vatnode-eu-vat-rates' ),
                     $vat_number,
                     $vat_country
                 );
@@ -148,7 +148,7 @@ class EUVATR_Validator {
                 self::STATUS_INVALID,
                 false,
                 true,
-                __( 'This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT.', 'eu-vat-rates-woo' ),
+                __( 'This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT.', 'vatnode-eu-vat-rates' ),
                 $vat_number,
                 $vat_country,
                 $response['data']
@@ -159,7 +159,7 @@ class EUVATR_Validator {
             self::STATUS_VALID,
             true,
             false,
-            __( 'VAT number verified — reverse charge applies.', 'eu-vat-rates-woo' ),
+            __( 'VAT number verified — reverse charge applies.', 'vatnode-eu-vat-rates' ),
             $vat_number,
             $vat_country,
             $response['data']
@@ -192,14 +192,14 @@ class EUVATR_Validator {
      */
     public static function status_label( string $status ): string {
         $labels = [
-            self::STATUS_VALID            => __( 'Verified — reverse charge applied', 'eu-vat-rates-woo' ),
-            self::STATUS_INVALID          => __( 'Not registered in VIES', 'eu-vat-rates-woo' ),
-            self::STATUS_FORMAT_INVALID   => __( 'Invalid format', 'eu-vat-rates-woo' ),
-            self::STATUS_COUNTRY_MISMATCH => __( 'VAT country does not match billing country', 'eu-vat-rates-woo' ),
-            self::STATUS_DOMESTIC         => __( 'Domestic sale — VAT charged', 'eu-vat-rates-woo' ),
-            self::STATUS_NOT_ELIGIBLE     => __( 'Outside the EU VAT area', 'eu-vat-rates-woo' ),
-            self::STATUS_UNVERIFIED       => __( 'Not verified — VAT charged', 'eu-vat-rates-woo' ),
-            self::STATUS_EMPTY            => __( 'No VAT number provided', 'eu-vat-rates-woo' ),
+            self::STATUS_VALID            => __( 'Verified — reverse charge applied', 'vatnode-eu-vat-rates' ),
+            self::STATUS_INVALID          => __( 'Not registered in VIES', 'vatnode-eu-vat-rates' ),
+            self::STATUS_FORMAT_INVALID   => __( 'Invalid format', 'vatnode-eu-vat-rates' ),
+            self::STATUS_COUNTRY_MISMATCH => __( 'VAT country does not match billing country', 'vatnode-eu-vat-rates' ),
+            self::STATUS_DOMESTIC         => __( 'Domestic sale — VAT charged', 'vatnode-eu-vat-rates' ),
+            self::STATUS_NOT_ELIGIBLE     => __( 'Outside the EU VAT area', 'vatnode-eu-vat-rates' ),
+            self::STATUS_UNVERIFIED       => __( 'Not verified — VAT charged', 'vatnode-eu-vat-rates' ),
+            self::STATUS_EMPTY            => __( 'No VAT number provided', 'vatnode-eu-vat-rates' ),
         ];
         return $labels[ $status ] ?? $status;
     }

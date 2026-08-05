@@ -28,7 +28,7 @@ class EUVATR_Checkout_Blocks {
     public static function register_field(): void {
         woocommerce_register_additional_checkout_field( [
             'id'                => self::FIELD_ID,
-            'label'             => __( 'VAT number', 'eu-vat-rates-woo' ),
+            'label'             => __( 'VAT number', 'vatnode-eu-vat-rates' ),
             'location'          => 'contact',
             'type'              => 'text',
             'required'          => EUVATR_Settings::is_field_required(),

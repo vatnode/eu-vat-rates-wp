@@ -30,7 +30,7 @@ class EUVATR_Api {
         $normalized = EUVATR_Format::normalize( $vat_id );
 
         if ( ! EUVATR_Settings::has_api_key() ) {
-            return self::failure( 'NO_API_KEY', __( 'No vatnode API key configured.', 'eu-vat-rates-woo' ) );
+            return self::failure( 'NO_API_KEY', __( 'No vatnode API key configured.', 'vatnode-eu-vat-rates' ) );
         }
 
         $cache_key = self::CACHE_PREFIX . md5( $normalized );
@@ -81,7 +81,7 @@ class EUVATR_Api {
         $code    = (string) ( $body['error']['code'] ?? 'HTTP_' . $status );
         $message = (string) ( $body['error']['message'] ?? sprintf(
             /* translators: %d = HTTP status code */
-            __( 'vatnode API returned HTTP %d.', 'eu-vat-rates-woo' ),
+            __( 'vatnode API returned HTTP %d.', 'vatnode-eu-vat-rates' ),
             $status
         ) );
 
@@ -116,18 +116,18 @@ class EUVATR_Api {
      */
     public static function test_key(): array {
         if ( ! EUVATR_Settings::has_api_key() ) {
-            return [ 'ok' => false, 'message' => __( 'Enter an API key first.', 'eu-vat-rates-woo' ) ];
+            return [ 'ok' => false, 'message' => __( 'Enter an API key first.', 'vatnode-eu-vat-rates' ) ];
         }
 
         $result = self::validate( 'XX0000001', false );
 
         if ( $result['ok'] || $result['error_code'] === 'INVALID_FORMAT' ) {
             EUVATR_Settings::set_key_status( 'active' );
-            return [ 'ok' => true, 'message' => __( 'API key accepted by vatnode.', 'eu-vat-rates-woo' ) ];
+            return [ 'ok' => true, 'message' => __( 'API key accepted by vatnode.', 'vatnode-eu-vat-rates' ) ];
         }
 
         if ( in_array( $result['error_code'], [ 'UNAUTHORIZED', 'INVALID_API_KEY', 'ACCOUNT_DELETED', 'HTTP_401', 'HTTP_403' ], true ) ) {
-            return [ 'ok' => false, 'message' => __( 'API key was rejected by vatnode.', 'eu-vat-rates-woo' ) ];
+            return [ 'ok' => false, 'message' => __( 'API key was rejected by vatnode.', 'vatnode-eu-vat-rates' ) ];
         }
 
         return [ 'ok' => false, 'message' => $result['message'] ];

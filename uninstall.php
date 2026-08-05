@@ -11,7 +11,7 @@ defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
 
 global $wpdb;
 
-$options = [
+$euvatr_options = [
     'euvatr_api_key',
     'euvatr_validation_enabled',
     'euvatr_field_required',
@@ -21,8 +21,8 @@ $options = [
     'euvatr_last_error',
 ];
 
-foreach ( $options as $option ) {
-    delete_option( $option );
+foreach ( $euvatr_options as $euvatr_option ) {
+    delete_option( $euvatr_option );
 }
 
 delete_transient( 'euvatr_rates' );

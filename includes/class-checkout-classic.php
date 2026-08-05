@@ -96,7 +96,7 @@ class EUVATR_Checkout_Classic {
 
         if ( $vat_number === '' ) {
             if ( EUVATR_Settings::is_field_required() ) {
-                $errors->add( 'euvatr_vat_required', __( 'Please enter your VAT number.', 'eu-vat-rates-woo' ) );
+                $errors->add( 'euvatr_vat_required', __( 'Please enter your VAT number.', 'vatnode-eu-vat-rates' ) );
             }
             return;
         }
@@ -126,9 +126,9 @@ class EUVATR_Checkout_Classic {
     private static function field_definition(): array {
         return [
             'type'        => 'text',
-            'label'       => __( 'VAT number', 'eu-vat-rates-woo' ),
-            'placeholder' => __( 'e.g. DE123456789', 'eu-vat-rates-woo' ),
-            'description' => __( 'EU businesses outside our country: enter your VAT number to buy without VAT.', 'eu-vat-rates-woo' ),
+            'label'       => __( 'VAT number', 'vatnode-eu-vat-rates' ),
+            'placeholder' => __( 'e.g. DE123456789', 'vatnode-eu-vat-rates' ),
+            'description' => __( 'EU businesses outside our country: enter your VAT number to buy without VAT.', 'vatnode-eu-vat-rates' ),
             'required'    => EUVATR_Settings::is_field_required(),
             'class'       => [ 'form-row-wide' ],
             'priority'    => 125,

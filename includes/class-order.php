@@ -51,7 +51,7 @@ class EUVATR_Order {
 
         $order->add_order_note( sprintf(
             /* translators: 1: VAT number, 2: status label */
-            __( 'VAT number %1$s — %2$s', 'eu-vat-rates-woo' ),
+            __( 'VAT number %1$s — %2$s', 'vatnode-eu-vat-rates' ),
             $evaluation['vat_number'],
             EUVATR_Validator::status_label( $evaluation['status'] )
         ) );
@@ -69,21 +69,21 @@ class EUVATR_Order {
         $checked_at   = (string) $order->get_meta( self::META_CHECKED_AT );
         $reverse      = $order->get_meta( self::META_REVERSE ) === 'yes';
 
-        echo '<div class="euvatr-order-panel"><h3>' . esc_html__( 'EU VAT', 'eu-vat-rates-woo' ) . '</h3><p>';
-        echo '<strong>' . esc_html__( 'VAT number:', 'eu-vat-rates-woo' ) . '</strong> <code>' . esc_html( $vat_number ) . '</code><br>';
-        echo '<strong>' . esc_html__( 'Status:', 'eu-vat-rates-woo' ) . '</strong> ' . esc_html( EUVATR_Validator::status_label( $status ) ) . '<br>';
-        echo '<strong>' . esc_html__( 'Reverse charge:', 'eu-vat-rates-woo' ) . '</strong> ' . ( $reverse ? esc_html__( 'Applied', 'eu-vat-rates-woo' ) : esc_html__( 'Not applied', 'eu-vat-rates-woo' ) ) . '<br>';
+        echo '<div class="euvatr-order-panel"><h3>' . esc_html__( 'EU VAT', 'vatnode-eu-vat-rates' ) . '</h3><p>';
+        echo '<strong>' . esc_html__( 'VAT number:', 'vatnode-eu-vat-rates' ) . '</strong> <code>' . esc_html( $vat_number ) . '</code><br>';
+        echo '<strong>' . esc_html__( 'Status:', 'vatnode-eu-vat-rates' ) . '</strong> ' . esc_html( EUVATR_Validator::status_label( $status ) ) . '<br>';
+        echo '<strong>' . esc_html__( 'Reverse charge:', 'vatnode-eu-vat-rates' ) . '</strong> ' . ( $reverse ? esc_html__( 'Applied', 'vatnode-eu-vat-rates' ) : esc_html__( 'Not applied', 'vatnode-eu-vat-rates' ) ) . '<br>';
 
         if ( $company !== '' ) {
-            echo '<strong>' . esc_html__( 'Registered name:', 'eu-vat-rates-woo' ) . '</strong> ' . esc_html( $company ) . '<br>';
+            echo '<strong>' . esc_html__( 'Registered name:', 'vatnode-eu-vat-rates' ) . '</strong> ' . esc_html( $company ) . '<br>';
         }
         if ( $consultation !== '' ) {
-            echo '<strong>' . esc_html__( 'VIES consultation number:', 'eu-vat-rates-woo' ) . '</strong> <code>' . esc_html( $consultation ) . '</code><br>';
+            echo '<strong>' . esc_html__( 'VIES consultation number:', 'vatnode-eu-vat-rates' ) . '</strong> <code>' . esc_html( $consultation ) . '</code><br>';
         }
         if ( $checked_at !== '' ) {
             $timestamp = strtotime( $checked_at );
             if ( $timestamp ) {
-                echo '<strong>' . esc_html__( 'Checked:', 'eu-vat-rates-woo' ) . '</strong> ' . esc_html(
+                echo '<strong>' . esc_html__( 'Checked:', 'vatnode-eu-vat-rates' ) . '</strong> ' . esc_html(
                     wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $timestamp )
                 );
             }

@@ -35,8 +35,9 @@ class EUVATR_Sync {
 
         // Plugin versions up to 1.0.0 wrote a `country` location row per rate,
         // which silently stopped WooCommerce from matching those rates at all.
-        // Drop them for the rates this plugin manages.
-        // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+        // Drop them for the rates this plugin manages. Table names come from
+        // $wpdb->prefix, never from input, so they cannot be placeholders.
+        // phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter
         $wpdb->query(
             "DELETE l FROM {$locations_table} l
              INNER JOIN {$rates_table} r ON r.tax_rate_id = l.tax_rate_id
@@ -44,13 +45,14 @@ class EUVATR_Sync {
                AND r.tax_rate_name = 'VAT'
                AND r.tax_rate_class = ''"
         );
+        // phpcs:enable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter
 
         foreach ( $data['rates'] as $country_code => $country ) {
             $standard_rate = (float) $country['standard'];
             $country_code  = strtoupper( $country_code );
 
             // Check for existing managed rate
-            // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+            // phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter
             $existing_id = $wpdb->get_var( $wpdb->prepare(
                 "SELECT tax_rate_id FROM {$rates_table}
                  WHERE tax_rate_country = %s
@@ -59,6 +61,7 @@ class EUVATR_Sync {
                  LIMIT 1",
                 $country_code
             ) );
+            // phpcs:enable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter
 
             if ( $existing_id ) {
                 // Update

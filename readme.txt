@@ -1,8 +1,8 @@
-=== EU VAT Rates & VAT Number Validation for WooCommerce ===
-Contributors: vatnode
+=== vatnode - EU VAT Rates and VIES Validation for WooCommerce ===
+Contributors: iuriirogulia
 Tags: woocommerce, vat, eu, tax, reverse charge
 Requires at least: 6.3
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 8.1
 Stable tag: 1.1.0
 WC requires at least: 8.0
