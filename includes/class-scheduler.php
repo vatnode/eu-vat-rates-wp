@@ -10,13 +10,7 @@ class EUVATR_Scheduler {
     const INTERVAL = 'daily';
 
     public static function init(): void {
-        // The cron event is always registered so upgrading to Pro activates
-        // auto-sync without any extra setup. The handler is gated by license.
-        add_action( self::HOOK, function (): void {
-            if ( euvatr_is_pro() ) {
-                EUVATR_Sync::run();
-            }
-        } );
+        add_action( self::HOOK, [ EUVATR_Sync::class, 'run' ] );
     }
 
     public static function schedule(): void {
@@ -37,8 +31,8 @@ class EUVATR_Scheduler {
     public static function next_run(): string {
         $ts = wp_next_scheduled( self::HOOK );
         if ( ! $ts ) {
-            return 'Not scheduled';
+            return __( 'Not scheduled', 'eu-vat-rates-woo' );
         }
-        return wp_date( 'Y-m-d H:i:s', $ts ) . ' UTC';
+        return (string) wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $ts );
     }
 }

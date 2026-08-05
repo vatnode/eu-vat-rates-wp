@@ -33,6 +33,18 @@ class EUVATR_Sync {
         $locations_table = $wpdb->prefix . 'woocommerce_tax_rate_locations';
         $synced          = 0;
 
+        // Plugin versions up to 1.0.0 wrote a `country` location row per rate,
+        // which silently stopped WooCommerce from matching those rates at all.
+        // Drop them for the rates this plugin manages.
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+        $wpdb->query(
+            "DELETE l FROM {$locations_table} l
+             INNER JOIN {$rates_table} r ON r.tax_rate_id = l.tax_rate_id
+             WHERE l.location_type = 'country'
+               AND r.tax_rate_name = 'VAT'
+               AND r.tax_rate_class = ''"
+        );
+
         foreach ( $data['rates'] as $country_code => $country ) {
             $standard_rate = (float) $country['standard'];
             $country_code  = strtoupper( $country_code );
@@ -59,7 +71,10 @@ class EUVATR_Sync {
                     [ '%d' ]
                 );
             } else {
-                // Insert rate
+                // Insert rate. The country lives in tax_rate_country itself —
+                // woocommerce_tax_rate_locations is only for postcode and city
+                // restrictions, and a row there makes WC_Tax::find_rates()
+                // require a match that a country-wide rate can never satisfy.
                 // phpcs:ignore WordPress.DB.DirectDatabaseQuery
                 $wpdb->insert( $rates_table, [
                     'tax_rate_country'  => $country_code,
@@ -71,16 +86,6 @@ class EUVATR_Sync {
                     'tax_rate_shipping' => 1,
                     'tax_rate_order'    => $synced,
                     'tax_rate_class'    => '', // '' = Standard rate class
-                ] );
-
-                $new_id = (int) $wpdb->insert_id;
-
-                // Link to country location
-                // phpcs:ignore WordPress.DB.DirectDatabaseQuery
-                $wpdb->insert( $locations_table, [
-                    'location_code' => $country_code,
-                    'location_type' => 'country',
-                    'tax_rate_id'   => $new_id,
                 ] );
             }
 
@@ -101,6 +106,22 @@ class EUVATR_Sync {
 
     public static function last_sync(): string {
         return (string) get_option( self::OPTION_LAST_SYNC, '' );
+    }
+
+    /**
+     * Last sync in the site's own date format — the stored value is a machine
+     * timestamp and should never be shown as-is.
+     */
+    public static function last_sync_display(): string {
+        $stored = self::last_sync();
+        if ( $stored === '' ) {
+            return '';
+        }
+        $timestamp = strtotime( $stored );
+        if ( ! $timestamp ) {
+            return '';
+        }
+        return (string) wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $timestamp );
     }
 
     public static function last_version(): string {
