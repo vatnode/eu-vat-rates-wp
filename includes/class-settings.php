@@ -13,6 +13,7 @@ class EUVATR_Settings {
     const OPTION_VALIDATION = 'euvatr_validation_enabled';
     const OPTION_FIELD_REQ  = 'euvatr_field_required';
     const OPTION_KEY_STATUS = 'euvatr_key_status';
+    const OPTION_OSS        = 'euvatr_oss_registered';
 
     public static function api_key(): string {
         return trim( (string) get_option( self::OPTION_API_KEY, '' ) );
@@ -32,6 +33,20 @@ class EUVATR_Settings {
 
     public static function is_field_required(): bool {
         return (bool) get_option( self::OPTION_FIELD_REQ, false );
+    }
+
+    /**
+     * Whether the store is registered for the EU One Stop Shop.
+     *
+     * Registered: cross-border B2C sales are taxed at the buyer's rate.
+     * Not registered (below the €10,000 distance-selling threshold): the
+     * seller's own rate applies to every EU buyer.
+     *
+     * Defaults to true so an existing install keeps charging what it charged
+     * before this setting existed.
+     */
+    public static function is_oss_registered(): bool {
+        return (bool) get_option( self::OPTION_OSS, true );
     }
 
     /**

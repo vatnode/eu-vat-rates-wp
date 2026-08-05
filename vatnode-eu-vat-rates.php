@@ -3,7 +3,7 @@
  * Plugin Name:       vatnode - EU VAT Rates and VIES Validation for WooCommerce
  * Plugin URI:        https://vatnode.dev/woocommerce
  * Description:       Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge.
- * Version:           1.1.0
+ * Version:           1.1.1
  * Author:            vatnode
  * Author URI:        https://vatnode.dev
  * License:           GPL-2.0-or-later
@@ -17,7 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'EUVATR_VERSION', '1.1.0' );
+define( 'EUVATR_VERSION', '1.1.1' );
 define( 'EUVATR_FILE',    __FILE__ );
 define( 'EUVATR_DIR',     plugin_dir_path( __FILE__ ) );
 define( 'EUVATR_URL',     plugin_dir_url( __FILE__ ) );
@@ -27,6 +27,7 @@ require_once EUVATR_DIR . 'includes/class-data.php';
 require_once EUVATR_DIR . 'includes/class-format.php';
 require_once EUVATR_DIR . 'includes/class-api.php';
 require_once EUVATR_DIR . 'includes/class-validator.php';
+require_once EUVATR_DIR . 'includes/class-tax.php';
 require_once EUVATR_DIR . 'includes/class-order.php';
 require_once EUVATR_DIR . 'includes/class-checkout-classic.php';
 require_once EUVATR_DIR . 'includes/class-checkout-blocks.php';
@@ -55,6 +56,7 @@ add_action( 'plugins_loaded', function (): void {
     EUVATR_Scheduler::init();
     EUVATR_Admin::init();
     EUVATR_Order::init();
+    EUVATR_Tax::init();
     EUVATR_Checkout_Classic::init();
     EUVATR_Checkout_Blocks::init();
 } );

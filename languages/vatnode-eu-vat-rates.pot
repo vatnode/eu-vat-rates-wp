@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: vatnode - EU VAT Rates and VIES Validation for WooCommerce 1.1.0\n"
+"Project-Id-Version: vatnode - EU VAT Rates and VIES Validation for WooCommerce 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-05T13:03:46+00:00\n"
+"POT-Creation-Date: 2026-08-05T13:54:41+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: vatnode-eu-vat-rates\n"
@@ -44,7 +44,7 @@ msgstr ""
 msgid "EU VAT Rates"
 msgstr ""
 
-#: admin/class-admin.php:115
+#: admin/class-admin.php:119
 msgid "Insufficient permissions."
 msgstr ""
 
@@ -151,89 +151,103 @@ msgstr ""
 msgid "Only for B2B-only stores — consumers do not have a VAT number."
 msgstr ""
 
-#: admin/views/page-settings.php:130
-msgid "Save Settings"
+#: admin/views/page-settings.php:129
+msgid "Which rate applies"
 msgstr ""
 
 #: admin/views/page-settings.php:133
-msgid "Remove key"
+msgid "This store is registered for the EU One Stop Shop (OSS)"
 msgstr ""
 
-#: admin/views/page-settings.php:142
-msgid "Test Key"
+#. translators: %s = the store's own country code, e.g. FI
+#: admin/views/page-settings.php:139
+#, php-format
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
 msgstr ""
 
 #: admin/views/page-settings.php:148
-msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgid "Save Settings"
 msgstr ""
 
-#: admin/views/page-settings.php:155
-msgid "Rate sync"
+#: admin/views/page-settings.php:151
+msgid "Remove key"
 msgstr ""
 
-#: admin/views/page-settings.php:158
-msgid "Auto-sync"
-msgstr ""
-
-#: admin/views/page-settings.php:159
-msgid "Active — daily"
-msgstr ""
-
-#: admin/views/page-settings.php:162
-msgid "Last sync"
-msgstr ""
-
-#: admin/views/page-settings.php:163
-msgid "Never"
+#: admin/views/page-settings.php:160
+msgid "Test Key"
 msgstr ""
 
 #: admin/views/page-settings.php:166
-msgid "Data version"
+msgid "Reverse charge is active for verified EU business buyers outside your country."
 msgstr ""
 
-#: admin/views/page-settings.php:170
-msgid "Next auto-sync"
+#: admin/views/page-settings.php:173
+msgid "Rate sync"
 msgstr ""
 
-#: admin/views/page-settings.php:174
-msgid "Source"
+#: admin/views/page-settings.php:176
+msgid "Auto-sync"
 msgstr ""
 
 #: admin/views/page-settings.php:177
+msgid "Active — daily"
+msgstr ""
+
+#: admin/views/page-settings.php:180
+msgid "Last sync"
+msgstr ""
+
+#: admin/views/page-settings.php:181
+msgid "Never"
+msgstr ""
+
+#: admin/views/page-settings.php:184
+msgid "Data version"
+msgstr ""
+
+#: admin/views/page-settings.php:188
+msgid "Next auto-sync"
+msgstr ""
+
+#: admin/views/page-settings.php:192
+msgid "Source"
+msgstr ""
+
+#: admin/views/page-settings.php:195
 msgid "(European Commission TEDB)"
 msgstr ""
 
-#: admin/views/page-settings.php:185
+#: admin/views/page-settings.php:203
 msgid "Sync Now"
 msgstr ""
 
 #. translators: %d = number of countries
-#: admin/views/page-settings.php:196
+#: admin/views/page-settings.php:214
 #, php-format
 msgid "Current rates (%d countries)"
 msgstr ""
 
-#: admin/views/page-settings.php:204
+#: admin/views/page-settings.php:222
 msgid "Country"
 msgstr ""
 
-#: admin/views/page-settings.php:205
+#: admin/views/page-settings.php:223
 msgid "Code"
 msgstr ""
 
-#: admin/views/page-settings.php:206
+#: admin/views/page-settings.php:224
 msgid "Standard"
 msgstr ""
 
-#: admin/views/page-settings.php:207
+#: admin/views/page-settings.php:225
 msgid "Reduced"
 msgstr ""
 
-#: admin/views/page-settings.php:208
+#: admin/views/page-settings.php:226
 msgid "Super-reduced"
 msgstr ""
 
-#: admin/views/page-settings.php:209
+#: admin/views/page-settings.php:227
 msgid "Parking"
 msgstr ""
 
@@ -381,6 +395,6 @@ msgstr ""
 msgid "No VAT number provided"
 msgstr ""
 
-#: vatnode-eu-vat-rates.php:49
+#: vatnode-eu-vat-rates.php:50
 msgid "requires WooCommerce to be active."
 msgstr ""

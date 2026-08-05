@@ -125,6 +125,24 @@
                         </p>
                     </td>
                 </tr>
+                <tr>
+                    <th scope="row"><?php esc_html_e( 'Which rate applies', 'vatnode-eu-vat-rates' ); ?></th>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="oss_registered" value="1" <?php checked( $oss ); ?>>
+                            <?php esc_html_e( 'This store is registered for the EU One Stop Shop (OSS)', 'vatnode-eu-vat-rates' ); ?>
+                        </label>
+                        <p class="description">
+                            <?php
+                            printf(
+                                /* translators: %s = the store's own country code, e.g. FI */
+                                esc_html__( 'Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold.', 'vatnode-eu-vat-rates' ),
+                                esc_html( $store )
+                            );
+                            ?>
+                        </p>
+                    </td>
+                </tr>
             </table>
 
             <?php submit_button( __( 'Save Settings', 'vatnode-eu-vat-rates' ), 'primary', 'submit', false ); ?>

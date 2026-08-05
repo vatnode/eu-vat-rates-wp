@@ -4,7 +4,7 @@ Tags: woocommerce, vat, eu, tax, reverse charge
 Requires at least: 6.3
 Tested up to: 7.0
 Requires PHP: 8.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 WC requires at least: 8.0
 WC tested up to: 11.0
 License: GPL-2.0-or-later
@@ -22,7 +22,7 @@ Two jobs, one plugin, no configuration to get started.
 
 = What is free =
 
-* Daily rate sync from the European Commission TEDB
+* Daily rate sync from the European Commission TEDB for the EU-27 plus XI
 * Manual "Sync now" whenever you want it
 * VAT number field on both the classic and block checkout
 * Offline format checking against the country pattern
@@ -36,6 +36,10 @@ Two jobs, one plugin, no configuration to get started.
 * VIES consultation number stored as audit evidence, when your vatnode account has a requester VAT configured
 
 Get a key at [vatnode.dev/woocommerce](https://vatnode.dev/woocommerce) — the free plan includes a monthly request quota. Paste it into **WooCommerce → EU VAT Rates**. Nothing else changes.
+
+= OSS and the €10,000 threshold =
+
+If your store is registered for the One Stop Shop, consumers in other EU countries are charged the rate of their own country — the default. If it is not registered, untick the OSS box and every EU buyer is charged your own country's rate, which is what applies while cross-border sales stay under the EU-wide €10,000 threshold.
 
 = How the reverse charge decision is made =
 
@@ -114,6 +118,10 @@ On the order, together with the verification status, the registered company name
 4. Order screen — VAT number, verification status and registered company name
 
 == Changelog ==
+
+= 1.1.1 =
+* Rates are now synced only for the EU-27 plus XI; rates this plugin previously wrote for non-EU countries are removed on the next sync, so an export is no longer taxed at the destination country's rate
+* Added an OSS setting: untick it to charge your own country's rate to every EU buyer, as applies below the EU-wide 10,000 EUR threshold
 
 = 1.1.0 =
 * Added VAT number field to the classic and block checkout

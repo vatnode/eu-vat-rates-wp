@@ -45,6 +45,7 @@ class EUVATR_Admin {
             : '';
         $validation = isset( $_POST['validation_enabled'] );
         $required   = isset( $_POST['field_required'] );
+        $oss        = isset( $_POST['oss_registered'] );
         // phpcs:enable WordPress.Security.NonceVerification.Missing
 
         if ( $remove_key ) {
@@ -59,6 +60,7 @@ class EUVATR_Admin {
 
         update_option( EUVATR_Settings::OPTION_VALIDATION, $validation );
         update_option( EUVATR_Settings::OPTION_FIELD_REQ, $required );
+        update_option( EUVATR_Settings::OPTION_OSS, $oss );
 
         self::redirect( [ 'saved' => '1' ] );
     }
@@ -97,6 +99,8 @@ class EUVATR_Admin {
         $validation = EUVATR_Settings::is_validation_active();
         $enabled    = (bool) get_option( EUVATR_Settings::OPTION_VALIDATION, false );
         $required   = EUVATR_Settings::is_field_required();
+        $oss        = EUVATR_Settings::is_oss_registered();
+        $store      = EUVATR_Validator::store_country();
         $key_status = EUVATR_Settings::key_status();
         $signup_url = self::SIGNUP_URL;
 

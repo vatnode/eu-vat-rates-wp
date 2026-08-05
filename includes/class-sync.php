@@ -48,8 +48,17 @@ class EUVATR_Sync {
         // phpcs:enable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter
 
         foreach ( $data['rates'] as $country_code => $country ) {
+            $country_code = strtoupper( $country_code );
+
+            // Only the EU VAT area belongs in the tax table. A seller in the EU
+            // does not charge Norwegian or Swiss VAT to a buyer there — that is
+            // an export, and writing those rates would make WooCommerce add tax
+            // that is not owed.
+            if ( ! EUVATR_Format::is_vies_eligible( $country_code ) ) {
+                continue;
+            }
+
             $standard_rate = (float) $country['standard'];
-            $country_code  = strtoupper( $country_code );
 
             // Check for existing managed rate
             // phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter
@@ -95,6 +104,8 @@ class EUVATR_Sync {
             $synced++;
         }
 
+        self::remove_non_eu_rates( $rates_table );
+
         // Bust WooCommerce tax cache
         WC_Cache_Helper::invalidate_cache_group( 'taxes' );
         delete_transient( 'wc_tax_rates_' . md5( serialize( [] ) ) );
@@ -105,6 +116,29 @@ class EUVATR_Sync {
         delete_option( self::OPTION_LAST_ERROR );
 
         return true;
+    }
+
+    /**
+     * Versions up to 1.1.0 wrote a rate for every country in the dataset,
+     * including non-EU ones. Those rows made WooCommerce charge, say, Norwegian
+     * VAT on an export — remove the ones this plugin created.
+     */
+    private static function remove_non_eu_rates( string $rates_table ): void {
+        global $wpdb;
+
+        // phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter
+        $managed = $wpdb->get_results(
+            "SELECT tax_rate_id, tax_rate_country FROM {$rates_table}
+             WHERE tax_rate_name = 'VAT' AND tax_rate_class = ''"
+        );
+
+        foreach ( $managed as $rate ) {
+            if ( EUVATR_Format::is_vies_eligible( (string) $rate->tax_rate_country ) ) {
+                continue;
+            }
+            $wpdb->delete( $rates_table, [ 'tax_rate_id' => (int) $rate->tax_rate_id ], [ '%d' ] );
+        }
+        // phpcs:enable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter
     }
 
     public static function last_sync(): string {
