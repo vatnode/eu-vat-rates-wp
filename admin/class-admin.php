@@ -6,7 +6,13 @@ defined( 'ABSPATH' ) || exit;
  */
 class EUVATR_Admin {
 
+    // For a merchant with no key yet: the page that explains what the key
+    // unlocks and what it costs.
     const SIGNUP_URL = 'https://vatnode.dev/woocommerce?ref=woo-plugin';
+
+    // Straight to the keys screen. A signed-out visitor is sent through login
+    // and returned here, so one link serves both cases.
+    const KEYS_URL = 'https://vatnode.dev/dashboard/api-keys';
 
     public static function init(): void {
         add_action( 'admin_menu',                       [ __CLASS__, 'add_menu' ] );
@@ -103,6 +109,7 @@ class EUVATR_Admin {
         $store      = EUVATR_Validator::store_country();
         $key_status = EUVATR_Settings::key_status();
         $signup_url = self::SIGNUP_URL;
+        $keys_url   = self::KEYS_URL;
 
         // phpcs:disable WordPress.Security.NonceVerification.Recommended -- read-only view state.
         $synced  = isset( $_GET['synced'] ) ? sanitize_key( wp_unslash( $_GET['synced'] ) ) : '';

@@ -79,7 +79,7 @@
                                 printf(
                                     /* translators: %s = link to vatnode */
                                     esc_html__( 'Create a key in your %s dashboard. The free plan includes a monthly request quota.', 'vatnode-eu-vat-rates' ),
-                                    '<a href="' . esc_url( $signup_url ) . '" target="_blank" rel="noopener noreferrer">vatnode</a>'
+                                    '<a href="' . esc_url( $keys_url ) . '" target="_blank" rel="noopener noreferrer">vatnode</a>'
                                 );
                                 ?>
                             <?php endif; ?>
