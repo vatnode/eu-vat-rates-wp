@@ -16,6 +16,8 @@ $euvatr_options = [
     'euvatr_validation_enabled',
     'euvatr_field_required',
     'euvatr_key_status',
+    'euvatr_oss_registered',
+    'euvatr_rates_last_good',
     'euvatr_last_sync',
     'euvatr_last_version',
     'euvatr_last_error',

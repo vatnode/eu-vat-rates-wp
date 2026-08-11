@@ -1,24 +1,26 @@
-=== vatnode - EU VAT Rates and VIES Validation for WooCommerce ===
+=== EU VAT Validation and Reverse Charge for WooCommerce - vatnode ===
 Contributors: iuriirogulia
-Tags: woocommerce, vat, eu, tax, reverse charge
+Tags: vat, vies, vat validation, reverse charge, woocommerce
 Requires at least: 6.3
 Tested up to: 7.0
-Requires PHP: 8.1
-Stable tag: 1.1.1
+Requires PHP: 8.0
+Stable tag: 1.1.2
 WC requires at least: 8.0
 WC tested up to: 11.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-EU VAT rates synced daily from the European Commission, plus VIES VAT number validation and reverse charge at checkout.
+Validate EU VAT numbers against VIES at checkout, apply the reverse charge, and keep WooCommerce tax rates in step with the European Commission.
 
 == Description ==
 
-Two jobs, one plugin, no configuration to get started.
+WooCommerce collects a VAT number if you add a field for it, but it does not check the number and it does not know when a sale is zero-rated. This plugin does both, and keeps the EU VAT rate table current while it is at it.
+
+Neither job needs any configuration to get started.
 
 **1. Your tax table stays correct.** The plugin pulls standard VAT rates for every EU member state from the European Commission's Taxes in Europe Database (TEDB) and writes them into the WooCommerce tax table. It re-checks daily, so a rate change lands in your store within 24 hours instead of whenever you happen to read about it.
 
-**2. Your B2B buyers can pay without VAT.** A VAT number field appears at checkout. The number is checked against its country format offline, stored on the order, and — once you add a vatnode API key — verified live against the official VIES service. When a buyer's VAT number is valid and they are in another EU country, VAT is removed and the reverse charge applies.
+**2. Your B2B buyers can pay without VAT.** The plugin adds a VAT number field at checkout. The number is checked against its country format offline, stored on the order, and — once you add a vatnode API key — verified live against the official VIES service. When a buyer's VAT number is valid and they are in another EU country, VAT is removed and the reverse charge applies.
 
 = What is free =
 
@@ -35,11 +37,11 @@ Two jobs, one plugin, no configuration to get started.
 * Company name from the official register stored with the order
 * VIES consultation number stored as audit evidence, when your vatnode account has a requester VAT configured
 
-Get a key at [vatnode.dev/woocommerce](https://vatnode.dev/woocommerce) — the free plan includes a monthly request quota. Paste it into **WooCommerce → EU VAT Rates**. Nothing else changes.
+Get a key at [vatnode.dev/woocommerce](https://vatnode.dev/woocommerce?ref=woo-plugin) — the free plan includes a monthly request quota. Paste it into **WooCommerce → EU VAT Rates** and save. Nothing else changes.
 
 = OSS and the €10,000 threshold =
 
-If your store is registered for the One Stop Shop, consumers in other EU countries are charged the rate of their own country — the default. If it is not registered, untick the OSS box and every EU buyer is charged your own country's rate, which is what applies while cross-border sales stay under the EU-wide €10,000 threshold.
+If your store is registered for the One Stop Shop, consumers in other EU countries are charged the rate of their own country. That is the default. If you are not registered, untick the OSS box: every EU buyer is then charged your own country's rate, which is what applies while cross-border sales stay under the EU-wide €10,000 threshold.
 
 = How the reverse charge decision is made =
 
@@ -78,7 +80,7 @@ vatnode terms: https://vatnode.dev/legal/terms — privacy: https://vatnode.dev/
 1. Upload the plugin folder to `/wp-content/plugins/`, or install it from the WordPress plugin directory
 2. Activate it through **Plugins → Installed Plugins**
 3. Go to **WooCommerce → EU VAT Rates** — rates sync automatically on first activation
-4. Optional: paste a vatnode API key and tick "Verify VAT numbers with VIES" to enable the reverse charge
+4. Optional: paste a vatnode API key and save — VIES verification and the reverse charge switch on with it
 
 == Frequently Asked Questions ==
 
@@ -104,11 +106,31 @@ No. The plugin upserts rates named "VAT" per country code — insert if missing,
 
 = Which countries can be validated? =
 
-VIES covers the 27 EU member states plus XI (Northern Ireland). Rate data covers those plus around 17 other European jurisdictions, which are rate-lookup only.
+VIES covers the 27 EU member states plus XI (Northern Ireland). Rate data covers those plus 17 other European jurisdictions, which are rate-lookup only.
 
 = Where is the VAT number stored? =
 
 On the order, together with the verification status, the registered company name and the VIES consultation number when one was issued. You can see all of it on the order screen in the WooCommerce admin.
+
+= Do Greek EL numbers work? =
+
+Yes. Greece issues VAT numbers under the EL prefix while the billing country is GR, and the plugin treats the two as the same country. An EL number on a Greek billing address validates, and a Greek store selling to a Greek business is correctly treated as domestic.
+
+= Does it work with HPOS? =
+
+Yes. The plugin declares compatibility with High-Performance Order Storage and with the cart and checkout blocks, and reads and writes order data through the WooCommerce CRUD layer either way.
+
+= Can I make the VAT number field mandatory? =
+
+Yes, there is a setting for it. Leave it off unless you sell to businesses only — consumers do not have a VAT number and would not be able to check out.
+
+= Is my API key sent anywhere else? =
+
+No. The key is stored in your own site and travels only to api.vatnode.dev, over HTTPS, in the request that validates a VAT number. It is masked down to its prefix on the settings screen and removed from the database when you uninstall the plugin.
+
+= Where do I get support? =
+
+Open a thread in the support forum for this plugin. Bugs and feature requests are also welcome on GitHub at https://github.com/vatnode/eu-vat-rates-wp.
 
 == Screenshots ==
 
@@ -118,6 +140,15 @@ On the order, together with the verification status, the registered company name
 4. Order screen — VAT number, verification status and registered company name
 
 == Changelog ==
+
+= 1.1.2 =
+* Fixed: Greek VAT numbers were rejected at checkout. Greece issues them under the EL prefix while the billing country is GR, and the two are now treated as one country — a Greek B2B checkout works, and a domestic Greek sale is no longer mistaken for a cross-border one
+* Fixed: when the rate source could not be reached and the local cache had expired, every VAT number was reported as invalid and the checkout was blocked. The last known-good dataset is now kept on the site and used instead, and a number that cannot be checked never blocks an order
+* Rate refreshes no longer happen inside a shopper's request; a stale cache schedules a background sync and serves the last known-good data meanwhile
+* Added Settings and Get an API key links to the plugin row on the Plugins screen
+* A newly saved API key is checked immediately, so a typo shows up on the settings screen instead of in the first B2B order
+* VIES validation is now on by default, so pasting a key is the only step needed
+* Uninstall now also removes the OSS setting and the cached rate dataset
 
 = 1.1.1 =
 * Rates are now synced only for the EU-27 plus XI; rates this plugin previously wrote for non-EU countries are removed on the next sync, so an export is no longer taxed at the destination country's rate

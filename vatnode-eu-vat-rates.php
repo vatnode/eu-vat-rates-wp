@@ -1,14 +1,15 @@
 <?php
 /**
- * Plugin Name:       vatnode - EU VAT Rates and VIES Validation for WooCommerce
+ * Plugin Name:       EU VAT Validation and Reverse Charge for WooCommerce - vatnode
  * Plugin URI:        https://vatnode.dev/woocommerce
  * Description:       Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge.
- * Version:           1.1.1
+ * Version:           1.1.2
  * Author:            vatnode
  * Author URI:        https://vatnode.dev
  * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Requires at least: 6.3
- * Requires PHP:      8.1
+ * Requires PHP:      8.0
  * Requires Plugins:  woocommerce
  * WC requires at least: 8.0
  * WC tested up to:   11.0
@@ -17,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'EUVATR_VERSION', '1.1.1' );
+define( 'EUVATR_VERSION', '1.1.2' );
 define( 'EUVATR_FILE',    __FILE__ );
 define( 'EUVATR_DIR',     plugin_dir_path( __FILE__ ) );
 define( 'EUVATR_URL',     plugin_dir_url( __FILE__ ) );

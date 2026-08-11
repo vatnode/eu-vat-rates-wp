@@ -47,12 +47,26 @@ class EUVATR_Validator {
      * }
      */
     public static function evaluate( string $vat_id, string $billing_country ): array {
-        $billing_country = strtoupper( trim( $billing_country ) );
+        $billing_country = EUVATR_Format::iso_code( trim( $billing_country ) );
         $format          = EUVATR_Format::check( $vat_id );
         $vat_number      = $format['normalized'];
 
         if ( $vat_number === '' ) {
             return self::result( self::STATUS_EMPTY, false, false, '', '', '' );
+        }
+
+        // No dataset means nothing can be decided offline. Calling the number
+        // invalid here would block every B2B checkout for as long as the source
+        // is unreachable — exactly the failure this plugin promises not to have.
+        if ( ! $format['data_available'] ) {
+            return self::result(
+                self::STATUS_UNVERIFIED,
+                false,
+                false,
+                __( 'VAT number could not be verified — VAT charged as usual.', 'vatnode-eu-vat-rates' ),
+                $vat_number,
+                ''
+            );
         }
 
         $store_country = self::store_country();
@@ -97,7 +111,7 @@ class EUVATR_Validator {
             );
         }
 
-        if ( $vat_country === strtoupper( $store_country ) ) {
+        if ( $vat_country === EUVATR_Format::iso_code( $store_country ) ) {
             return self::result(
                 self::STATUS_DOMESTIC,
                 false,

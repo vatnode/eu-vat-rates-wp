@@ -12,7 +12,9 @@ class EUVATR_Admin {
 
     // Straight to the keys screen. A signed-out visitor is sent through login
     // and returned here, so one link serves both cases.
-    const KEYS_URL = 'https://vatnode.dev/dashboard/api-keys';
+    const KEYS_URL = 'https://vatnode.dev/dashboard/api-keys?ref=woo-plugin';
+
+    const SETTINGS_SLUG = 'eu-vat-rates';
 
     public static function init(): void {
         add_action( 'admin_menu',                       [ __CLASS__, 'add_menu' ] );
@@ -20,6 +22,11 @@ class EUVATR_Admin {
         add_action( 'admin_post_euvatr_save_settings',  [ __CLASS__, 'handle_save_settings' ] );
         add_action( 'admin_post_euvatr_test_key',       [ __CLASS__, 'handle_test_key' ] );
         add_action( 'admin_enqueue_scripts',            [ __CLASS__, 'enqueue_assets' ] );
+
+        add_filter(
+            'plugin_action_links_' . plugin_basename( EUVATR_FILE ),
+            [ __CLASS__, 'add_action_links' ]
+        );
     }
 
     public static function add_menu(): void {
@@ -28,9 +35,34 @@ class EUVATR_Admin {
             __( 'EU VAT Rates', 'vatnode-eu-vat-rates' ),
             __( 'EU VAT Rates', 'vatnode-eu-vat-rates' ),
             'manage_woocommerce',
-            'eu-vat-rates',
+            self::SETTINGS_SLUG,
             [ __CLASS__, 'render_page' ]
         );
+    }
+
+    /**
+     * Row links on Plugins → Installed Plugins. Without them the settings
+     * screen is buried under the WooCommerce menu right after activation.
+     *
+     * @param array<int, string> $links
+     * @return array<int, string>
+     */
+    public static function add_action_links( array $links ): array {
+        $own = [
+            '<a href="' . esc_url( self::settings_url() ) . '">'
+                . esc_html__( 'Settings', 'vatnode-eu-vat-rates' ) . '</a>',
+        ];
+
+        if ( ! EUVATR_Settings::has_api_key() ) {
+            $own[] = '<a href="' . esc_url( self::SIGNUP_URL ) . '" target="_blank" rel="noopener noreferrer">'
+                . esc_html__( 'Get an API key', 'vatnode-eu-vat-rates' ) . '</a>';
+        }
+
+        return array_merge( $own, $links );
+    }
+
+    public static function settings_url(): string {
+        return admin_url( 'admin.php?page=' . self::SETTINGS_SLUG );
     }
 
     public static function handle_manual_sync(): void {
@@ -68,6 +100,19 @@ class EUVATR_Admin {
         update_option( EUVATR_Settings::OPTION_FIELD_REQ, $required );
         update_option( EUVATR_Settings::OPTION_OSS, $oss );
 
+        // Check a freshly pasted key straight away. A merchant who mistyped it
+        // should find out here, not from the first B2B order that quietly
+        // charged VAT it did not need to.
+        if ( ! $remove_key && $key !== '' ) {
+            $test = EUVATR_Api::test_key();
+
+            self::redirect( [
+                'saved'   => '1',
+                'tested'  => $test['ok'] ? 'success' : 'error',
+                'message' => $test['message'],
+            ] );
+        }
+
         self::redirect( [ 'saved' => '1' ] );
     }
 
@@ -103,7 +148,7 @@ class EUVATR_Admin {
         $has_key    = EUVATR_Settings::has_api_key();
         $masked_key = EUVATR_Settings::masked_key();
         $validation = EUVATR_Settings::is_validation_active();
-        $enabled    = (bool) get_option( EUVATR_Settings::OPTION_VALIDATION, false );
+        $enabled    = EUVATR_Settings::is_validation_enabled();
         $required   = EUVATR_Settings::is_field_required();
         $oss        = EUVATR_Settings::is_oss_registered();
         $store      = EUVATR_Validator::store_country();
@@ -133,7 +178,7 @@ class EUVATR_Admin {
      */
     private static function redirect( array $args ): void {
         wp_safe_redirect( add_query_arg(
-            array_merge( [ 'page' => 'eu-vat-rates' ], $args ),
+            array_merge( [ 'page' => self::SETTINGS_SLUG ], $args ),
             admin_url( 'admin.php' )
         ) );
         exit;

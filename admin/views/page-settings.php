@@ -42,6 +42,16 @@
             <p>
                 <?php esc_html_e( 'Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order.', 'vatnode-eu-vat-rates' ); ?>
             </p>
+            <p class="description">
+                <?php
+                printf(
+                    /* translators: %s = link that opens the vatnode dashboard */
+                    esc_html__( 'Already have a vatnode account? %s and paste it below.', 'vatnode-eu-vat-rates' ),
+                    '<a href="' . esc_url( $keys_url ) . '" target="_blank" rel="noopener noreferrer">'
+                        . esc_html__( 'Create a key', 'vatnode-eu-vat-rates' ) . '</a>'
+                );
+                ?>
+            </p>
         </div>
         <a href="<?php echo esc_url( $signup_url ); ?>" target="_blank" rel="noopener noreferrer" class="button button-primary euvatr-upgrade-banner__cta">
             <?php esc_html_e( 'Get an API Key', 'vatnode-eu-vat-rates' ); ?>

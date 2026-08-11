@@ -28,7 +28,16 @@ class EUVATR_Settings {
      * enabled them AND supplied a key — without a key there is nothing to call.
      */
     public static function is_validation_active(): bool {
-        return self::has_api_key() && (bool) get_option( self::OPTION_VALIDATION, false );
+        return self::has_api_key() && self::is_validation_enabled();
+    }
+
+    /**
+     * Defaults to on. Adding an API key is the deliberate step; a merchant who
+     * has just pasted one should not have to hunt for a second switch before
+     * anything happens. Nothing is called until a key exists.
+     */
+    public static function is_validation_enabled(): bool {
+        return (bool) get_option( self::OPTION_VALIDATION, true );
     }
 
     public static function is_field_required(): bool {
