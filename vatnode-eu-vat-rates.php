@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       EU VAT Validation and Reverse Charge - vatnode
+ * Plugin Name:       vatnode - EU VAT Validation and Reverse Charge
  * Plugin URI:        https://vatnode.dev/woocommerce
  * Description:       Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge.
  * Version:           1.1.3

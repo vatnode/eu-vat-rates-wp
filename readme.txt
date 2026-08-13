@@ -1,4 +1,4 @@
-=== EU VAT Validation and Reverse Charge - vatnode ===
+=== vatnode - EU VAT Validation and Reverse Charge ===
 Contributors: iuriirogulia
 Tags: vat, vies, vat validation, reverse charge, woocommerce
 Requires at least: 6.3
