@@ -4,7 +4,7 @@ Tags: vat, vies, vat validation, reverse charge, woocommerce
 Requires at least: 6.3
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 WC requires at least: 8.0
 WC tested up to: 11.0
 License: GPL-2.0-or-later
@@ -141,7 +141,7 @@ Open a thread in the support forum for this plugin. Bugs and feature requests ar
 
 == Changelog ==
 
-= 1.1.3 =
+= 1.1.4 =
 * The full EU VAT rate dataset now ships inside the plugin, so rates, country patterns and the settings screen work on a site with no outbound network access at all. The daily refresh only replaces it when a newer dataset is published
 * Internal names — options, hooks, classes, script handles and the settings page address — now all carry the vatnode prefix, so nothing can collide with another plugin. Existing settings, including a saved API key, are carried over automatically
 
