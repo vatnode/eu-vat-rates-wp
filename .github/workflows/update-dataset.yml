@@ -1,0 +1,42 @@
+name: Update Bundled VAT Rates
+
+on:
+  schedule:
+    # 07:30 UTC — half an hour after the canonical dataset repo publishes.
+    - cron: '30 7 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    name: Refresh the dataset shipped inside the plugin
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Fetch the canonical dataset
+        run: |
+          curl -fsSL -o data/eu-vat-rates-data.json \
+            https://raw.githubusercontent.com/vatnode/eu-vat-rates-data/main/data/eu-vat-rates-data.json
+          python3 -c "
+          import json, sys
+          data = json.load(open('data/eu-vat-rates-data.json'))
+          if not data.get('rates') or not data.get('version'):
+              sys.exit('downloaded file is not a rate dataset')
+          print(f\"version {data['version']}, {len(data['rates'])} countries\")
+          "
+
+      - name: Commit and push
+        run: |
+          if git diff --quiet data/eu-vat-rates-data.json; then
+            echo "Dataset already current — nothing to commit."
+            exit 0
+          fi
+          VERSION=$(python3 -c "import json; print(json.load(open('data/eu-vat-rates-data.json'))['version'])")
+          git config user.name "vatnode-bot"
+          git config user.email "bot@vatnode.dev"
+          git add data/eu-vat-rates-data.json
+          git commit -m "chore(data): refresh bundled VAT rates ($VERSION)"
+          git push
