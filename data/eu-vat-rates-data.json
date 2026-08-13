@@ -1,0 +1,713 @@
+{
+  "version": "2026-08-12",
+  "source": "European Commission TEDB",
+  "rates": {
+    "AD": {
+      "country": "Andorra",
+      "currency": "EUR",
+      "eu_member": false,
+      "vat_name": "Impost General Indirecte",
+      "vat_abbr": "IGI",
+      "standard": 4.5,
+      "reduced": [
+        1.0,
+        2.5
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "1 letter + 6 digits + 1 letter",
+      "pattern": "^[A-Z]\\d{6}[A-Z]$"
+    },
+    "AL": {
+      "country": "Albania",
+      "currency": "ALL",
+      "eu_member": false,
+      "vat_name": "Tatimi mbi vlerën e shtuar",
+      "vat_abbr": "TVSH",
+      "standard": 20.0,
+      "reduced": [
+        6.0,
+        10.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "1 letter + 8 digits + 1 letter",
+      "pattern": "^[A-Z]\\d{8}[A-Z]$"
+    },
+    "AT": {
+      "country": "Austria",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Umsatzsteuer",
+      "vat_abbr": "USt",
+      "standard": 20.0,
+      "reduced": [
+        10.0,
+        13.0,
+        19.0
+      ],
+      "super_reduced": 4.9,
+      "parking": null,
+      "format": "ATU + 8 digits",
+      "pattern": "^ATU\\d{8}$"
+    },
+    "BA": {
+      "country": "Bosnia and Herzegovina",
+      "currency": "BAM",
+      "eu_member": false,
+      "vat_name": "Porez na dodanu vrijednost",
+      "vat_abbr": "PDV",
+      "standard": 17.0,
+      "reduced": [],
+      "super_reduced": null,
+      "parking": null,
+      "format": "12 digits",
+      "pattern": "^\\d{12}$"
+    },
+    "BE": {
+      "country": "Belgium",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Belasting over de toegevoegde waarde",
+      "vat_abbr": "BTW",
+      "standard": 21.0,
+      "reduced": [
+        6.0,
+        12.0
+      ],
+      "super_reduced": null,
+      "parking": 12.0,
+      "format": "BE + 0/1 + 9 digits",
+      "pattern": "^BE[01]\\d{9}$"
+    },
+    "BG": {
+      "country": "Bulgaria",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Данък върху добавената стойност",
+      "vat_abbr": "ДДС",
+      "standard": 20.0,
+      "reduced": [
+        9.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "BG + 9–10 digits",
+      "pattern": "^BG\\d{9,10}$"
+    },
+    "CH": {
+      "country": "Switzerland",
+      "currency": "CHF",
+      "eu_member": false,
+      "vat_name": "Mehrwertsteuer",
+      "vat_abbr": "MWST",
+      "standard": 8.1,
+      "reduced": [
+        2.6,
+        3.8
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "CHE-NNN.NNN.NNN (+ MWST/TVA/IVA)",
+      "pattern": "^CHE-?\\d{3}\\.?\\d{3}\\.?\\d{3}[ ]?(MWST|TVA|IVA)?$"
+    },
+    "CY": {
+      "country": "Cyprus",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Φόρος Προστιθέμενης Αξίας",
+      "vat_abbr": "ΦΠΑ",
+      "standard": 19.0,
+      "reduced": [
+        5.0,
+        9.0
+      ],
+      "super_reduced": 3.0,
+      "parking": null,
+      "format": "CY + 8 digits + 1 letter",
+      "pattern": "^CY\\d{8}[A-Z]$"
+    },
+    "CZ": {
+      "country": "Czech Republic",
+      "currency": "CZK",
+      "eu_member": true,
+      "vat_name": "Daň z přidané hodnoty",
+      "vat_abbr": "DPH",
+      "standard": 21.0,
+      "reduced": [
+        12.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "CZ + 8–10 digits",
+      "pattern": "^CZ\\d{8,10}$"
+    },
+    "DE": {
+      "country": "Germany",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Mehrwertsteuer",
+      "vat_abbr": "MwSt",
+      "standard": 19.0,
+      "reduced": [
+        7.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "DE + 9 digits",
+      "pattern": "^DE\\d{9}$"
+    },
+    "DK": {
+      "country": "Denmark",
+      "currency": "DKK",
+      "eu_member": true,
+      "vat_name": "Moms",
+      "vat_abbr": "moms",
+      "standard": 25.0,
+      "reduced": [],
+      "super_reduced": null,
+      "parking": null,
+      "format": "DK + 8 digits",
+      "pattern": "^DK\\d{8}$"
+    },
+    "EE": {
+      "country": "Estonia",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Käibemaks",
+      "vat_abbr": "km",
+      "standard": 24.0,
+      "reduced": [
+        9.0,
+        13.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "EE + 9 digits",
+      "pattern": "^EE\\d{9}$"
+    },
+    "ES": {
+      "country": "Spain",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Impuesto sobre el Valor Añadido",
+      "vat_abbr": "IVA",
+      "standard": 21.0,
+      "reduced": [
+        10.0
+      ],
+      "super_reduced": 4.0,
+      "parking": null,
+      "format": "ES + letter/digit + 7 digits + letter/digit",
+      "pattern": "^ES[A-Z0-9]\\d{7}[A-Z0-9]$"
+    },
+    "FI": {
+      "country": "Finland",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Arvonlisävero",
+      "vat_abbr": "ALV",
+      "standard": 25.5,
+      "reduced": [
+        10.0,
+        13.5
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "FI + 8 digits",
+      "pattern": "^FI\\d{8}$"
+    },
+    "FR": {
+      "country": "France",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Taxe sur la valeur ajoutée",
+      "vat_abbr": "TVA",
+      "standard": 20.0,
+      "reduced": [
+        0.9,
+        1.05,
+        5.5,
+        8.5,
+        10.0,
+        13.0
+      ],
+      "super_reduced": 2.1,
+      "parking": null,
+      "format": "FR + 2 alphanumeric + 9 digits",
+      "pattern": "^FR[A-HJ-NP-Z0-9]{2}\\d{9}$"
+    },
+    "GB": {
+      "country": "United Kingdom",
+      "currency": "GBP",
+      "eu_member": false,
+      "vat_name": "Value Added Tax",
+      "vat_abbr": "VAT",
+      "standard": 20.0,
+      "reduced": [
+        5.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "GB + 9 digits, 12 digits, or GD/HA + 3 digits",
+      "pattern": "^GB(\\d{9}|\\d{12}|GD\\d{3}|HA\\d{3})$"
+    },
+    "GE": {
+      "country": "Georgia",
+      "currency": "GEL",
+      "eu_member": false,
+      "vat_name": "დამატებული ღირებულების გადასახადი",
+      "vat_abbr": "დღგ",
+      "standard": 18.0,
+      "reduced": [],
+      "super_reduced": null,
+      "parking": null,
+      "format": "9 digits",
+      "pattern": "^\\d{9}$"
+    },
+    "GR": {
+      "country": "Greece",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Φόρος Προστιθέμενης Αξίας",
+      "vat_abbr": "ΦΠΑ",
+      "standard": 24.0,
+      "reduced": [
+        6.0,
+        13.0,
+        17.0
+      ],
+      "super_reduced": 4.0,
+      "parking": 13.0,
+      "format": "EL + 9 digits",
+      "pattern": "^EL\\d{9}$"
+    },
+    "HR": {
+      "country": "Croatia",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Porez na dodanu vrijednost",
+      "vat_abbr": "PDV",
+      "standard": 25.0,
+      "reduced": [
+        5.0,
+        13.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "HR + 11 digits",
+      "pattern": "^HR\\d{11}$"
+    },
+    "HU": {
+      "country": "Hungary",
+      "currency": "HUF",
+      "eu_member": true,
+      "vat_name": "Általános forgalmi adó",
+      "vat_abbr": "ÁFA",
+      "standard": 27.0,
+      "reduced": [
+        5.0,
+        18.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "HU + 8 digits",
+      "pattern": "^HU\\d{8}$"
+    },
+    "IE": {
+      "country": "Ireland",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Value Added Tax",
+      "vat_abbr": "VAT",
+      "standard": 23.0,
+      "reduced": [
+        9.0,
+        13.5
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "IE + 7 digits + 1–2 letters",
+      "pattern": "^IE\\d{7}[A-W][A-IW]?$|^IE\\d[A-Z+*]\\d{5}[A-W]$"
+    },
+    "IS": {
+      "country": "Iceland",
+      "currency": "ISK",
+      "eu_member": false,
+      "vat_name": "Virðisaukaskattur",
+      "vat_abbr": "VSK",
+      "standard": 24.0,
+      "reduced": [
+        11.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "5–6 digits",
+      "pattern": "^\\d{5,6}$"
+    },
+    "IT": {
+      "country": "Italy",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Imposta sul valore aggiunto",
+      "vat_abbr": "IVA",
+      "standard": 22.0,
+      "reduced": [
+        5.0,
+        10.0
+      ],
+      "super_reduced": 4.0,
+      "parking": null,
+      "format": "IT + 11 digits",
+      "pattern": "^IT\\d{11}$"
+    },
+    "LI": {
+      "country": "Liechtenstein",
+      "currency": "CHF",
+      "eu_member": false,
+      "vat_name": "Mehrwertsteuer",
+      "vat_abbr": "MWST",
+      "standard": 8.1,
+      "reduced": [
+        2.6,
+        3.8
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "5 digits",
+      "pattern": "^\\d{5}$"
+    },
+    "LT": {
+      "country": "Lithuania",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Pridėtinės vertės mokestis",
+      "vat_abbr": "PVM",
+      "standard": 21.0,
+      "reduced": [
+        5.0,
+        12.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "LT + 9 or 12 digits",
+      "pattern": "^LT(\\d{9}|\\d{12})$"
+    },
+    "LU": {
+      "country": "Luxembourg",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Taxe sur la valeur ajoutée",
+      "vat_abbr": "TVA",
+      "standard": 17.0,
+      "reduced": [
+        8.0,
+        14.0
+      ],
+      "super_reduced": 3.0,
+      "parking": 14.0,
+      "format": "LU + 8 digits",
+      "pattern": "^LU\\d{8}$"
+    },
+    "LV": {
+      "country": "Latvia",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Pievienotās vērtības nodoklis",
+      "vat_abbr": "PVN",
+      "standard": 21.0,
+      "reduced": [
+        5.0,
+        12.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "LV + 11 digits",
+      "pattern": "^LV\\d{11}$"
+    },
+    "MC": {
+      "country": "Monaco",
+      "currency": "EUR",
+      "eu_member": false,
+      "vat_name": "Taxe sur la valeur ajoutée",
+      "vat_abbr": "TVA",
+      "standard": 20.0,
+      "reduced": [
+        5.5,
+        10.0
+      ],
+      "super_reduced": 2.1,
+      "parking": null,
+      "format": "FR + 2 alphanumeric + 9 digits",
+      "pattern": "^FR[A-HJ-NP-Z0-9]{2}\\d{9}$"
+    },
+    "MD": {
+      "country": "Moldova",
+      "currency": "MDL",
+      "eu_member": false,
+      "vat_name": "Taxa pe valoarea adăugată",
+      "vat_abbr": "TVA",
+      "standard": 20.0,
+      "reduced": [
+        8.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "7 digits",
+      "pattern": "^\\d{7}$"
+    },
+    "ME": {
+      "country": "Montenegro",
+      "currency": "EUR",
+      "eu_member": false,
+      "vat_name": "Porez na dodatu vrijednost",
+      "vat_abbr": "PDV",
+      "standard": 21.0,
+      "reduced": [
+        7.0,
+        15.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "8 digits",
+      "pattern": "^\\d{8}$"
+    },
+    "MK": {
+      "country": "North Macedonia",
+      "currency": "MKD",
+      "eu_member": false,
+      "vat_name": "Данок на додадена вредност",
+      "vat_abbr": "ДДВ",
+      "standard": 18.0,
+      "reduced": [
+        5.0,
+        10.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "MK + 13 digits",
+      "pattern": "^MK\\d{13}$"
+    },
+    "MT": {
+      "country": "Malta",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Taxxa tal-Valur Miżjud",
+      "vat_abbr": "VAT",
+      "standard": 18.0,
+      "reduced": [
+        5.0,
+        7.0
+      ],
+      "super_reduced": null,
+      "parking": 12.0,
+      "format": "MT + 8 digits",
+      "pattern": "^MT\\d{8}$"
+    },
+    "NL": {
+      "country": "Netherlands",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Belasting over de toegevoegde waarde",
+      "vat_abbr": "btw",
+      "standard": 21.0,
+      "reduced": [
+        9.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "NL + 9 digits + B + 2 digits",
+      "pattern": "^NL\\d{9}B\\d{2}$"
+    },
+    "NO": {
+      "country": "Norway",
+      "currency": "NOK",
+      "eu_member": false,
+      "vat_name": "Merverdiavgift",
+      "vat_abbr": "MVA",
+      "standard": 25.0,
+      "reduced": [
+        12.0,
+        15.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "9 digits + MVA",
+      "pattern": "^\\d{9}MVA$"
+    },
+    "PL": {
+      "country": "Poland",
+      "currency": "PLN",
+      "eu_member": true,
+      "vat_name": "Podatek od towarów i usług",
+      "vat_abbr": "VAT",
+      "standard": 23.0,
+      "reduced": [
+        5.0,
+        8.0
+      ],
+      "super_reduced": 8.0,
+      "parking": null,
+      "format": "PL + 10 digits",
+      "pattern": "^PL\\d{10}$"
+    },
+    "PT": {
+      "country": "Portugal",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Imposto sobre o Valor Acrescentado",
+      "vat_abbr": "IVA",
+      "standard": 23.0,
+      "reduced": [
+        6.0,
+        13.0,
+        16.0,
+        22.0
+      ],
+      "super_reduced": 6.0,
+      "parking": 13.0,
+      "format": "PT + 9 digits",
+      "pattern": "^PT\\d{9}$"
+    },
+    "RO": {
+      "country": "Romania",
+      "currency": "RON",
+      "eu_member": true,
+      "vat_name": "Taxa pe valoarea adăugată",
+      "vat_abbr": "TVA",
+      "standard": 21.0,
+      "reduced": [
+        11.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "RO + 2–10 digits",
+      "pattern": "^RO\\d{2,10}$"
+    },
+    "RS": {
+      "country": "Serbia",
+      "currency": "RSD",
+      "eu_member": false,
+      "vat_name": "Porez na dodatu vrednost",
+      "vat_abbr": "PDV",
+      "standard": 20.0,
+      "reduced": [
+        10.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "9 digits",
+      "pattern": "^\\d{9}$"
+    },
+    "SE": {
+      "country": "Sweden",
+      "currency": "SEK",
+      "eu_member": true,
+      "vat_name": "Mervärdesskatt",
+      "vat_abbr": "moms",
+      "standard": 25.0,
+      "reduced": [
+        6.0,
+        12.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "SE + 10 digits + 01",
+      "pattern": "^SE\\d{10}01$"
+    },
+    "SI": {
+      "country": "Slovenia",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Davek na dodano vrednost",
+      "vat_abbr": "DDV",
+      "standard": 22.0,
+      "reduced": [
+        5.0,
+        9.5
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "SI + 8 digits",
+      "pattern": "^SI\\d{8}$"
+    },
+    "SK": {
+      "country": "Slovakia",
+      "currency": "EUR",
+      "eu_member": true,
+      "vat_name": "Daň z pridanej hodnoty",
+      "vat_abbr": "DPH",
+      "standard": 23.0,
+      "reduced": [
+        5.0,
+        19.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "SK + 10 digits",
+      "pattern": "^SK\\d{10}$"
+    },
+    "TR": {
+      "country": "Turkey",
+      "currency": "TRY",
+      "eu_member": false,
+      "vat_name": "Katma Değer Vergisi",
+      "vat_abbr": "KDV",
+      "standard": 20.0,
+      "reduced": [
+        1.0,
+        10.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "10 digits",
+      "pattern": "^\\d{10}$"
+    },
+    "UA": {
+      "country": "Ukraine",
+      "currency": "UAH",
+      "eu_member": false,
+      "vat_name": "Податок на додану вартість",
+      "vat_abbr": "ПДВ",
+      "standard": 20.0,
+      "reduced": [
+        7.0,
+        14.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "9 digits",
+      "pattern": "^\\d{9}$"
+    },
+    "XI": {
+      "country": "Northern Ireland",
+      "currency": "GBP",
+      "eu_member": false,
+      "vat_name": "Value Added Tax",
+      "vat_abbr": "VAT",
+      "standard": 20.0,
+      "reduced": [
+        5.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "XI + 9 digits, 12 digits, or GD/HA + 3 digits",
+      "pattern": "^XI(\\d{9}|\\d{12}|(GD|HA)\\d{3})$"
+    },
+    "XK": {
+      "country": "Kosovo",
+      "currency": "EUR",
+      "eu_member": false,
+      "vat_name": "Tatimi mbi Vlerën e Shtuar",
+      "vat_abbr": "TVSH",
+      "standard": 18.0,
+      "reduced": [
+        8.0
+      ],
+      "super_reduced": null,
+      "parking": null,
+      "format": "9 digits",
+      "pattern": "^\\d{9}$"
+    }
+  }
+}

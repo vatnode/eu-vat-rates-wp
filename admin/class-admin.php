@@ -14,7 +14,7 @@ class EUVATR_Admin {
     // and returned here, so one link serves both cases.
     const KEYS_URL = 'https://vatnode.dev/dashboard/api-keys?ref=woo-plugin';
 
-    const SETTINGS_SLUG = 'eu-vat-rates';
+    const SETTINGS_SLUG = 'euvatr-settings';
 
     public static function init(): void {
         add_action( 'admin_menu',                       [ __CLASS__, 'add_menu' ] );
@@ -128,7 +128,7 @@ class EUVATR_Admin {
     }
 
     public static function enqueue_assets( string $hook ): void {
-        if ( strpos( $hook, 'eu-vat-rates' ) === false ) {
+        if ( strpos( $hook, self::SETTINGS_SLUG ) === false ) {
             return;
         }
         wp_enqueue_style(

@@ -4,7 +4,7 @@ Tags: vat, vies, vat validation, reverse charge, woocommerce
 Requires at least: 6.3
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 WC requires at least: 8.0
 WC tested up to: 11.0
 License: GPL-2.0-or-later
@@ -55,15 +55,15 @@ If the check cannot be made — no key, quota spent, VIES down — the order sti
 
 = Data source =
 
-Rates come from the [European Commission TEDB](https://taxation-customs.ec.europa.eu/tedb/vatRates.html). The dataset is open source and also published on GitHub, npm, PyPI, Packagist and RubyGems.
+Rates come from the [European Commission TEDB](https://taxation-customs.ec.europa.eu/tedb/vatRates.html). The dataset is open source and also published on GitHub, npm, PyPI, Packagist and RubyGems. A full copy ships inside the plugin, so nothing has to be downloaded for it to work — the daily refresh exists because rates change by law between plugin releases.
 
 == External services ==
 
-This plugin relies on two external services.
+The plugin ships with a full copy of the rate dataset and works without contacting anything. Two external services are used on top of that.
 
-**1. eu-vat-rates-data (rate sync) — always on**
+**1. eu-vat-rates-data (rate refresh) — keeps the bundled rates current**
 
-The plugin downloads a JSON file of EU VAT rates from `https://raw.githubusercontent.com/vatnode/eu-vat-rates-data/main/data/eu-vat-rates-data.json`, hosted by GitHub. This happens on activation, once a day, and when you click "Sync now". The request sends no personal data: only your site URL as part of the user agent, which GitHub logs as it does for any file download.
+VAT rates are set by law and change during the life of a plugin release, so the plugin refreshes its bundled dataset from `https://raw.githubusercontent.com/vatnode/eu-vat-rates-data/main/data/eu-vat-rates-data.json`, hosted by GitHub. This happens once a day and when you click "Sync now". Nothing is downloaded during a page load or a checkout, and if the refresh fails the bundled dataset is used, so the store keeps working. The request sends no personal data: only your site URL as part of the user agent, which GitHub logs as it does for any file download.
 
 GitHub terms: https://docs.github.com/site-policy/github-terms/github-terms-of-service — privacy: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
 
@@ -140,6 +140,10 @@ Open a thread in the support forum for this plugin. Bugs and feature requests ar
 4. Order screen — VAT number, verification status and registered company name
 
 == Changelog ==
+
+= 1.1.3 =
+* The full EU VAT rate dataset now ships inside the plugin, so rates, country patterns and the settings screen work on a site with no outbound network access at all. The daily refresh only replaces it when a newer dataset is published
+* The settings page is now reached at a plugin-specific address under WooCommerce; the page itself is unchanged
 
 = 1.1.2 =
 * Fixed: Greek VAT numbers were rejected at checkout. Greece issues them under the EL prefix while the billing country is GR, and the two are now treated as one country — a Greek B2B checkout works, and a domestic Greek sale is no longer mistaken for a cross-border one

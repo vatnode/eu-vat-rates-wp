@@ -2,22 +2,25 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Fetches and caches EU VAT rates from the canonical data source.
+ * Serves the EU VAT rate dataset and refreshes it from the canonical source.
  *
- * Two layers on purpose. The transient is the hot cache; the option is the last
- * dataset that was known to be good. Rates and VAT-number patterns are read on
- * the checkout path, so a source that is briefly unreachable must not leave the
- * store with no data — a slightly stale rate table is always better than none.
+ * Three layers on purpose. The plugin ships with a full copy of the dataset, so
+ * it works with no network access at all; the option holds the last refreshed
+ * dataset that was known to be good; the transient is the hot cache. Rates and
+ * VAT-number patterns are read on the checkout path, so a source that is
+ * briefly unreachable must never leave the store with no data.
  */
 class EUVATR_Data {
 
     const SOURCE_URL   = 'https://raw.githubusercontent.com/vatnode/eu-vat-rates-data/main/data/eu-vat-rates-data.json';
+    const BUNDLED_FILE = 'data/eu-vat-rates-data.json';
     const TRANSIENT    = 'euvatr_rates';
     const OPTION_LAST_GOOD = 'euvatr_rates_last_good';
     const CACHE_HOURS  = 25; // slightly over 24h so daily cron always wins
 
     /**
-     * Returns the full rates array, fetching remotely if nothing is cached.
+     * Returns the full rates array. Never performs a blocking remote request:
+     * the bundled copy answers immediately and a refresh runs in the background.
      *
      * @return array{version: string, rates: array<string, array>}|null
      */
@@ -27,16 +30,45 @@ class EUVATR_Data {
             return $cached;
         }
 
-        // Stale hot cache but a known-good copy on disk: serve it and refresh in
-        // the background. A shopper's checkout request must never wait on
-        // GitHub.
-        $last_good = get_option( self::OPTION_LAST_GOOD, null );
-        if ( self::is_dataset( $last_good ) ) {
-            self::schedule_refresh();
-            return $last_good;
+        self::schedule_refresh();
+
+        return self::newest( get_option( self::OPTION_LAST_GOOD, null ), self::bundled() );
+    }
+
+    /**
+     * The copy shipped inside the plugin. This is what makes the plugin usable
+     * with no remote call whatsoever — a plugin update brings fresh rates too.
+     *
+     * @return array|null
+     */
+    public static function bundled(): ?array {
+        static $bundled = null;
+
+        if ( $bundled === null ) {
+            $decoded = wp_json_file_decode( EUVATR_DIR . self::BUNDLED_FILE, [ 'associative' => true ] );
+            $bundled = self::is_dataset( $decoded ) ? $decoded : false;
         }
 
-        return self::fetch();
+        return $bundled === false ? null : $bundled;
+    }
+
+    /**
+     * Picks whichever dataset carries the later version. Versions are ISO dates,
+     * so a string comparison is the right one.
+     *
+     * @param mixed $a
+     * @param mixed $b
+     * @return array|null
+     */
+    private static function newest( $a, $b ): ?array {
+        if ( ! self::is_dataset( $a ) ) {
+            return self::is_dataset( $b ) ? $b : null;
+        }
+        if ( ! self::is_dataset( $b ) ) {
+            return $a;
+        }
+
+        return (string) ( $b['version'] ?? '' ) > (string) ( $a['version'] ?? '' ) ? $b : $a;
     }
 
     /**
@@ -94,8 +126,7 @@ class EUVATR_Data {
      * @return array|null
      */
     private static function fallback(): ?array {
-        $last_good = get_option( self::OPTION_LAST_GOOD, null );
-        return self::is_dataset( $last_good ) ? $last_good : null;
+        return self::newest( get_option( self::OPTION_LAST_GOOD, null ), self::bundled() );
     }
 
     /**
