@@ -10,17 +10,17 @@ defined( 'ABSPATH' ) || exit;
  *   - Rates no longer in the dataset are left untouched (user may have
  *     custom rates; we only manage what we know about).
  */
-class EUVATR_Sync {
+class Vatnode_Sync {
 
-    const OPTION_LAST_SYNC    = 'euvatr_last_sync';
-    const OPTION_LAST_VERSION = 'euvatr_last_version';
-    const OPTION_LAST_ERROR   = 'euvatr_last_error';
+    const OPTION_LAST_SYNC    = 'vatnode_last_sync';
+    const OPTION_LAST_VERSION = 'vatnode_last_version';
+    const OPTION_LAST_ERROR   = 'vatnode_last_error';
 
     /**
      * Run a full sync. Returns true on success, false on failure.
      */
     public static function run(): bool {
-        $data = EUVATR_Data::fetch(); // always force a fresh fetch on explicit sync
+        $data = Vatnode_Data::fetch(); // always force a fresh fetch on explicit sync
 
         if ( $data === null ) {
             update_option( self::OPTION_LAST_ERROR, 'Could not fetch data from source.' );
@@ -54,7 +54,7 @@ class EUVATR_Sync {
             // does not charge Norwegian or Swiss VAT to a buyer there — that is
             // an export, and writing those rates would make WooCommerce add tax
             // that is not owed.
-            if ( ! EUVATR_Format::is_vies_eligible( $country_code ) ) {
+            if ( ! Vatnode_Format::is_vies_eligible( $country_code ) ) {
                 continue;
             }
 
@@ -133,7 +133,7 @@ class EUVATR_Sync {
         );
 
         foreach ( $managed as $rate ) {
-            if ( EUVATR_Format::is_vies_eligible( (string) $rate->tax_rate_country ) ) {
+            if ( Vatnode_Format::is_vies_eligible( (string) $rate->tax_rate_country ) ) {
                 continue;
             }
             $wpdb->delete( $rates_table, [ 'tax_rate_id' => (int) $rate->tax_rate_id ], [ '%d' ] );

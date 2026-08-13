@@ -1,4 +1,4 @@
-=== EU VAT Validation and Reverse Charge for WooCommerce - vatnode ===
+=== EU VAT Validation and Reverse Charge - vatnode ===
 Contributors: iuriirogulia
 Tags: vat, vies, vat validation, reverse charge, woocommerce
 Requires at least: 6.3
@@ -143,7 +143,7 @@ Open a thread in the support forum for this plugin. Bugs and feature requests ar
 
 = 1.1.3 =
 * The full EU VAT rate dataset now ships inside the plugin, so rates, country patterns and the settings screen work on a site with no outbound network access at all. The daily refresh only replaces it when a newer dataset is published
-* The settings page is now reached at a plugin-specific address under WooCommerce; the page itself is unchanged
+* Internal names — options, hooks, classes, script handles and the settings page address — now all carry the vatnode prefix, so nothing can collide with another plugin. Existing settings, including a saved API key, are carried over automatically
 
 = 1.1.2 =
 * Fixed: Greek VAT numbers were rejected at checkout. Greece issues them under the EL prefix while the billing country is GR, and the two are now treated as one country — a Greek B2B checkout works, and a domestic Greek sale is no longer mistaken for a cross-border one

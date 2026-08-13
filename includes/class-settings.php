@@ -7,13 +7,13 @@ defined( 'ABSPATH' ) || exit;
  * Rates sync works with no configuration at all. VAT number validation is
  * opt-in and needs a vatnode API key.
  */
-class EUVATR_Settings {
+class Vatnode_Settings {
 
-    const OPTION_API_KEY    = 'euvatr_api_key';
-    const OPTION_VALIDATION = 'euvatr_validation_enabled';
-    const OPTION_FIELD_REQ  = 'euvatr_field_required';
-    const OPTION_KEY_STATUS = 'euvatr_key_status';
-    const OPTION_OSS        = 'euvatr_oss_registered';
+    const OPTION_API_KEY    = 'vatnode_api_key';
+    const OPTION_VALIDATION = 'vatnode_validation_enabled';
+    const OPTION_FIELD_REQ  = 'vatnode_field_required';
+    const OPTION_KEY_STATUS = 'vatnode_key_status';
+    const OPTION_OSS        = 'vatnode_oss_registered';
 
     public static function api_key(): string {
         return trim( (string) get_option( self::OPTION_API_KEY, '' ) );

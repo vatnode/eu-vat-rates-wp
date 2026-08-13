@@ -4,13 +4,13 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Manages the daily WP-Cron event.
  */
-class EUVATR_Scheduler {
+class Vatnode_Scheduler {
 
-    const HOOK     = 'euvatr_do_sync';
+    const HOOK     = 'vatnode_do_sync';
     const INTERVAL = 'daily';
 
     public static function init(): void {
-        add_action( self::HOOK, [ EUVATR_Sync::class, 'run' ] );
+        add_action( self::HOOK, [ Vatnode_Sync::class, 'run' ] );
     }
 
     public static function schedule(): void {

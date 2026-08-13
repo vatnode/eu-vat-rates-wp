@@ -10,10 +10,10 @@ defined( 'ABSPATH' ) || exit;
  * quota request, and every later checkout refresh — up to and including the
  * order itself — reuses that same answer and its consultation number.
  */
-class EUVATR_Api {
+class Vatnode_Api {
 
     const BASE_URL        = 'https://api.vatnode.dev';
-    const CACHE_PREFIX    = 'euvatr_vies_';
+    const CACHE_PREFIX    = 'vatnode_vies_';
     const CACHE_HOURS     = 24;
     const TIMEOUT_SECONDS = 8;
 
@@ -27,9 +27,9 @@ class EUVATR_Api {
      * @return array{ok: bool, valid: bool|null, data: array<string, mixed>|null, error_code: string, message: string, from_cache: bool}
      */
     public static function validate( string $vat_id, bool $use_cache = true ): array {
-        $normalized = EUVATR_Format::normalize( $vat_id );
+        $normalized = Vatnode_Format::normalize( $vat_id );
 
-        if ( ! EUVATR_Settings::has_api_key() ) {
+        if ( ! Vatnode_Settings::has_api_key() ) {
             return self::failure( 'NO_API_KEY', __( 'No vatnode API key configured.', 'vatnode-eu-vat-rates' ) );
         }
 
@@ -49,14 +49,14 @@ class EUVATR_Api {
                 'timeout'    => self::TIMEOUT_SECONDS,
                 'user-agent' => self::user_agent(),
                 'headers'    => [
-                    'Authorization' => 'Bearer ' . EUVATR_Settings::api_key(),
+                    'Authorization' => 'Bearer ' . Vatnode_Settings::api_key(),
                     'Accept'        => 'application/json',
                 ],
             ]
         );
 
         if ( is_wp_error( $response ) ) {
-            EUVATR_Settings::set_key_status( 'unreachable', $response->get_error_message() );
+            Vatnode_Settings::set_key_status( 'unreachable', $response->get_error_message() );
             return self::failure( 'TRANSPORT_ERROR', $response->get_error_message() );
         }
 
@@ -65,7 +65,7 @@ class EUVATR_Api {
         $body   = is_array( $body ) ? $body : [];
 
         if ( $status === 200 && isset( $body['valid'] ) ) {
-            EUVATR_Settings::set_key_status( 'active' );
+            Vatnode_Settings::set_key_status( 'active' );
             $result = [
                 'ok'         => true,
                 'valid'      => (bool) $body['valid'],
@@ -88,18 +88,18 @@ class EUVATR_Api {
         // A malformed VAT number says nothing about the key or the upstream, and
         // it is a stable verdict — cache it so a repeated typo costs nothing.
         if ( $code === 'INVALID_FORMAT' ) {
-            EUVATR_Settings::set_key_status( 'active' );
+            Vatnode_Settings::set_key_status( 'active' );
             $result = self::failure( $code, $message );
             set_transient( $cache_key, $result, HOUR_IN_SECONDS * self::CACHE_HOURS );
             return $result;
         }
 
         if ( in_array( $status, [ 401, 403 ], true ) ) {
-            EUVATR_Settings::set_key_status( 'invalid', $message );
+            Vatnode_Settings::set_key_status( 'invalid', $message );
         } elseif ( $status === 429 ) {
-            EUVATR_Settings::set_key_status( 'quota_exceeded', $message );
+            Vatnode_Settings::set_key_status( 'quota_exceeded', $message );
         } else {
-            EUVATR_Settings::set_key_status( 'error', $message );
+            Vatnode_Settings::set_key_status( 'error', $message );
         }
 
         return self::failure( $code, $message );
@@ -115,14 +115,14 @@ class EUVATR_Api {
      * @return array{ok: bool, message: string}
      */
     public static function test_key(): array {
-        if ( ! EUVATR_Settings::has_api_key() ) {
+        if ( ! Vatnode_Settings::has_api_key() ) {
             return [ 'ok' => false, 'message' => __( 'Enter an API key first.', 'vatnode-eu-vat-rates' ) ];
         }
 
         $result = self::validate( 'XX0000001', false );
 
         if ( $result['ok'] || $result['error_code'] === 'INVALID_FORMAT' ) {
-            EUVATR_Settings::set_key_status( 'active' );
+            Vatnode_Settings::set_key_status( 'active' );
             return [ 'ok' => true, 'message' => __( 'API key accepted by vatnode.', 'vatnode-eu-vat-rates' ) ];
         }
 
@@ -134,11 +134,11 @@ class EUVATR_Api {
     }
 
     private static function base_url(): string {
-        return untrailingslashit( (string) apply_filters( 'euvatr_api_base_url', self::BASE_URL ) );
+        return untrailingslashit( (string) apply_filters( 'vatnode_api_base_url', self::BASE_URL ) );
     }
 
     private static function user_agent(): string {
-        return 'vatnode-woo/' . EUVATR_VERSION . ' (+https://vatnode.dev)';
+        return 'vatnode-woo/' . VATNODE_VERSION . ' (+https://vatnode.dev)';
     }
 
     /**

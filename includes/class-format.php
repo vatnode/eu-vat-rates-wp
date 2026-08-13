@@ -6,9 +6,9 @@ defined( 'ABSPATH' ) || exit;
  *
  * Uses the country patterns shipped in the same dataset that drives the rate
  * sync — no network call, no API key, no quota. A valid format says nothing
- * about whether the VAT is real; that is what EUVATR_Api is for.
+ * about whether the VAT is real; that is what Vatnode_Api is for.
  */
-class EUVATR_Format {
+class Vatnode_Format {
 
     /**
      * Jurisdictions VIES validates that the dataset does not flag as EU
@@ -81,7 +81,7 @@ class EUVATR_Format {
      * offline without it, and "no data" must not read as "invalid number".
      */
     public static function has_data(): bool {
-        $data = EUVATR_Data::get();
+        $data = Vatnode_Data::get();
         return is_array( $data ) && ! empty( $data['rates'] );
     }
 
@@ -89,7 +89,7 @@ class EUVATR_Format {
      * @return array<string, mixed>|null
      */
     private static function country( string $country_code ): ?array {
-        $data = EUVATR_Data::get();
+        $data = Vatnode_Data::get();
         if ( ! is_array( $data ) || empty( $data['rates'] ) ) {
             return null;
         }

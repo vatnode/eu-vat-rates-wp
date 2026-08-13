@@ -8,26 +8,26 @@ defined( 'ABSPATH' ) || exit;
  * once at checkout and never recalculated — an order must keep the answer that
  * was true when it was placed.
  */
-class EUVATR_Order {
+class Vatnode_Order {
 
-    const META_VAT_NUMBER   = '_euvatr_vat_number';
-    const META_STATUS       = '_euvatr_vat_status';
-    const META_COUNTRY      = '_euvatr_vat_country';
-    const META_COMPANY      = '_euvatr_company_name';
-    const META_CONSULTATION = '_euvatr_consultation_number';
-    const META_SOURCE       = '_euvatr_source';
-    const META_CHECKED_AT   = '_euvatr_checked_at';
-    const META_REVERSE      = '_euvatr_reverse_charge';
+    const META_VAT_NUMBER   = '_vatnode_vat_number';
+    const META_STATUS       = '_vatnode_vat_status';
+    const META_COUNTRY      = '_vatnode_vat_country';
+    const META_COMPANY      = '_vatnode_company_name';
+    const META_CONSULTATION = '_vatnode_consultation_number';
+    const META_SOURCE       = '_vatnode_source';
+    const META_CHECKED_AT   = '_vatnode_checked_at';
+    const META_REVERSE      = '_vatnode_reverse_charge';
 
     public static function init(): void {
         add_action( 'woocommerce_admin_order_data_after_billing_address', [ __CLASS__, 'render_admin_panel' ] );
     }
 
     /**
-     * @param array<string, mixed> $evaluation Result of EUVATR_Validator::evaluate().
+     * @param array<string, mixed> $evaluation Result of Vatnode_Validator::evaluate().
      */
     public static function save( WC_Order $order, array $evaluation ): void {
-        if ( $evaluation['status'] === EUVATR_Validator::STATUS_EMPTY ) {
+        if ( $evaluation['status'] === Vatnode_Validator::STATUS_EMPTY ) {
             return;
         }
 
@@ -53,7 +53,7 @@ class EUVATR_Order {
             /* translators: 1: VAT number, 2: status label */
             __( 'VAT number %1$s — %2$s', 'vatnode-eu-vat-rates' ),
             $evaluation['vat_number'],
-            EUVATR_Validator::status_label( $evaluation['status'] )
+            Vatnode_Validator::status_label( $evaluation['status'] )
         ) );
     }
 
@@ -69,9 +69,9 @@ class EUVATR_Order {
         $checked_at   = (string) $order->get_meta( self::META_CHECKED_AT );
         $reverse      = $order->get_meta( self::META_REVERSE ) === 'yes';
 
-        echo '<div class="euvatr-order-panel"><h3>' . esc_html__( 'EU VAT', 'vatnode-eu-vat-rates' ) . '</h3><p>';
+        echo '<div class="vatnode-order-panel"><h3>' . esc_html__( 'EU VAT', 'vatnode-eu-vat-rates' ) . '</h3><p>';
         echo '<strong>' . esc_html__( 'VAT number:', 'vatnode-eu-vat-rates' ) . '</strong> <code>' . esc_html( $vat_number ) . '</code><br>';
-        echo '<strong>' . esc_html__( 'Status:', 'vatnode-eu-vat-rates' ) . '</strong> ' . esc_html( EUVATR_Validator::status_label( $status ) ) . '<br>';
+        echo '<strong>' . esc_html__( 'Status:', 'vatnode-eu-vat-rates' ) . '</strong> ' . esc_html( Vatnode_Validator::status_label( $status ) ) . '<br>';
         echo '<strong>' . esc_html__( 'Reverse charge:', 'vatnode-eu-vat-rates' ) . '</strong> ' . ( $reverse ? esc_html__( 'Applied', 'vatnode-eu-vat-rates' ) : esc_html__( 'Not applied', 'vatnode-eu-vat-rates' ) ) . '<br>';
 
         if ( $company !== '' ) {

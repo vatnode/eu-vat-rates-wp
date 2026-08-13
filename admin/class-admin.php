@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Admin settings page under WooCommerce → EU VAT Rates.
  */
-class EUVATR_Admin {
+class Vatnode_Admin {
 
     // For a merchant with no key yet: the page that explains what the key
     // unlocks and what it costs.
@@ -14,17 +14,17 @@ class EUVATR_Admin {
     // and returned here, so one link serves both cases.
     const KEYS_URL = 'https://vatnode.dev/dashboard/api-keys?ref=woo-plugin';
 
-    const SETTINGS_SLUG = 'euvatr-settings';
+    const SETTINGS_SLUG = 'vatnode-settings';
 
     public static function init(): void {
         add_action( 'admin_menu',                       [ __CLASS__, 'add_menu' ] );
-        add_action( 'admin_post_euvatr_sync',           [ __CLASS__, 'handle_manual_sync' ] );
-        add_action( 'admin_post_euvatr_save_settings',  [ __CLASS__, 'handle_save_settings' ] );
-        add_action( 'admin_post_euvatr_test_key',       [ __CLASS__, 'handle_test_key' ] );
+        add_action( 'admin_post_vatnode_sync',           [ __CLASS__, 'handle_manual_sync' ] );
+        add_action( 'admin_post_vatnode_save_settings',  [ __CLASS__, 'handle_save_settings' ] );
+        add_action( 'admin_post_vatnode_test_key',       [ __CLASS__, 'handle_test_key' ] );
         add_action( 'admin_enqueue_scripts',            [ __CLASS__, 'enqueue_assets' ] );
 
         add_filter(
-            'plugin_action_links_' . plugin_basename( EUVATR_FILE ),
+            'plugin_action_links_' . plugin_basename( VATNODE_FILE ),
             [ __CLASS__, 'add_action_links' ]
         );
     }
@@ -53,7 +53,7 @@ class EUVATR_Admin {
                 . esc_html__( 'Settings', 'vatnode-eu-vat-rates' ) . '</a>',
         ];
 
-        if ( ! EUVATR_Settings::has_api_key() ) {
+        if ( ! Vatnode_Settings::has_api_key() ) {
             $own[] = '<a href="' . esc_url( self::SIGNUP_URL ) . '" target="_blank" rel="noopener noreferrer">'
                 . esc_html__( 'Get an API key', 'vatnode-eu-vat-rates' ) . '</a>';
         }
@@ -66,15 +66,15 @@ class EUVATR_Admin {
     }
 
     public static function handle_manual_sync(): void {
-        self::guard( 'euvatr_sync' );
+        self::guard( 'vatnode_sync' );
 
-        $success = EUVATR_Sync::run();
+        $success = Vatnode_Sync::run();
 
         self::redirect( [ 'synced' => $success ? 'success' : 'error' ] );
     }
 
     public static function handle_save_settings(): void {
-        self::guard( 'euvatr_save_settings' );
+        self::guard( 'vatnode_save_settings' );
 
         // phpcs:disable WordPress.Security.NonceVerification.Missing -- verified in guard().
         $remove_key = isset( $_POST['remove_key'] );
@@ -87,24 +87,24 @@ class EUVATR_Admin {
         // phpcs:enable WordPress.Security.NonceVerification.Missing
 
         if ( $remove_key ) {
-            delete_option( EUVATR_Settings::OPTION_API_KEY );
-            delete_option( EUVATR_Settings::OPTION_KEY_STATUS );
+            delete_option( Vatnode_Settings::OPTION_API_KEY );
+            delete_option( Vatnode_Settings::OPTION_KEY_STATUS );
         } elseif ( $key !== '' ) {
             // An empty box means "leave the stored key alone", not "delete it" —
             // the field never renders the real key back to the browser.
-            update_option( EUVATR_Settings::OPTION_API_KEY, $key );
-            EUVATR_Settings::set_key_status( 'unknown' );
+            update_option( Vatnode_Settings::OPTION_API_KEY, $key );
+            Vatnode_Settings::set_key_status( 'unknown' );
         }
 
-        update_option( EUVATR_Settings::OPTION_VALIDATION, $validation );
-        update_option( EUVATR_Settings::OPTION_FIELD_REQ, $required );
-        update_option( EUVATR_Settings::OPTION_OSS, $oss );
+        update_option( Vatnode_Settings::OPTION_VALIDATION, $validation );
+        update_option( Vatnode_Settings::OPTION_FIELD_REQ, $required );
+        update_option( Vatnode_Settings::OPTION_OSS, $oss );
 
         // Check a freshly pasted key straight away. A merchant who mistyped it
         // should find out here, not from the first B2B order that quietly
         // charged VAT it did not need to.
         if ( ! $remove_key && $key !== '' ) {
-            $test = EUVATR_Api::test_key();
+            $test = Vatnode_Api::test_key();
 
             self::redirect( [
                 'saved'   => '1',
@@ -117,9 +117,9 @@ class EUVATR_Admin {
     }
 
     public static function handle_test_key(): void {
-        self::guard( 'euvatr_test_key' );
+        self::guard( 'vatnode_test_key' );
 
-        $result = EUVATR_Api::test_key();
+        $result = Vatnode_Api::test_key();
 
         self::redirect( [
             'tested'  => $result['ok'] ? 'success' : 'error',
@@ -132,27 +132,27 @@ class EUVATR_Admin {
             return;
         }
         wp_enqueue_style(
-            'euvatr-admin',
-            EUVATR_URL . 'assets/admin.css',
+            'vatnode-admin',
+            VATNODE_URL . 'assets/admin.css',
             [],
-            EUVATR_VERSION
+            VATNODE_VERSION
         );
     }
 
     public static function render_page(): void {
-        $data       = EUVATR_Data::get();
-        $last_sync  = EUVATR_Sync::last_sync_display();
-        $last_ver   = EUVATR_Sync::last_version();
-        $last_err   = EUVATR_Sync::last_error();
-        $next_run   = EUVATR_Scheduler::next_run();
-        $has_key    = EUVATR_Settings::has_api_key();
-        $masked_key = EUVATR_Settings::masked_key();
-        $validation = EUVATR_Settings::is_validation_active();
-        $enabled    = EUVATR_Settings::is_validation_enabled();
-        $required   = EUVATR_Settings::is_field_required();
-        $oss        = EUVATR_Settings::is_oss_registered();
-        $store      = EUVATR_Validator::store_country();
-        $key_status = EUVATR_Settings::key_status();
+        $data       = Vatnode_Data::get();
+        $last_sync  = Vatnode_Sync::last_sync_display();
+        $last_ver   = Vatnode_Sync::last_version();
+        $last_err   = Vatnode_Sync::last_error();
+        $next_run   = Vatnode_Scheduler::next_run();
+        $has_key    = Vatnode_Settings::has_api_key();
+        $masked_key = Vatnode_Settings::masked_key();
+        $validation = Vatnode_Settings::is_validation_active();
+        $enabled    = Vatnode_Settings::is_validation_enabled();
+        $required   = Vatnode_Settings::is_field_required();
+        $oss        = Vatnode_Settings::is_oss_registered();
+        $store      = Vatnode_Validator::store_country();
+        $key_status = Vatnode_Settings::key_status();
         $signup_url = self::SIGNUP_URL;
         $keys_url   = self::KEYS_URL;
 
@@ -163,7 +163,7 @@ class EUVATR_Admin {
         $message = isset( $_GET['message'] ) ? sanitize_text_field( wp_unslash( $_GET['message'] ) ) : '';
         // phpcs:enable WordPress.Security.NonceVerification.Recommended
 
-        require EUVATR_DIR . 'admin/views/page-settings.php';
+        require VATNODE_DIR . 'admin/views/page-settings.php';
     }
 
     private static function guard( string $nonce_action ): void {

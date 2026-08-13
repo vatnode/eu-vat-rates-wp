@@ -1,6 +1,6 @@
 <?php defined( 'ABSPATH' ) || exit; ?>
 
-<div class="wrap euvatr-wrap">
+<div class="wrap vatnode-wrap">
     <h1><?php esc_html_e( 'EU VAT Rates and VIES Validation', 'vatnode-eu-vat-rates' ); ?></h1>
 
     <?php if ( $synced === 'success' ) : ?>
@@ -35,9 +35,9 @@
     <?php endif; ?>
 
     <?php if ( ! $has_key ) : ?>
-    <div class="euvatr-upgrade-banner">
-        <div class="euvatr-upgrade-banner__icon">&#9889;</div>
-        <div class="euvatr-upgrade-banner__body">
+    <div class="vatnode-upgrade-banner">
+        <div class="vatnode-upgrade-banner__icon">&#9889;</div>
+        <div class="vatnode-upgrade-banner__body">
             <strong><?php esc_html_e( 'Sell to EU businesses without VAT', 'vatnode-eu-vat-rates' ); ?></strong>
             <p>
                 <?php esc_html_e( 'Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order.', 'vatnode-eu-vat-rates' ); ?>
@@ -53,29 +53,29 @@
                 ?>
             </p>
         </div>
-        <a href="<?php echo esc_url( $signup_url ); ?>" target="_blank" rel="noopener noreferrer" class="button button-primary euvatr-upgrade-banner__cta">
+        <a href="<?php echo esc_url( $signup_url ); ?>" target="_blank" rel="noopener noreferrer" class="button button-primary vatnode-upgrade-banner__cta">
             <?php esc_html_e( 'Get an API Key', 'vatnode-eu-vat-rates' ); ?>
         </a>
     </div>
     <?php endif; ?>
 
     <!-- VAT number validation -->
-    <div class="euvatr-card">
+    <div class="vatnode-card">
         <h2><?php esc_html_e( 'VAT number validation', 'vatnode-eu-vat-rates' ); ?></h2>
 
         <form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
-            <input type="hidden" name="action" value="euvatr_save_settings">
-            <?php wp_nonce_field( 'euvatr_save_settings' ); ?>
+            <input type="hidden" name="action" value="vatnode_save_settings">
+            <?php wp_nonce_field( 'vatnode_save_settings' ); ?>
 
             <table class="form-table" role="presentation">
                 <tr>
                     <th scope="row">
-                        <label for="euvatr-api-key"><?php esc_html_e( 'vatnode API key', 'vatnode-eu-vat-rates' ); ?></label>
+                        <label for="vatnode-api-key"><?php esc_html_e( 'vatnode API key', 'vatnode-eu-vat-rates' ); ?></label>
                     </th>
                     <td>
                         <input
                             type="password"
-                            id="euvatr-api-key"
+                            id="vatnode-api-key"
                             name="api_key"
                             class="regular-text"
                             autocomplete="off"
@@ -98,7 +98,7 @@
                             <p>
                                 <strong><?php esc_html_e( 'Key status:', 'vatnode-eu-vat-rates' ); ?></strong>
                                 <?php
-                                $euvatr_states = [
+                                $vatnode_states = [
                                     'active'         => __( 'Working', 'vatnode-eu-vat-rates' ),
                                     'invalid'        => __( 'Rejected by vatnode', 'vatnode-eu-vat-rates' ),
                                     'quota_exceeded' => __( 'Monthly quota exceeded', 'vatnode-eu-vat-rates' ),
@@ -106,7 +106,7 @@
                                     'error'          => __( 'Last call failed', 'vatnode-eu-vat-rates' ),
                                     'unknown'        => __( 'Not checked yet', 'vatnode-eu-vat-rates' ),
                                 ];
-                                echo esc_html( $euvatr_states[ $key_status['state'] ] ?? $key_status['state'] );
+                                echo esc_html( $vatnode_states[ $key_status['state'] ] ?? $key_status['state'] );
                                 ?>
                                 <?php if ( $key_status['message'] !== '' ) : ?>
                                     — <code><?php echo esc_html( $key_status['message'] ); ?></code>
@@ -165,26 +165,26 @@
 
         <?php if ( $has_key ) : ?>
             <form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" style="margin-top:12px">
-                <input type="hidden" name="action" value="euvatr_test_key">
-                <?php wp_nonce_field( 'euvatr_test_key' ); ?>
+                <input type="hidden" name="action" value="vatnode_test_key">
+                <?php wp_nonce_field( 'vatnode_test_key' ); ?>
                 <?php submit_button( __( 'Test Key', 'vatnode-eu-vat-rates' ), 'secondary', 'submit', false ); ?>
             </form>
         <?php endif; ?>
 
         <?php if ( $validation ) : ?>
-            <p class="euvatr-status-active" style="margin-top:12px">
+            <p class="vatnode-status-active" style="margin-top:12px">
                 &#10003; <?php esc_html_e( 'Reverse charge is active for verified EU business buyers outside your country.', 'vatnode-eu-vat-rates' ); ?>
             </p>
         <?php endif; ?>
     </div>
 
     <!-- Sync status -->
-    <div class="euvatr-card">
+    <div class="vatnode-card">
         <h2><?php esc_html_e( 'Rate sync', 'vatnode-eu-vat-rates' ); ?></h2>
-        <table class="euvatr-status-table">
+        <table class="vatnode-status-table">
             <tr>
                 <th><?php esc_html_e( 'Auto-sync', 'vatnode-eu-vat-rates' ); ?></th>
-                <td><span class="euvatr-status-active">&#10003; <?php esc_html_e( 'Active — daily', 'vatnode-eu-vat-rates' ); ?></span></td>
+                <td><span class="vatnode-status-active">&#10003; <?php esc_html_e( 'Active — daily', 'vatnode-eu-vat-rates' ); ?></span></td>
             </tr>
             <tr>
                 <th><?php esc_html_e( 'Last sync', 'vatnode-eu-vat-rates' ); ?></th>
@@ -208,15 +208,15 @@
         </table>
 
         <form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" style="margin-top:16px">
-            <input type="hidden" name="action" value="euvatr_sync">
-            <?php wp_nonce_field( 'euvatr_sync' ); ?>
+            <input type="hidden" name="action" value="vatnode_sync">
+            <?php wp_nonce_field( 'vatnode_sync' ); ?>
             <?php submit_button( __( 'Sync Now', 'vatnode-eu-vat-rates' ), 'secondary', 'submit', false ); ?>
         </form>
     </div>
 
     <!-- Rates table -->
     <?php if ( $data && ! empty( $data['rates'] ) ) : ?>
-    <div class="euvatr-card">
+    <div class="vatnode-card">
         <h2>
             <?php
             printf(
@@ -226,7 +226,7 @@
             );
             ?>
         </h2>
-        <table class="wp-list-table widefat fixed striped euvatr-rates-table">
+        <table class="wp-list-table widefat fixed striped vatnode-rates-table">
             <thead>
                 <tr>
                     <th><?php esc_html_e( 'Country', 'vatnode-eu-vat-rates' ); ?></th>
@@ -238,20 +238,20 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ( $data['rates'] as $euvatr_code => $euvatr_country ) : ?>
+                <?php foreach ( $data['rates'] as $vatnode_code => $vatnode_country ) : ?>
                 <tr>
-                    <td><?php echo esc_html( $euvatr_country['country'] ); ?></td>
-                    <td><code><?php echo esc_html( $euvatr_code ); ?></code></td>
-                    <td><?php echo esc_html( $euvatr_country['standard'] . '%' ); ?></td>
+                    <td><?php echo esc_html( $vatnode_country['country'] ); ?></td>
+                    <td><code><?php echo esc_html( $vatnode_code ); ?></code></td>
+                    <td><?php echo esc_html( $vatnode_country['standard'] . '%' ); ?></td>
                     <td>
-                        <?php if ( ! empty( $euvatr_country['reduced'] ) ) : ?>
-                            <?php echo esc_html( implode( ', ', array_map( fn( $euvatr_rate ) => $euvatr_rate . '%', $euvatr_country['reduced'] ) ) ); ?>
+                        <?php if ( ! empty( $vatnode_country['reduced'] ) ) : ?>
+                            <?php echo esc_html( implode( ', ', array_map( fn( $vatnode_rate ) => $vatnode_rate . '%', $vatnode_country['reduced'] ) ) ); ?>
                         <?php else : ?>
                             —
                         <?php endif; ?>
                     </td>
-                    <td><?php echo isset( $euvatr_country['super_reduced'] ) ? esc_html( $euvatr_country['super_reduced'] . '%' ) : '—'; ?></td>
-                    <td><?php echo isset( $euvatr_country['parking'] ) ? esc_html( $euvatr_country['parking'] . '%' ) : '—'; ?></td>
+                    <td><?php echo isset( $vatnode_country['super_reduced'] ) ? esc_html( $vatnode_country['super_reduced'] . '%' ) : '—'; ?></td>
+                    <td><?php echo isset( $vatnode_country['parking'] ) ? esc_html( $vatnode_country['parking'] . '%' ) : '—'; ?></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
  * number — is reused from the local 24-hour cache for the rest of the checkout,
  * so one number costs one request no matter how often the totals refresh.
  */
-class EUVATR_Validator {
+class Vatnode_Validator {
 
     // Reverse charge applies.
     const STATUS_VALID = 'valid';
@@ -47,8 +47,8 @@ class EUVATR_Validator {
      * }
      */
     public static function evaluate( string $vat_id, string $billing_country ): array {
-        $billing_country = EUVATR_Format::iso_code( trim( $billing_country ) );
-        $format          = EUVATR_Format::check( $vat_id );
+        $billing_country = Vatnode_Format::iso_code( trim( $billing_country ) );
+        $format          = Vatnode_Format::check( $vat_id );
         $vat_number      = $format['normalized'];
 
         if ( $vat_number === '' ) {
@@ -71,7 +71,7 @@ class EUVATR_Validator {
 
         $store_country = self::store_country();
 
-        if ( ! EUVATR_Format::is_vies_eligible( $store_country ) ) {
+        if ( ! Vatnode_Format::is_vies_eligible( $store_country ) ) {
             return self::result(
                 self::STATUS_NOT_ELIGIBLE,
                 false,
@@ -111,7 +111,7 @@ class EUVATR_Validator {
             );
         }
 
-        if ( $vat_country === EUVATR_Format::iso_code( $store_country ) ) {
+        if ( $vat_country === Vatnode_Format::iso_code( $store_country ) ) {
             return self::result(
                 self::STATUS_DOMESTIC,
                 false,
@@ -122,7 +122,7 @@ class EUVATR_Validator {
             );
         }
 
-        if ( ! EUVATR_Settings::is_validation_active() ) {
+        if ( ! Vatnode_Settings::is_validation_active() ) {
             return self::result(
                 self::STATUS_UNVERIFIED,
                 false,
@@ -133,7 +133,7 @@ class EUVATR_Validator {
             );
         }
 
-        $response = EUVATR_Api::validate( $vat_number );
+        $response = Vatnode_Api::validate( $vat_number );
 
         if ( ! $response['ok'] ) {
             if ( $response['error_code'] === 'INVALID_FORMAT' ) {

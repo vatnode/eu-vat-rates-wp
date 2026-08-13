@@ -6,9 +6,9 @@ defined( 'ABSPATH' ) || exit;
  *
  * The Additional Checkout Fields API covers the block checkout only, so the
  * classic form is wired up separately here. Both paths funnel into
- * EUVATR_Validator, so the rules can never drift apart.
+ * Vatnode_Validator, so the rules can never drift apart.
  */
-class EUVATR_Checkout_Classic {
+class Vatnode_Checkout_Classic {
 
     const FIELD_KEY = 'billing_vat_number';
 
@@ -27,10 +27,10 @@ class EUVATR_Checkout_Classic {
             return;
         }
         wp_enqueue_script(
-            'euvatr-checkout',
-            EUVATR_URL . 'assets/checkout.js',
+            'vatnode-checkout',
+            VATNODE_URL . 'assets/checkout.js',
             [ 'jquery' ],
-            EUVATR_VERSION,
+            VATNODE_VERSION,
             true
         );
     }
@@ -61,12 +61,12 @@ class EUVATR_Checkout_Classic {
         $posted = [];
         parse_str( $post_data, $posted );
 
-        $evaluation = EUVATR_Validator::evaluate(
+        $evaluation = Vatnode_Validator::evaluate(
             (string) ( $posted[ self::FIELD_KEY ] ?? '' ),
             (string) ( $posted['billing_country'] ?? '' )
         );
 
-        EUVATR_Validator::apply_exemption( $evaluation['exempt'] );
+        Vatnode_Validator::apply_exemption( $evaluation['exempt'] );
     }
 
     /**
@@ -78,12 +78,12 @@ class EUVATR_Checkout_Classic {
      * @return array<string, mixed>
      */
     public static function apply_exemption_before_totals( array $data ): array {
-        $evaluation = EUVATR_Validator::evaluate(
+        $evaluation = Vatnode_Validator::evaluate(
             (string) ( $data[ self::FIELD_KEY ] ?? '' ),
             (string) ( $data['billing_country'] ?? '' )
         );
 
-        EUVATR_Validator::apply_exemption( $evaluation['exempt'] );
+        Vatnode_Validator::apply_exemption( $evaluation['exempt'] );
 
         return $data;
     }
@@ -95,16 +95,16 @@ class EUVATR_Checkout_Classic {
         $vat_number = (string) ( $data[ self::FIELD_KEY ] ?? '' );
 
         if ( $vat_number === '' ) {
-            if ( EUVATR_Settings::is_field_required() ) {
-                $errors->add( 'euvatr_vat_required', __( 'Please enter your VAT number.', 'vatnode-eu-vat-rates' ) );
+            if ( Vatnode_Settings::is_field_required() ) {
+                $errors->add( 'vatnode_vat_required', __( 'Please enter your VAT number.', 'vatnode-eu-vat-rates' ) );
             }
             return;
         }
 
-        $evaluation = EUVATR_Validator::evaluate( $vat_number, (string) ( $data['billing_country'] ?? '' ) );
+        $evaluation = Vatnode_Validator::evaluate( $vat_number, (string) ( $data['billing_country'] ?? '' ) );
 
         if ( $evaluation['blocking'] ) {
-            $errors->add( 'euvatr_vat_invalid', $evaluation['message'] );
+            $errors->add( 'vatnode_vat_invalid', $evaluation['message'] );
         }
     }
 
@@ -112,12 +112,12 @@ class EUVATR_Checkout_Classic {
      * @param array<string, mixed> $data
      */
     public static function attach_to_order( WC_Order $order, array $data ): void {
-        $evaluation = EUVATR_Validator::evaluate(
+        $evaluation = Vatnode_Validator::evaluate(
             (string) ( $data[ self::FIELD_KEY ] ?? '' ),
             (string) ( $data['billing_country'] ?? '' )
         );
 
-        EUVATR_Order::save( $order, $evaluation );
+        Vatnode_Order::save( $order, $evaluation );
     }
 
     /**
@@ -129,7 +129,7 @@ class EUVATR_Checkout_Classic {
             'label'       => __( 'VAT number', 'vatnode-eu-vat-rates' ),
             'placeholder' => __( 'e.g. DE123456789', 'vatnode-eu-vat-rates' ),
             'description' => __( 'EU businesses outside our country: enter your VAT number to buy without VAT.', 'vatnode-eu-vat-rates' ),
-            'required'    => EUVATR_Settings::is_field_required(),
+            'required'    => Vatnode_Settings::is_field_required(),
             'class'       => [ 'form-row-wide' ],
             'priority'    => 125,
         ];

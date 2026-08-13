@@ -10,12 +10,12 @@ defined( 'ABSPATH' ) || exit;
  * VAT-number patterns are read on the checkout path, so a source that is
  * briefly unreachable must never leave the store with no data.
  */
-class EUVATR_Data {
+class Vatnode_Data {
 
     const SOURCE_URL   = 'https://raw.githubusercontent.com/vatnode/eu-vat-rates-data/main/data/eu-vat-rates-data.json';
     const BUNDLED_FILE = 'data/eu-vat-rates-data.json';
-    const TRANSIENT    = 'euvatr_rates';
-    const OPTION_LAST_GOOD = 'euvatr_rates_last_good';
+    const TRANSIENT    = 'vatnode_rates';
+    const OPTION_LAST_GOOD = 'vatnode_rates_last_good';
     const CACHE_HOURS  = 25; // slightly over 24h so daily cron always wins
 
     /**
@@ -45,7 +45,7 @@ class EUVATR_Data {
         static $bundled = null;
 
         if ( $bundled === null ) {
-            $decoded = wp_json_file_decode( EUVATR_DIR . self::BUNDLED_FILE, [ 'associative' => true ] );
+            $decoded = wp_json_file_decode( VATNODE_DIR . self::BUNDLED_FILE, [ 'associative' => true ] );
             $bundled = self::is_dataset( $decoded ) ? $decoded : false;
         }
 
@@ -79,7 +79,7 @@ class EUVATR_Data {
     public static function fetch(): ?array {
         $response = wp_remote_get( self::SOURCE_URL, [
             'timeout'    => 15,
-            'user-agent' => 'vatnode-eu-vat-rates/' . EUVATR_VERSION . '; ' . home_url(),
+            'user-agent' => 'vatnode-eu-vat-rates/' . VATNODE_VERSION . '; ' . home_url(),
         ] );
 
         if ( is_wp_error( $response ) ) {
@@ -135,7 +135,7 @@ class EUVATR_Data {
     private static function schedule_refresh(): void {
         // WP-Cron drops a duplicate of the same hook within its own 10-minute
         // window, so this cannot pile up across concurrent requests.
-        wp_schedule_single_event( time(), EUVATR_Scheduler::HOOK );
+        wp_schedule_single_event( time(), Vatnode_Scheduler::HOOK );
     }
 
     private static function log( string $message ): void {

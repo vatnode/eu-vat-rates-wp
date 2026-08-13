@@ -11,23 +11,24 @@ defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
 
 global $wpdb;
 
-$euvatr_options = [
-    'euvatr_api_key',
-    'euvatr_validation_enabled',
-    'euvatr_field_required',
-    'euvatr_key_status',
-    'euvatr_oss_registered',
-    'euvatr_rates_last_good',
-    'euvatr_last_sync',
-    'euvatr_last_version',
-    'euvatr_last_error',
+$vatnode_options = [
+    'vatnode_api_key',
+    'vatnode_validation_enabled',
+    'vatnode_field_required',
+    'vatnode_key_status',
+    'vatnode_oss_registered',
+    'vatnode_rates_last_good',
+    'vatnode_last_sync',
+    'vatnode_last_version',
+    'vatnode_last_error',
+    'vatnode_prefix_migrated',
 ];
 
-foreach ( $euvatr_options as $euvatr_option ) {
-    delete_option( $euvatr_option );
+foreach ( $vatnode_options as $vatnode_option ) {
+    delete_option( $vatnode_option );
 }
 
-delete_transient( 'euvatr_rates' );
+delete_transient( 'vatnode_rates' );
 
 // Cached VIES answers are one transient per VAT number, so they have to be
 // matched by prefix rather than deleted by name.
@@ -35,9 +36,9 @@ delete_transient( 'euvatr_rates' );
 $wpdb->query(
     $wpdb->prepare(
         "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s",
-        $wpdb->esc_like( '_transient_euvatr_vies_' ) . '%',
-        $wpdb->esc_like( '_transient_timeout_euvatr_vies_' ) . '%'
+        $wpdb->esc_like( '_transient_vatnode_vies_' ) . '%',
+        $wpdb->esc_like( '_transient_timeout_vatnode_vies_' ) . '%'
     )
 );
 
-wp_clear_scheduled_hook( 'euvatr_do_sync' );
+wp_clear_scheduled_hook( 'vatnode_do_sync' );

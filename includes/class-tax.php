@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
  * Buyers outside the EU are left alone: no EU rate should apply to them, and
  * the sync no longer writes rates for those countries.
  */
-class EUVATR_Tax {
+class Vatnode_Tax {
 
     public static function init(): void {
         add_filter( 'woocommerce_customer_taxable_address', [ __CLASS__, 'maybe_tax_at_store_rate' ] );
@@ -24,12 +24,12 @@ class EUVATR_Tax {
      * @return array<int, string>
      */
     public static function maybe_tax_at_store_rate( array $address ): array {
-        if ( EUVATR_Settings::is_oss_registered() ) {
+        if ( Vatnode_Settings::is_oss_registered() ) {
             return $address;
         }
 
         $buyer_country = strtoupper( (string) ( $address[0] ?? '' ) );
-        if ( $buyer_country === '' || ! EUVATR_Format::is_vies_eligible( $buyer_country ) ) {
+        if ( $buyer_country === '' || ! Vatnode_Format::is_vies_eligible( $buyer_country ) ) {
             return $address;
         }
 

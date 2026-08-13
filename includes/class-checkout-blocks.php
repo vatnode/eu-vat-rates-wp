@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit;
  * while the shopper is still on the page, instead of only after placing the
  * order.
  */
-class EUVATR_Checkout_Blocks {
+class Vatnode_Checkout_Blocks {
 
     const FIELD_ID = 'vatnode/vat-number';
     const META_KEY = '_wc_other/vatnode/vat-number';
@@ -31,7 +31,7 @@ class EUVATR_Checkout_Blocks {
             'label'             => __( 'VAT number', 'vatnode-eu-vat-rates' ),
             'location'          => 'contact',
             'type'              => 'text',
-            'required'          => EUVATR_Settings::is_field_required(),
+            'required'          => Vatnode_Settings::is_field_required(),
             'attributes'        => [
                 'autocomplete'   => 'off',
                 'aria-describedby' => 'vatnode-vat-number-description',
@@ -46,16 +46,16 @@ class EUVATR_Checkout_Blocks {
             return;
         }
         wp_enqueue_script(
-            'euvatr-blocks-checkout',
-            EUVATR_URL . 'assets/blocks-checkout.js',
+            'vatnode-blocks-checkout',
+            VATNODE_URL . 'assets/blocks-checkout.js',
             [ 'wp-api-fetch', 'wp-data' ],
-            EUVATR_VERSION,
+            VATNODE_VERSION,
             true
         );
     }
 
     public static function sanitize( $value ): string {
-        return EUVATR_Format::normalize( (string) $value );
+        return Vatnode_Format::normalize( (string) $value );
     }
 
     /**
@@ -67,34 +67,34 @@ class EUVATR_Checkout_Blocks {
             return;
         }
 
-        $evaluation = EUVATR_Validator::evaluate( $vat_number, self::billing_country() );
+        $evaluation = Vatnode_Validator::evaluate( $vat_number, self::billing_country() );
 
         if ( $evaluation['blocking'] ) {
-            return new WP_Error( 'euvatr_vat_invalid', $evaluation['message'] );
+            return new WP_Error( 'vatnode_vat_invalid', $evaluation['message'] );
         }
     }
 
     public static function refresh_exemption( WC_Customer $customer, WP_REST_Request $request ): void {
-        $evaluation = EUVATR_Validator::evaluate(
+        $evaluation = Vatnode_Validator::evaluate(
             self::vat_from_request( $request, $customer ),
             (string) $customer->get_billing_country()
         );
 
-        EUVATR_Validator::apply_exemption( $evaluation['exempt'] );
+        Vatnode_Validator::apply_exemption( $evaluation['exempt'] );
     }
 
     public static function attach_to_order( WC_Order $order, WP_REST_Request $request ): void {
         $customer   = WC()->customer ?? null;
-        $evaluation = EUVATR_Validator::evaluate(
+        $evaluation = Vatnode_Validator::evaluate(
             self::vat_from_request( $request, $customer instanceof WC_Customer ? $customer : null ),
             (string) $order->get_billing_country()
         );
 
-        if ( $evaluation['status'] === EUVATR_Validator::STATUS_EMPTY ) {
+        if ( $evaluation['status'] === Vatnode_Validator::STATUS_EMPTY ) {
             return;
         }
 
-        EUVATR_Validator::apply_exemption( $evaluation['exempt'] );
+        Vatnode_Validator::apply_exemption( $evaluation['exempt'] );
 
         // The Store API stamps `is_vat_exempt` on the order before this hook
         // runs, and WC_Abstract_Order::calculate_taxes() reads that meta rather
@@ -108,7 +108,7 @@ class EUVATR_Checkout_Blocks {
         $order->calculate_taxes();
         $order->calculate_totals( false );
 
-        EUVATR_Order::save( $order, $evaluation );
+        Vatnode_Order::save( $order, $evaluation );
     }
 
     private static function vat_from_request( WP_REST_Request $request, ?WC_Customer $customer ): string {
