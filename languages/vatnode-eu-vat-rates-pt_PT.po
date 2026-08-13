@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Mantém atualizadas as taxas de IVA da UE no WooCommerce a partir da base TEDB da Comissão Europeia e valida os números de IVA dos clientes no VIES para aplicar a autoliquidação."
+
+msgid "EU VAT Rates"
+msgstr "Taxas de IVA da UE"
+
+msgid "Settings"
+msgstr "Definições"
+
+msgid "Get an API key"
+msgstr "Obter uma chave de API"
+
+msgid "Insufficient permissions."
+msgstr "Permissões insuficientes."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "Taxas de IVA da UE e validação VIES"
+
+msgid "EU VAT rates synced successfully."
+msgstr "Taxas de IVA da UE sincronizadas com sucesso."
+
+msgid "Sync failed."
+msgstr "A sincronização falhou."
+
+msgid "Settings saved."
+msgstr "Definições guardadas."
+
+msgid "API key accepted by vatnode."
+msgstr "Chave de API aceite pelo vatnode."
+
+msgid "API key check failed."
+msgstr "A verificação da chave de API falhou."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Venda a empresas da UE sem IVA"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Adicione uma chave de API do vatnode e o plugin verifica o número de IVA do cliente no serviço oficial VIES durante a finalização da compra. As empresas da UE verificadas fora do seu país não pagam IVA, e a prova fica guardada na encomenda."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Já tem uma conta vatnode? %s e cole-a abaixo."
+
+msgid "Create a key"
+msgstr "Criar uma chave"
+
+msgid "Get an API Key"
+msgstr "Obter uma chave de API"
+
+msgid "VAT number validation"
+msgstr "Validação do número de IVA"
+
+msgid "vatnode API key"
+msgstr "Chave de API do vatnode"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Existe uma chave guardada. Deixe este campo vazio para a manter, ou cole uma nova para a substituir."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Crie uma chave no painel %s. O plano gratuito inclui uma quota mensal de pedidos."
+
+msgid "Key status:"
+msgstr "Estado da chave:"
+
+msgid "Working"
+msgstr "A funcionar"
+
+msgid "Rejected by vatnode"
+msgstr "Recusada pelo vatnode"
+
+msgid "Monthly quota exceeded"
+msgstr "Quota mensal excedida"
+
+msgid "Could not reach vatnode"
+msgstr "Não foi possível contactar o vatnode"
+
+msgid "Last call failed"
+msgstr "A última chamada falhou"
+
+msgid "Not checked yet"
+msgstr "Ainda não verificada"
+
+msgid "Checkout"
+msgstr "Finalização da compra"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Validar números de IVA com o VIES e aplicar a autoliquidação"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "O campo do número de IVA é sempre apresentado na finalização da compra. Sem chave, o número é apenas validado no formato e guardado — o IVA continua a ser cobrado."
+
+msgid "Make the VAT number field required"
+msgstr "Tornar o campo do número de IVA obrigatório"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Apenas para lojas exclusivamente B2B — os consumidores não têm número de IVA."
+
+msgid "Which rate applies"
+msgstr "Que taxa se aplica"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Esta loja está registada no balcão único da UE (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Registada: os consumidores de outros países da UE pagam a taxa do seu próprio país. Não registada: todos os compradores da UE pagam a taxa de %s, que é a aplicável enquanto as suas vendas transfronteiriças se mantiverem abaixo do limiar de 10 000 EUR em toda a UE."
+
+msgid "Save Settings"
+msgstr "Guardar definições"
+
+msgid "Remove key"
+msgstr "Remover a chave"
+
+msgid "Test Key"
+msgstr "Testar a chave"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "A autoliquidação está ativa para empresas da UE verificadas fora do seu país."
+
+msgid "Rate sync"
+msgstr "Sincronização de taxas"
+
+msgid "Auto-sync"
+msgstr "Sincronização automática"
+
+msgid "Active — daily"
+msgstr "Ativa — diária"
+
+msgid "Last sync"
+msgstr "Última sincronização"
+
+msgid "Never"
+msgstr "Nunca"
+
+msgid "Data version"
+msgstr "Versão dos dados"
+
+msgid "Next auto-sync"
+msgstr "Próxima sincronização automática"
+
+msgid "Source"
+msgstr "Fonte"
+
+msgid "(European Commission TEDB)"
+msgstr "(TEDB da Comissão Europeia)"
+
+msgid "Sync Now"
+msgstr "Sincronizar agora"
+
+msgid "Current rates (%d countries)"
+msgstr "Taxas atuais (%d países)"
+
+msgid "Country"
+msgstr "País"
+
+msgid "Code"
+msgstr "Código"
+
+msgid "Standard"
+msgstr "Normal"
+
+msgid "Reduced"
+msgstr "Reduzida"
+
+msgid "Super-reduced"
+msgstr "Super-reduzida"
+
+msgid "Parking"
+msgstr "Parking"
+
+msgid "No vatnode API key configured."
+msgstr "Nenhuma chave de API do vatnode configurada."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "A API do vatnode devolveu HTTP %d."
+
+msgid "Enter an API key first."
+msgstr "Introduza primeiro uma chave de API."
+
+msgid "API key was rejected by vatnode."
+msgstr "A chave de API foi recusada pelo vatnode."
+
+msgid "VAT number"
+msgstr "Número de IVA"
+
+msgid "Please enter your VAT number."
+msgstr "Introduza o seu número de IVA."
+
+msgid "e.g. DE123456789"
+msgstr "ex. DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "Empresas da UE fora do nosso país: introduza o seu número de IVA para comprar sem IVA."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "Número de IVA %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "IVA da UE"
+
+msgid "VAT number:"
+msgstr "Número de IVA:"
+
+msgid "Status:"
+msgstr "Estado:"
+
+msgid "Reverse charge:"
+msgstr "Autoliquidação:"
+
+msgid "Applied"
+msgstr "Aplicada"
+
+msgid "Not applied"
+msgstr "Não aplicada"
+
+msgid "Registered name:"
+msgstr "Nome registado:"
+
+msgid "VIES consultation number:"
+msgstr "Número de consulta VIES:"
+
+msgid "Checked:"
+msgstr "Verificado:"
+
+msgid "Not scheduled"
+msgstr "Não agendada"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "Não foi possível verificar o número de IVA — IVA cobrado como habitualmente."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "A autoliquidação aplica-se apenas a lojas sediadas na UE."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "Isto não parece um número de IVA da UE válido. Verifique-o, ou deixe o campo vazio."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "O número de IVA está registado em %1$s mas a morada de faturação é em %2$s. Têm de coincidir."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Venda nacional — o IVA é cobrado como habitualmente."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Este número de IVA não está registado no VIES. Verifique-o, ou deixe o campo vazio para pagar IVA."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "Número de IVA verificado — aplica-se a autoliquidação."
+
+msgid "Verified — reverse charge applied"
+msgstr "Verificado — autoliquidação aplicada"
+
+msgid "Not registered in VIES"
+msgstr "Não registado no VIES"
+
+msgid "Invalid format"
+msgstr "Formato inválido"
+
+msgid "VAT country does not match billing country"
+msgstr "O país do número de IVA não corresponde ao país de faturação"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Venda nacional — IVA cobrado"
+
+msgid "Outside the EU VAT area"
+msgstr "Fora do território de IVA da UE"
+
+msgid "Not verified — VAT charged"
+msgstr "Não verificado — IVA cobrado"
+
+msgid "No VAT number provided"
+msgstr "Nenhum número de IVA indicado"
+
+msgid "requires WooCommerce to be active."
+msgstr "requer o WooCommerce ativo."

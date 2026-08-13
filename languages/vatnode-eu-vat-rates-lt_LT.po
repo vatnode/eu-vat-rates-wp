@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lt_LT\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Palaiko ES PVM tarifus WooCommerce parduotuvėje atnaujintus pagal Europos Komisijos TEDB duomenų bazę ir tikrina klientų PVM mokėtojo kodus VIES sistemoje, kad būtų taikomas atvirkštinis apmokestinimas."
+
+msgid "EU VAT Rates"
+msgstr "ES PVM tarifai"
+
+msgid "Settings"
+msgstr "Nustatymai"
+
+msgid "Get an API key"
+msgstr "Gauti API raktą"
+
+msgid "Insufficient permissions."
+msgstr "Nepakanka teisių."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "ES PVM tarifai ir VIES patikra"
+
+msgid "EU VAT rates synced successfully."
+msgstr "ES PVM tarifai sėkmingai sinchronizuoti."
+
+msgid "Sync failed."
+msgstr "Sinchronizacija nepavyko."
+
+msgid "Settings saved."
+msgstr "Nustatymai išsaugoti."
+
+msgid "API key accepted by vatnode."
+msgstr "vatnode priėmė API raktą."
+
+msgid "API key check failed."
+msgstr "API rakto patikra nepavyko."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Parduokite ES įmonėms be PVM"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Pridėkite vatnode API raktą ir papildinys užsakymo metu patikrins kliento PVM mokėtojo kodą oficialioje VIES sistemoje. Patvirtintiems verslo klientams iš kitų ES šalių PVM neskaičiuojamas, o įrodymas išsaugomas prie užsakymo."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Jau turite vatnode paskyrą? %s ir įklijuokite jį žemiau."
+
+msgid "Create a key"
+msgstr "Sukurti raktą"
+
+msgid "Get an API Key"
+msgstr "Gauti API raktą"
+
+msgid "VAT number validation"
+msgstr "PVM mokėtojo kodo patikra"
+
+msgid "vatnode API key"
+msgstr "vatnode API raktas"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Raktas išsaugotas. Palikite lauką tuščią, kad jį išlaikytumėte, arba įklijuokite naują, kad pakeistumėte."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Sukurkite raktą %s valdymo skydelyje. Nemokamas planas apima mėnesinę užklausų kvotą."
+
+msgid "Key status:"
+msgstr "Rakto būsena:"
+
+msgid "Working"
+msgstr "Veikia"
+
+msgid "Rejected by vatnode"
+msgstr "vatnode atmetė"
+
+msgid "Monthly quota exceeded"
+msgstr "Mėnesio kvota viršyta"
+
+msgid "Could not reach vatnode"
+msgstr "Nepavyko pasiekti vatnode"
+
+msgid "Last call failed"
+msgstr "Paskutinė užklausa nepavyko"
+
+msgid "Not checked yet"
+msgstr "Dar nepatikrintas"
+
+msgid "Checkout"
+msgstr "Užsakymo pateikimas"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Tikrinti PVM mokėtojo kodus VIES sistemoje ir taikyti atvirkštinį apmokestinimą"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "PVM mokėtojo kodo laukas visada rodomas pateikiant užsakymą. Be rakto kodas tik patikrinamas pagal formatą ir išsaugomas — PVM vis tiek skaičiuojamas."
+
+msgid "Make the VAT number field required"
+msgstr "Padaryti PVM mokėtojo kodo lauką privalomą"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Tik parduotuvėms, prekiaujančioms vien su verslo klientais — vartotojai PVM mokėtojo kodo neturi."
+
+msgid "Which rate applies"
+msgstr "Kuris tarifas taikomas"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Ši parduotuvė registruota ES vieno langelio sistemoje (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Registruota: vartotojams iš kitų ES šalių taikomas jų šalies tarifas. Neregistruota: visiems pirkėjams iš ES taikomas %s tarifas, kuris galioja tol, kol tarpvalstybiniai pardavimai neviršija ES masto 10 000 EUR ribos."
+
+msgid "Save Settings"
+msgstr "Išsaugoti nustatymus"
+
+msgid "Remove key"
+msgstr "Pašalinti raktą"
+
+msgid "Test Key"
+msgstr "Išbandyti raktą"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "Atvirkštinis apmokestinimas taikomas patvirtintoms ES įmonėms už jūsų šalies ribų."
+
+msgid "Rate sync"
+msgstr "Tarifų sinchronizavimas"
+
+msgid "Auto-sync"
+msgstr "Automatinis sinchronizavimas"
+
+msgid "Active — daily"
+msgstr "Aktyvus — kasdien"
+
+msgid "Last sync"
+msgstr "Paskutinis sinchronizavimas"
+
+msgid "Never"
+msgstr "Niekada"
+
+msgid "Data version"
+msgstr "Duomenų versija"
+
+msgid "Next auto-sync"
+msgstr "Kitas automatinis sinchronizavimas"
+
+msgid "Source"
+msgstr "Šaltinis"
+
+msgid "(European Commission TEDB)"
+msgstr "(Europos Komisijos TEDB)"
+
+msgid "Sync Now"
+msgstr "Sinchronizuoti dabar"
+
+msgid "Current rates (%d countries)"
+msgstr "Dabartiniai tarifai (%d šalių)"
+
+msgid "Country"
+msgstr "Šalis"
+
+msgid "Code"
+msgstr "Kodas"
+
+msgid "Standard"
+msgstr "Standartinis"
+
+msgid "Reduced"
+msgstr "Lengvatinis"
+
+msgid "Super-reduced"
+msgstr "Itin lengvatinis"
+
+msgid "Parking"
+msgstr "Pereinamasis"
+
+msgid "No vatnode API key configured."
+msgstr "vatnode API raktas nesukonfigūruotas."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "vatnode API grąžino HTTP %d."
+
+msgid "Enter an API key first."
+msgstr "Pirmiausia įveskite API raktą."
+
+msgid "API key was rejected by vatnode."
+msgstr "vatnode atmetė API raktą."
+
+msgid "VAT number"
+msgstr "PVM mokėtojo kodas"
+
+msgid "Please enter your VAT number."
+msgstr "Įveskite savo PVM mokėtojo kodą."
+
+msgid "e.g. DE123456789"
+msgstr "pvz., DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "ES įmonės už mūsų šalies ribų: įveskite PVM mokėtojo kodą, kad pirktumėte be PVM."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "PVM mokėtojo kodas %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "ES PVM"
+
+msgid "VAT number:"
+msgstr "PVM mokėtojo kodas:"
+
+msgid "Status:"
+msgstr "Būsena:"
+
+msgid "Reverse charge:"
+msgstr "Atvirkštinis apmokestinimas:"
+
+msgid "Applied"
+msgstr "Taikomas"
+
+msgid "Not applied"
+msgstr "Netaikomas"
+
+msgid "Registered name:"
+msgstr "Registruotas pavadinimas:"
+
+msgid "VIES consultation number:"
+msgstr "VIES užklausos numeris:"
+
+msgid "Checked:"
+msgstr "Patikrinta:"
+
+msgid "Not scheduled"
+msgstr "Nesuplanuota"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "PVM mokėtojo kodo patikrinti nepavyko — PVM apskaičiuotas kaip įprasta."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "Atvirkštinis apmokestinimas taikomas tik ES įsteigtoms parduotuvėms."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "Tai nepanašu į galiojantį ES PVM mokėtojo kodą. Patikrinkite jį arba palikite lauką tuščią."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "PVM mokėtojo kodas registruotas šalyje %1$s, o sąskaitos adresas yra šalyje %2$s. Jie turi sutapti."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Pardavimas šalies viduje — PVM skaičiuojamas kaip įprasta."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Šis PVM mokėtojo kodas VIES sistemoje neregistruotas. Patikrinkite jį arba palikite lauką tuščią ir sumokėkite PVM."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "PVM mokėtojo kodas patvirtintas — taikomas atvirkštinis apmokestinimas."
+
+msgid "Verified — reverse charge applied"
+msgstr "Patvirtinta — taikytas atvirkštinis apmokestinimas"
+
+msgid "Not registered in VIES"
+msgstr "Neregistruotas VIES sistemoje"
+
+msgid "Invalid format"
+msgstr "Netinkamas formatas"
+
+msgid "VAT country does not match billing country"
+msgstr "PVM kodo šalis nesutampa su sąskaitos šalimi"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Pardavimas šalies viduje — PVM apskaičiuotas"
+
+msgid "Outside the EU VAT area"
+msgstr "Už ES PVM teritorijos ribų"
+
+msgid "Not verified — VAT charged"
+msgstr "Nepatvirtinta — PVM apskaičiuotas"
+
+msgid "No VAT number provided"
+msgstr "PVM mokėtojo kodas nenurodytas"
+
+msgid "requires WooCommerce to be active."
+msgstr "reikalauja aktyvaus WooCommerce."

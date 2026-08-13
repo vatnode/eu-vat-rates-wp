@@ -3,7 +3,7 @@
  * Plugin Name:       vatnode - EU VAT Validation and Reverse Charge
  * Plugin URI:        https://vatnode.dev/woocommerce
  * Description:       Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge.
- * Version:           1.1.4
+ * Version:           1.1.5
  * Author:            vatnode
  * Author URI:        https://vatnode.dev
  * License:           GPL-2.0-or-later
@@ -14,11 +14,12 @@
  * WC requires at least: 8.0
  * WC tested up to:   11.0
  * Text Domain:       vatnode-eu-vat-rates
+ * Domain Path:       /languages
  */
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'VATNODE_VERSION', '1.1.4' );
+define( 'VATNODE_VERSION', '1.1.5' );
 define( 'VATNODE_FILE',    __FILE__ );
 define( 'VATNODE_DIR',     plugin_dir_path( __FILE__ ) );
 define( 'VATNODE_URL',     plugin_dir_url( __FILE__ ) );
@@ -71,6 +72,12 @@ function vatnode_migrate_legacy_prefix(): void {
 
     update_option( 'vatnode_prefix_migrated', '1' );
 }
+
+// Translations shipped with the plugin. A WordPress.org language pack, once one
+// exists for the locale, is loaded ahead of these and wins.
+add_action( 'init', function (): void {
+    load_plugin_textdomain( 'vatnode-eu-vat-rates', false, dirname( plugin_basename( VATNODE_FILE ) ) . '/languages' );
+} );
 
 add_action( 'before_woocommerce_init', function (): void {
     if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {

@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Utrzymuje aktualne unijne stawki VAT w WooCommerce na podstawie bazy TEDB Komisji Europejskiej i sprawdza numery VAT klientów w systemie VIES, aby zastosować odwrotne obciążenie."
+
+msgid "EU VAT Rates"
+msgstr "Unijne stawki VAT"
+
+msgid "Settings"
+msgstr "Ustawienia"
+
+msgid "Get an API key"
+msgstr "Uzyskaj klucz API"
+
+msgid "Insufficient permissions."
+msgstr "Brak wystarczających uprawnień."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "Unijne stawki VAT i weryfikacja VIES"
+
+msgid "EU VAT rates synced successfully."
+msgstr "Unijne stawki VAT zostały zsynchronizowane."
+
+msgid "Sync failed."
+msgstr "Synchronizacja nie powiodła się."
+
+msgid "Settings saved."
+msgstr "Ustawienia zapisane."
+
+msgid "API key accepted by vatnode."
+msgstr "Klucz API zaakceptowany przez vatnode."
+
+msgid "API key check failed."
+msgstr "Sprawdzenie klucza API nie powiodło się."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Sprzedawaj firmom z UE bez VAT"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Dodaj klucz API vatnode, a wtyczka sprawdzi numer VAT klienta w oficjalnym systemie VIES podczas zamówienia. Zweryfikowani nabywcy firmowi z innych krajów UE nie płacą VAT, a dowód weryfikacji zapisuje się przy zamówieniu."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Masz już konto vatnode? %s i wklej go poniżej."
+
+msgid "Create a key"
+msgstr "Utwórz klucz"
+
+msgid "Get an API Key"
+msgstr "Uzyskaj klucz API"
+
+msgid "VAT number validation"
+msgstr "Weryfikacja numeru VAT"
+
+msgid "vatnode API key"
+msgstr "Klucz API vatnode"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Klucz jest zapisany. Zostaw to pole puste, aby go zachować, albo wklej nowy, aby go zastąpić."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Utwórz klucz w panelu %s. Bezpłatny plan obejmuje miesięczny limit zapytań."
+
+msgid "Key status:"
+msgstr "Status klucza:"
+
+msgid "Working"
+msgstr "Działa"
+
+msgid "Rejected by vatnode"
+msgstr "Odrzucony przez vatnode"
+
+msgid "Monthly quota exceeded"
+msgstr "Przekroczono miesięczny limit"
+
+msgid "Could not reach vatnode"
+msgstr "Brak połączenia z vatnode"
+
+msgid "Last call failed"
+msgstr "Ostatnie zapytanie nie powiodło się"
+
+msgid "Not checked yet"
+msgstr "Jeszcze niesprawdzony"
+
+msgid "Checkout"
+msgstr "Zamówienie"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Sprawdzaj numery VAT w VIES i stosuj odwrotne obciążenie"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "Pole numeru VAT jest zawsze widoczne przy zamówieniu. Bez klucza numer jest tylko sprawdzany pod względem formatu i zapisywany — VAT nadal jest naliczany."
+
+msgid "Make the VAT number field required"
+msgstr "Ustaw pole numeru VAT jako wymagane"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Tylko dla sklepów wyłącznie B2B — konsumenci nie mają numeru VAT."
+
+msgid "Which rate applies"
+msgstr "Która stawka obowiązuje"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Ten sklep jest zarejestrowany w unijnym punkcie kompleksowej obsługi (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Zarejestrowany: konsumenci z innych krajów UE płacą stawkę swojego kraju. Niezarejestrowany: każdy nabywca z UE płaci stawkę %s, która obowiązuje, dopóki sprzedaż transgraniczna nie przekroczy unijnego progu 10 000 EUR."
+
+msgid "Save Settings"
+msgstr "Zapisz ustawienia"
+
+msgid "Remove key"
+msgstr "Usuń klucz"
+
+msgid "Test Key"
+msgstr "Sprawdź klucz"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "Odwrotne obciążenie działa dla zweryfikowanych firm z UE spoza Twojego kraju."
+
+msgid "Rate sync"
+msgstr "Synchronizacja stawek"
+
+msgid "Auto-sync"
+msgstr "Automatyczna synchronizacja"
+
+msgid "Active — daily"
+msgstr "Aktywna — codziennie"
+
+msgid "Last sync"
+msgstr "Ostatnia synchronizacja"
+
+msgid "Never"
+msgstr "Nigdy"
+
+msgid "Data version"
+msgstr "Wersja danych"
+
+msgid "Next auto-sync"
+msgstr "Następna automatyczna synchronizacja"
+
+msgid "Source"
+msgstr "Źródło"
+
+msgid "(European Commission TEDB)"
+msgstr "(TEDB Komisji Europejskiej)"
+
+msgid "Sync Now"
+msgstr "Synchronizuj teraz"
+
+msgid "Current rates (%d countries)"
+msgstr "Aktualne stawki (%d krajów)"
+
+msgid "Country"
+msgstr "Kraj"
+
+msgid "Code"
+msgstr "Kod"
+
+msgid "Standard"
+msgstr "Podstawowa"
+
+msgid "Reduced"
+msgstr "Obniżona"
+
+msgid "Super-reduced"
+msgstr "Superobniżona"
+
+msgid "Parking"
+msgstr "Przejściowa"
+
+msgid "No vatnode API key configured."
+msgstr "Nie skonfigurowano klucza API vatnode."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "API vatnode zwróciło HTTP %d."
+
+msgid "Enter an API key first."
+msgstr "Najpierw wprowadź klucz API."
+
+msgid "API key was rejected by vatnode."
+msgstr "Klucz API został odrzucony przez vatnode."
+
+msgid "VAT number"
+msgstr "Numer VAT"
+
+msgid "Please enter your VAT number."
+msgstr "Podaj swój numer VAT."
+
+msgid "e.g. DE123456789"
+msgstr "np. DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "Firmy z UE spoza naszego kraju: podaj numer VAT, aby kupić bez VAT."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "Numer VAT %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "VAT UE"
+
+msgid "VAT number:"
+msgstr "Numer VAT:"
+
+msgid "Status:"
+msgstr "Status:"
+
+msgid "Reverse charge:"
+msgstr "Odwrotne obciążenie:"
+
+msgid "Applied"
+msgstr "Zastosowane"
+
+msgid "Not applied"
+msgstr "Niezastosowane"
+
+msgid "Registered name:"
+msgstr "Nazwa w rejestrze:"
+
+msgid "VIES consultation number:"
+msgstr "Numer potwierdzenia VIES:"
+
+msgid "Checked:"
+msgstr "Sprawdzono:"
+
+msgid "Not scheduled"
+msgstr "Niezaplanowana"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "Nie udało się zweryfikować numeru VAT — VAT naliczony jak zwykle."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "Odwrotne obciążenie dotyczy wyłącznie sklepów z siedzibą w UE."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "To nie wygląda na prawidłowy unijny numer VAT. Sprawdź go albo zostaw pole puste."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "Numer VAT jest zarejestrowany w %1$s, a adres rozliczeniowy jest w %2$s. Muszą się zgadzać."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Sprzedaż krajowa — VAT naliczany jak zwykle."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Ten numer VAT nie jest zarejestrowany w VIES. Sprawdź go albo zostaw pole puste, aby zapłacić VAT."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "Numer VAT zweryfikowany — obowiązuje odwrotne obciążenie."
+
+msgid "Verified — reverse charge applied"
+msgstr "Zweryfikowany — zastosowano odwrotne obciążenie"
+
+msgid "Not registered in VIES"
+msgstr "Niezarejestrowany w VIES"
+
+msgid "Invalid format"
+msgstr "Nieprawidłowy format"
+
+msgid "VAT country does not match billing country"
+msgstr "Kraj numeru VAT nie zgadza się z krajem rozliczeniowym"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Sprzedaż krajowa — VAT naliczony"
+
+msgid "Outside the EU VAT area"
+msgstr "Poza obszarem VAT Unii Europejskiej"
+
+msgid "Not verified — VAT charged"
+msgstr "Niezweryfikowany — VAT naliczony"
+
+msgid "No VAT number provided"
+msgstr "Nie podano numeru VAT"
+
+msgid "requires WooCommerce to be active."
+msgstr "wymaga aktywnej wtyczki WooCommerce."

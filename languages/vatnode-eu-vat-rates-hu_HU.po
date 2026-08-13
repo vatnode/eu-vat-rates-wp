@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hu_HU\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Naprakészen tartja az EU áfakulcsait a WooCommerce-ben az Európai Bizottság TEDB adatbázisából, és a VIES rendszerben ellenőrzi a vevők adószámát a fordított adózás alkalmazásához."
+
+msgid "EU VAT Rates"
+msgstr "EU áfakulcsok"
+
+msgid "Settings"
+msgstr "Beállítások"
+
+msgid "Get an API key"
+msgstr "API-kulcs igénylése"
+
+msgid "Insufficient permissions."
+msgstr "Nincs megfelelő jogosultság."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "EU áfakulcsok és VIES-ellenőrzés"
+
+msgid "EU VAT rates synced successfully."
+msgstr "Az EU áfakulcsai sikeresen szinkronizálva."
+
+msgid "Sync failed."
+msgstr "A szinkronizálás sikertelen."
+
+msgid "Settings saved."
+msgstr "A beállítások elmentve."
+
+msgid "API key accepted by vatnode."
+msgstr "A vatnode elfogadta az API-kulcsot."
+
+msgid "API key check failed."
+msgstr "Az API-kulcs ellenőrzése sikertelen."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Értékesítsen uniós cégeknek áfa nélkül"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Adjon meg egy vatnode API-kulcsot, és a bővítmény a pénztárban a hivatalos VIES szolgáltatásban ellenőrzi a vevő közösségi adószámát. Az ellenőrzött, más uniós országban működő céges vevők nem fizetnek áfát, a bizonyíték pedig a rendeléshez mentve marad."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Van már vatnode-fiókja? %s, majd illessze be alább."
+
+msgid "Create a key"
+msgstr "Kulcs létrehozása"
+
+msgid "Get an API Key"
+msgstr "API-kulcs igénylése"
+
+msgid "VAT number validation"
+msgstr "Adószám ellenőrzése"
+
+msgid "vatnode API key"
+msgstr "vatnode API-kulcs"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Egy kulcs már el van mentve. Hagyja üresen a mezőt a megtartásához, vagy illesszen be egy újat a cseréjéhez."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Hozzon létre kulcsot a %s vezérlőpultjában. Az ingyenes csomag havi lekérdezési keretet tartalmaz."
+
+msgid "Key status:"
+msgstr "A kulcs állapota:"
+
+msgid "Working"
+msgstr "Működik"
+
+msgid "Rejected by vatnode"
+msgstr "A vatnode elutasította"
+
+msgid "Monthly quota exceeded"
+msgstr "A havi keret elfogyott"
+
+msgid "Could not reach vatnode"
+msgstr "A vatnode nem érhető el"
+
+msgid "Last call failed"
+msgstr "A legutóbbi hívás sikertelen"
+
+msgid "Not checked yet"
+msgstr "Még nincs ellenőrizve"
+
+msgid "Checkout"
+msgstr "Pénztár"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Adószámok ellenőrzése a VIES-ben és a fordított adózás alkalmazása"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "Az adószám mezője mindig látható a pénztárban. Kulcs nélkül a rendszer csak a formátumot ellenőrzi és elmenti a számot — az áfát továbbra is felszámítja."
+
+msgid "Make the VAT number field required"
+msgstr "Az adószám megadása kötelező legyen"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Csak kizárólag céges vásárlókat kiszolgáló boltoknak — a magánszemélyeknek nincs adószámuk."
+
+msgid "Which rate applies"
+msgstr "Melyik kulcs érvényes"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Ez a bolt regisztrált az uniós egyablakos rendszerbe (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Regisztrált: a más uniós országban élő fogyasztók a saját országuk kulcsával fizetnek. Nem regisztrált: minden uniós vevő a(z) %s kulcsával fizet, ami mindaddig érvényes, amíg a határon átnyúló értékesítése az uniós szintű 10 000 EUR értékhatár alatt marad."
+
+msgid "Save Settings"
+msgstr "Beállítások mentése"
+
+msgid "Remove key"
+msgstr "Kulcs eltávolítása"
+
+msgid "Test Key"
+msgstr "Kulcs tesztelése"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "A fordított adózás aktív az országán kívüli, ellenőrzött uniós céges vevőkre."
+
+msgid "Rate sync"
+msgstr "Kulcsok szinkronizálása"
+
+msgid "Auto-sync"
+msgstr "Automatikus szinkronizálás"
+
+msgid "Active — daily"
+msgstr "Aktív — naponta"
+
+msgid "Last sync"
+msgstr "Utolsó szinkronizálás"
+
+msgid "Never"
+msgstr "Soha"
+
+msgid "Data version"
+msgstr "Adatok verziója"
+
+msgid "Next auto-sync"
+msgstr "Következő automatikus szinkronizálás"
+
+msgid "Source"
+msgstr "Forrás"
+
+msgid "(European Commission TEDB)"
+msgstr "(az Európai Bizottság TEDB adatbázisa)"
+
+msgid "Sync Now"
+msgstr "Szinkronizálás most"
+
+msgid "Current rates (%d countries)"
+msgstr "Jelenlegi kulcsok (%d ország)"
+
+msgid "Country"
+msgstr "Ország"
+
+msgid "Code"
+msgstr "Kód"
+
+msgid "Standard"
+msgstr "Általános"
+
+msgid "Reduced"
+msgstr "Kedvezményes"
+
+msgid "Super-reduced"
+msgstr "Erősen kedvezményes"
+
+msgid "Parking"
+msgstr "Köztes"
+
+msgid "No vatnode API key configured."
+msgstr "Nincs beállítva vatnode API-kulcs."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "A vatnode API HTTP %d választ adott."
+
+msgid "Enter an API key first."
+msgstr "Először adjon meg egy API-kulcsot."
+
+msgid "API key was rejected by vatnode."
+msgstr "A vatnode elutasította az API-kulcsot."
+
+msgid "VAT number"
+msgstr "Adószám"
+
+msgid "Please enter your VAT number."
+msgstr "Adja meg az adószámát."
+
+msgid "e.g. DE123456789"
+msgstr "pl. DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "Az országunkon kívüli uniós cégek: adja meg az adószámát, hogy áfa nélkül vásárolhasson."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "Adószám: %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "Uniós áfa"
+
+msgid "VAT number:"
+msgstr "Adószám:"
+
+msgid "Status:"
+msgstr "Állapot:"
+
+msgid "Reverse charge:"
+msgstr "Fordított adózás:"
+
+msgid "Applied"
+msgstr "Alkalmazva"
+
+msgid "Not applied"
+msgstr "Nincs alkalmazva"
+
+msgid "Registered name:"
+msgstr "Nyilvántartott név:"
+
+msgid "VIES consultation number:"
+msgstr "VIES lekérdezési szám:"
+
+msgid "Checked:"
+msgstr "Ellenőrizve:"
+
+msgid "Not scheduled"
+msgstr "Nincs ütemezve"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "Az adószámot nem sikerült ellenőrizni — az áfa a szokásos módon felszámításra került."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "A fordított adózás csak az EU-ban letelepedett boltokra vonatkozik."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "Ez nem tűnik érvényes uniós adószámnak. Ellenőrizze, vagy hagyja üresen a mezőt."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "Az adószám a következő országban van nyilvántartva: %1$s, a számlázási cím viszont itt van: %2$s. A kettőnek egyeznie kell."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Belföldi értékesítés — az áfát a szokásos módon számítjuk fel."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Ez az adószám nincs nyilvántartva a VIES-ben. Ellenőrizze, vagy hagyja üresen a mezőt, és fizesse meg az áfát."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "Az adószám ellenőrizve — a fordított adózás érvényes."
+
+msgid "Verified — reverse charge applied"
+msgstr "Ellenőrizve — fordított adózás alkalmazva"
+
+msgid "Not registered in VIES"
+msgstr "Nincs nyilvántartva a VIES-ben"
+
+msgid "Invalid format"
+msgstr "Érvénytelen formátum"
+
+msgid "VAT country does not match billing country"
+msgstr "Az adószám országa nem egyezik a számlázási országgal"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Belföldi értékesítés — áfa felszámítva"
+
+msgid "Outside the EU VAT area"
+msgstr "Az EU áfaterületén kívül"
+
+msgid "Not verified — VAT charged"
+msgstr "Nincs ellenőrizve — áfa felszámítva"
+
+msgid "No VAT number provided"
+msgstr "Nem adott meg adószámot"
+
+msgid "requires WooCommerce to be active."
+msgstr "működéséhez aktív WooCommerce szükséges."

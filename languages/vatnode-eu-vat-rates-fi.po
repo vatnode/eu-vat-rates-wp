@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Pitää EU:n arvonlisäverokannat ajan tasalla WooCommercessa Euroopan komission TEDB-tietokannasta ja tarkistaa asiakkaiden ALV-tunnisteet VIES-palvelusta käännetyn verovelvollisuuden soveltamiseksi."
+
+msgid "EU VAT Rates"
+msgstr "EU:n ALV-kannat"
+
+msgid "Settings"
+msgstr "Asetukset"
+
+msgid "Get an API key"
+msgstr "Hanki API-avain"
+
+msgid "Insufficient permissions."
+msgstr "Käyttöoikeudet eivät riitä."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "EU:n ALV-kannat ja VIES-tarkistus"
+
+msgid "EU VAT rates synced successfully."
+msgstr "EU:n ALV-kannat synkronoitiin onnistuneesti."
+
+msgid "Sync failed."
+msgstr "Synkronointi epäonnistui."
+
+msgid "Settings saved."
+msgstr "Asetukset tallennettu."
+
+msgid "API key accepted by vatnode."
+msgstr "vatnode hyväksyi API-avaimen."
+
+msgid "API key check failed."
+msgstr "API-avaimen tarkistus epäonnistui."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Myy EU-yrityksille ilman arvonlisäveroa"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Lisää vatnoden API-avain, niin lisäosa tarkistaa asiakkaan ALV-tunnisteen virallisesta VIES-palvelusta kassalla. Vahvistetut yritysasiakkaat muista EU-maista eivät maksa arvonlisäveroa, ja todiste tallennetaan tilaukselle."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Onko sinulla jo vatnode-tili? %s ja liitä se alle."
+
+msgid "Create a key"
+msgstr "Luo avain"
+
+msgid "Get an API Key"
+msgstr "Hanki API-avain"
+
+msgid "VAT number validation"
+msgstr "ALV-tunnisteen tarkistus"
+
+msgid "vatnode API key"
+msgstr "vatnoden API-avain"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Avain on tallennettu. Jätä kenttä tyhjäksi säilyttääksesi sen tai liitä uusi korvataksesi sen."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Luo avain %s-hallintapaneelissa. Ilmainen taso sisältää kuukausittaisen pyyntökiintiön."
+
+msgid "Key status:"
+msgstr "Avaimen tila:"
+
+msgid "Working"
+msgstr "Toimii"
+
+msgid "Rejected by vatnode"
+msgstr "vatnode hylkäsi"
+
+msgid "Monthly quota exceeded"
+msgstr "Kuukausikiintiö ylittyi"
+
+msgid "Could not reach vatnode"
+msgstr "vatnodeen ei saatu yhteyttä"
+
+msgid "Last call failed"
+msgstr "Viimeisin kutsu epäonnistui"
+
+msgid "Not checked yet"
+msgstr "Ei vielä tarkistettu"
+
+msgid "Checkout"
+msgstr "Kassa"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Tarkista ALV-tunnisteet VIES-palvelusta ja sovella käännettyä verovelvollisuutta"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "ALV-tunnisteen kenttä näkyy kassalla aina. Ilman avainta tunniste vain tarkistetaan muodon osalta ja tallennetaan — arvonlisävero peritään edelleen."
+
+msgid "Make the VAT number field required"
+msgstr "Tee ALV-tunnisteen kentästä pakollinen"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Vain pelkästään yritysmyyntiin keskittyville kaupoille — kuluttajilla ei ole ALV-tunnistetta."
+
+msgid "Which rate applies"
+msgstr "Mitä verokantaa sovelletaan"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Tämä kauppa on rekisteröitynyt EU:n arvonlisäveron erityisjärjestelmään (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Rekisteröitynyt: muissa EU-maissa asuvilta kuluttajilta peritään heidän oman maansa verokanta. Ei rekisteröitynyt: kaikilta EU-ostajilta peritään %s verokanta, jota sovelletaan niin kauan kuin rajat ylittävä myyntisi jää EU:n laajuisen 10 000 euron rajan alle."
+
+msgid "Save Settings"
+msgstr "Tallenna asetukset"
+
+msgid "Remove key"
+msgstr "Poista avain"
+
+msgid "Test Key"
+msgstr "Testaa avain"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "Käännetty verovelvollisuus on käytössä vahvistetuille EU-yrityksille oman maasi ulkopuolella."
+
+msgid "Rate sync"
+msgstr "Verokantojen synkronointi"
+
+msgid "Auto-sync"
+msgstr "Automaattinen synkronointi"
+
+msgid "Active — daily"
+msgstr "Käytössä — päivittäin"
+
+msgid "Last sync"
+msgstr "Viimeisin synkronointi"
+
+msgid "Never"
+msgstr "Ei koskaan"
+
+msgid "Data version"
+msgstr "Tietojen versio"
+
+msgid "Next auto-sync"
+msgstr "Seuraava automaattinen synkronointi"
+
+msgid "Source"
+msgstr "Lähde"
+
+msgid "(European Commission TEDB)"
+msgstr "(Euroopan komission TEDB)"
+
+msgid "Sync Now"
+msgstr "Synkronoi nyt"
+
+msgid "Current rates (%d countries)"
+msgstr "Nykyiset verokannat (%d maata)"
+
+msgid "Country"
+msgstr "Maa"
+
+msgid "Code"
+msgstr "Koodi"
+
+msgid "Standard"
+msgstr "Yleinen"
+
+msgid "Reduced"
+msgstr "Alennettu"
+
+msgid "Super-reduced"
+msgstr "Erittäin alennettu"
+
+msgid "Parking"
+msgstr "Siirtymäkauden kanta"
+
+msgid "No vatnode API key configured."
+msgstr "vatnoden API-avainta ei ole määritetty."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "vatnoden API palautti HTTP %d."
+
+msgid "Enter an API key first."
+msgstr "Syötä ensin API-avain."
+
+msgid "API key was rejected by vatnode."
+msgstr "vatnode hylkäsi API-avaimen."
+
+msgid "VAT number"
+msgstr "ALV-tunniste"
+
+msgid "Please enter your VAT number."
+msgstr "Syötä ALV-tunnisteesi."
+
+msgid "e.g. DE123456789"
+msgstr "esim. DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "EU-yritykset oman maamme ulkopuolella: syötä ALV-tunnisteesi ostaaksesi ilman arvonlisäveroa."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "ALV-tunniste %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "EU:n ALV"
+
+msgid "VAT number:"
+msgstr "ALV-tunniste:"
+
+msgid "Status:"
+msgstr "Tila:"
+
+msgid "Reverse charge:"
+msgstr "Käännetty verovelvollisuus:"
+
+msgid "Applied"
+msgstr "Sovellettu"
+
+msgid "Not applied"
+msgstr "Ei sovellettu"
+
+msgid "Registered name:"
+msgstr "Rekisteröity nimi:"
+
+msgid "VIES consultation number:"
+msgstr "VIES-tarkistusnumero:"
+
+msgid "Checked:"
+msgstr "Tarkistettu:"
+
+msgid "Not scheduled"
+msgstr "Ei ajastettu"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "ALV-tunnistetta ei voitu vahvistaa — arvonlisävero peritään tavalliseen tapaan."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "Käännettyä verovelvollisuutta sovelletaan vain EU:hun sijoittautuneisiin kauppoihin."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "Tämä ei näytä kelvolliselta EU:n ALV-tunnisteelta. Tarkista se tai jätä kenttä tyhjäksi."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "ALV-tunniste on rekisteröity maahan %1$s, mutta laskutusosoite on maassa %2$s. Niiden on vastattava toisiaan."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Kotimaan myynti — arvonlisävero peritään tavalliseen tapaan."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Tätä ALV-tunnistetta ei ole rekisteröity VIES-palveluun. Tarkista se tai jätä kenttä tyhjäksi maksaaksesi arvonlisäveron."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "ALV-tunniste vahvistettu — käännettyä verovelvollisuutta sovelletaan."
+
+msgid "Verified — reverse charge applied"
+msgstr "Vahvistettu — käännettyä verovelvollisuutta sovellettu"
+
+msgid "Not registered in VIES"
+msgstr "Ei rekisteröity VIES-palveluun"
+
+msgid "Invalid format"
+msgstr "Virheellinen muoto"
+
+msgid "VAT country does not match billing country"
+msgstr "ALV-tunnisteen maa ei vastaa laskutusmaata"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Kotimaan myynti — arvonlisävero peritty"
+
+msgid "Outside the EU VAT area"
+msgstr "EU:n arvonlisäveroalueen ulkopuolella"
+
+msgid "Not verified — VAT charged"
+msgstr "Ei vahvistettu — arvonlisävero peritty"
+
+msgid "No VAT number provided"
+msgstr "ALV-tunnistetta ei annettu"
+
+msgid "requires WooCommerce to be active."
+msgstr "vaatii, että WooCommerce on käytössä."

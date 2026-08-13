@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sq\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Mban të përditësuara normat e TVSH-së së BE-së në WooCommerce nga baza e të dhënave TEDB e Komisionit Evropian dhe verifikon numrat e TVSH-së së klientëve përmes VIES për të zbatuar ngarkesën e kundërt."
+
+msgid "EU VAT Rates"
+msgstr "Normat e TVSH-së së BE-së"
+
+msgid "Settings"
+msgstr "Cilësimet"
+
+msgid "Get an API key"
+msgstr "Merr një çelës API"
+
+msgid "Insufficient permissions."
+msgstr "Leje të pamjaftueshme."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "Normat e TVSH-së së BE-së dhe verifikimi VIES"
+
+msgid "EU VAT rates synced successfully."
+msgstr "Normat e TVSH-së së BE-së u sinkronizuan me sukses."
+
+msgid "Sync failed."
+msgstr "Sinkronizimi dështoi."
+
+msgid "Settings saved."
+msgstr "Cilësimet u ruajtën."
+
+msgid "API key accepted by vatnode."
+msgstr "Çelësi API u pranua nga vatnode."
+
+msgid "API key check failed."
+msgstr "Kontrolli i çelësit API dështoi."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Shitni bizneseve të BE-së pa TVSH"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Shtoni një çelës API të vatnode dhe shtojca verifikon numrin e TVSH-së së klientit në shërbimin zyrtar VIES gjatë pagesës. Blerësit e verifikuar të biznesit nga vende të tjera të BE-së nuk paguajnë TVSH, dhe prova ruhet me porosinë."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Keni tashmë një llogari vatnode? %s dhe ngjiteni më poshtë."
+
+msgid "Create a key"
+msgstr "Krijo një çelës"
+
+msgid "Get an API Key"
+msgstr "Merr një çelës API"
+
+msgid "VAT number validation"
+msgstr "Verifikimi i numrit të TVSH-së"
+
+msgid "vatnode API key"
+msgstr "Çelësi API i vatnode"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Është ruajtur një çelës. Lëreni fushën bosh për ta mbajtur, ose ngjitni një të ri për ta zëvendësuar."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Krijoni një çelës në panelin %s. Plani falas përfshin një kuotë mujore kërkesash."
+
+msgid "Key status:"
+msgstr "Statusi i çelësit:"
+
+msgid "Working"
+msgstr "Funksionon"
+
+msgid "Rejected by vatnode"
+msgstr "I refuzuar nga vatnode"
+
+msgid "Monthly quota exceeded"
+msgstr "Kuota mujore u tejkalua"
+
+msgid "Could not reach vatnode"
+msgstr "vatnode nuk u arrit"
+
+msgid "Last call failed"
+msgstr "Thirrja e fundit dështoi"
+
+msgid "Not checked yet"
+msgstr "Ende i pakontrolluar"
+
+msgid "Checkout"
+msgstr "Pagesa"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Verifiko numrat e TVSH-së me VIES dhe zbato ngarkesën e kundërt"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "Fusha e numrit të TVSH-së shfaqet gjithmonë gjatë pagesës. Pa çelës, numri vetëm kontrollohet për formatin dhe ruhet — TVSH-ja vazhdon të llogaritet."
+
+msgid "Make the VAT number field required"
+msgstr "Bëje të detyrueshme fushën e numrit të TVSH-së"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Vetëm për dyqane ekskluzivisht B2B — konsumatorët nuk kanë numër TVSH-je."
+
+msgid "Which rate applies"
+msgstr "Cila normë zbatohet"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Ky dyqan është i regjistruar në sistemin e një sporteli të BE-së (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "I regjistruar: konsumatorëve në vende të tjera të BE-së u ngarkohet norma e vendit të tyre. I paregjistruar: të gjithë blerësve nga BE-ja u ngarkohet norma e %s, e cila zbatohet për sa kohë shitjet tuaja ndërkufitare qëndrojnë nën pragun prej 10.000 EUR në nivel BE."
+
+msgid "Save Settings"
+msgstr "Ruaj cilësimet"
+
+msgid "Remove key"
+msgstr "Hiq çelësin"
+
+msgid "Test Key"
+msgstr "Testo çelësin"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "Ngarkesa e kundërt është aktive për bizneset e verifikuara të BE-së jashtë vendit tuaj."
+
+msgid "Rate sync"
+msgstr "Sinkronizimi i normave"
+
+msgid "Auto-sync"
+msgstr "Sinkronizim automatik"
+
+msgid "Active — daily"
+msgstr "Aktiv — çdo ditë"
+
+msgid "Last sync"
+msgstr "Sinkronizimi i fundit"
+
+msgid "Never"
+msgstr "Asnjëherë"
+
+msgid "Data version"
+msgstr "Versioni i të dhënave"
+
+msgid "Next auto-sync"
+msgstr "Sinkronizimi i ardhshëm automatik"
+
+msgid "Source"
+msgstr "Burimi"
+
+msgid "(European Commission TEDB)"
+msgstr "(TEDB i Komisionit Evropian)"
+
+msgid "Sync Now"
+msgstr "Sinkronizo tani"
+
+msgid "Current rates (%d countries)"
+msgstr "Normat aktuale (%d vende)"
+
+msgid "Country"
+msgstr "Vendi"
+
+msgid "Code"
+msgstr "Kodi"
+
+msgid "Standard"
+msgstr "Standarde"
+
+msgid "Reduced"
+msgstr "E reduktuar"
+
+msgid "Super-reduced"
+msgstr "Shumë e reduktuar"
+
+msgid "Parking"
+msgstr "Kalimtare"
+
+msgid "No vatnode API key configured."
+msgstr "Nuk është konfiguruar asnjë çelës API i vatnode."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "API i vatnode ktheu HTTP %d."
+
+msgid "Enter an API key first."
+msgstr "Fillimisht vendosni një çelës API."
+
+msgid "API key was rejected by vatnode."
+msgstr "Çelësi API u refuzua nga vatnode."
+
+msgid "VAT number"
+msgstr "Numri i TVSH-së"
+
+msgid "Please enter your VAT number."
+msgstr "Ju lutemi vendosni numrin tuaj të TVSH-së."
+
+msgid "e.g. DE123456789"
+msgstr "p.sh. DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "Bizneset e BE-së jashtë vendit tonë: vendosni numrin e TVSH-së për të blerë pa TVSH."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "Numri i TVSH-së %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "TVSH-ja e BE-së"
+
+msgid "VAT number:"
+msgstr "Numri i TVSH-së:"
+
+msgid "Status:"
+msgstr "Statusi:"
+
+msgid "Reverse charge:"
+msgstr "Ngarkesa e kundërt:"
+
+msgid "Applied"
+msgstr "E zbatuar"
+
+msgid "Not applied"
+msgstr "E pazbatuar"
+
+msgid "Registered name:"
+msgstr "Emri i regjistruar:"
+
+msgid "VIES consultation number:"
+msgstr "Numri i konsultimit VIES:"
+
+msgid "Checked:"
+msgstr "Kontrolluar:"
+
+msgid "Not scheduled"
+msgstr "E paplanifikuar"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "Numri i TVSH-së nuk mund të verifikohej — TVSH-ja u ngarkua si zakonisht."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "Ngarkesa e kundërt zbatohet vetëm për dyqanet e vendosura në BE."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "Ky nuk duket si një numër i vlefshëm TVSH-je i BE-së. Kontrollojeni, ose lëreni fushën bosh."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "Numri i TVSH-së është i regjistruar në %1$s, ndërsa adresa e faturimit është në %2$s. Ato duhet të përputhen."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Shitje e brendshme — TVSH-ja ngarkohet si zakonisht."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Ky numër TVSH-je nuk është i regjistruar në VIES. Kontrollojeni, ose lëreni fushën bosh për të paguar TVSH-në."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "Numri i TVSH-së u verifikua — zbatohet ngarkesa e kundërt."
+
+msgid "Verified — reverse charge applied"
+msgstr "I verifikuar — ngarkesa e kundërt u zbatua"
+
+msgid "Not registered in VIES"
+msgstr "I paregjistruar në VIES"
+
+msgid "Invalid format"
+msgstr "Format i pavlefshëm"
+
+msgid "VAT country does not match billing country"
+msgstr "Vendi i numrit të TVSH-së nuk përputhet me vendin e faturimit"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Shitje e brendshme — TVSH e ngarkuar"
+
+msgid "Outside the EU VAT area"
+msgstr "Jashtë territorit të TVSH-së së BE-së"
+
+msgid "Not verified — VAT charged"
+msgstr "I paverifikuar — TVSH e ngarkuar"
+
+msgid "No VAT number provided"
+msgstr "Nuk u dha asnjë numër TVSH-je"
+
+msgid "requires WooCommerce to be active."
+msgstr "kërkon që WooCommerce të jetë aktiv."

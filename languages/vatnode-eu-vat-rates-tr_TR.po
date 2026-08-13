@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "WooCommerce'teki AB KDV oranlarını Avrupa Komisyonu'nun TEDB veritabanından güncel tutar ve tersine yükümlülüğü uygulamak için müşterilerin KDV numaralarını VIES üzerinden doğrular."
+
+msgid "EU VAT Rates"
+msgstr "AB KDV oranları"
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+msgid "Get an API key"
+msgstr "API anahtarı al"
+
+msgid "Insufficient permissions."
+msgstr "Yetki yetersiz."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "AB KDV oranları ve VIES doğrulaması"
+
+msgid "EU VAT rates synced successfully."
+msgstr "AB KDV oranları başarıyla eşitlendi."
+
+msgid "Sync failed."
+msgstr "Eşitleme başarısız oldu."
+
+msgid "Settings saved."
+msgstr "Ayarlar kaydedildi."
+
+msgid "API key accepted by vatnode."
+msgstr "API anahtarı vatnode tarafından kabul edildi."
+
+msgid "API key check failed."
+msgstr "API anahtarı denetimi başarısız oldu."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "AB'deki şirketlere KDV'siz satış yapın"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Bir vatnode API anahtarı ekleyin; eklenti ödeme adımında müşterinin KDV numarasını resmi VIES servisinde doğrular. Ülkenizin dışındaki doğrulanmış AB şirketlerinden KDV alınmaz ve kanıt siparişe kaydedilir."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Zaten bir vatnode hesabınız var mı? %s ve aşağıya yapıştırın."
+
+msgid "Create a key"
+msgstr "Anahtar oluştur"
+
+msgid "Get an API Key"
+msgstr "API anahtarı al"
+
+msgid "VAT number validation"
+msgstr "KDV numarası doğrulama"
+
+msgid "vatnode API key"
+msgstr "vatnode API anahtarı"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Kayıtlı bir anahtar var. Korumak için alanı boş bırakın veya değiştirmek için yenisini yapıştırın."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "%s panelinizde bir anahtar oluşturun. Ücretsiz plan aylık istek kotası içerir."
+
+msgid "Key status:"
+msgstr "Anahtarın durumu:"
+
+msgid "Working"
+msgstr "Çalışıyor"
+
+msgid "Rejected by vatnode"
+msgstr "vatnode tarafından reddedildi"
+
+msgid "Monthly quota exceeded"
+msgstr "Aylık kota aşıldı"
+
+msgid "Could not reach vatnode"
+msgstr "vatnode'a ulaşılamadı"
+
+msgid "Last call failed"
+msgstr "Son çağrı başarısız oldu"
+
+msgid "Not checked yet"
+msgstr "Henüz denetlenmedi"
+
+msgid "Checkout"
+msgstr "Ödeme"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "KDV numaralarını VIES ile doğrula ve tersine yükümlülüğü uygula"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "KDV numarası alanı ödeme adımında her zaman görünür. Anahtar olmadan numara yalnızca biçim olarak denetlenir ve kaydedilir — KDV yine de tahsil edilir."
+
+msgid "Make the VAT number field required"
+msgstr "KDV numarası alanını zorunlu yap"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Yalnızca şirketlere satış yapan mağazalar için — tüketicilerin KDV numarası yoktur."
+
+msgid "Which rate applies"
+msgstr "Hangi oran geçerli"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Bu mağaza AB tek durak sistemine (OSS) kayıtlı"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Kayıtlı: diğer AB ülkelerindeki tüketicilerden kendi ülkelerinin oranı alınır. Kayıtlı değil: tüm AB alıcılarından %s oranı alınır; bu, sınır ötesi satışlarınız AB genelindeki 10.000 EUR eşiğinin altında kaldığı sürece geçerlidir."
+
+msgid "Save Settings"
+msgstr "Ayarları kaydet"
+
+msgid "Remove key"
+msgstr "Anahtarı kaldır"
+
+msgid "Test Key"
+msgstr "Anahtarı sına"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "Tersine yükümlülük, ülkenizin dışındaki doğrulanmış AB şirketleri için etkin."
+
+msgid "Rate sync"
+msgstr "Oran eşitleme"
+
+msgid "Auto-sync"
+msgstr "Otomatik eşitleme"
+
+msgid "Active — daily"
+msgstr "Etkin — günlük"
+
+msgid "Last sync"
+msgstr "Son eşitleme"
+
+msgid "Never"
+msgstr "Hiç"
+
+msgid "Data version"
+msgstr "Veri sürümü"
+
+msgid "Next auto-sync"
+msgstr "Sonraki otomatik eşitleme"
+
+msgid "Source"
+msgstr "Kaynak"
+
+msgid "(European Commission TEDB)"
+msgstr "(Avrupa Komisyonu TEDB)"
+
+msgid "Sync Now"
+msgstr "Şimdi eşitle"
+
+msgid "Current rates (%d countries)"
+msgstr "Güncel oranlar (%d ülke)"
+
+msgid "Country"
+msgstr "Ülke"
+
+msgid "Code"
+msgstr "Kod"
+
+msgid "Standard"
+msgstr "Standart"
+
+msgid "Reduced"
+msgstr "İndirimli"
+
+msgid "Super-reduced"
+msgstr "Çok indirimli"
+
+msgid "Parking"
+msgstr "Geçiş oranı"
+
+msgid "No vatnode API key configured."
+msgstr "Yapılandırılmış bir vatnode API anahtarı yok."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "vatnode API'si HTTP %d döndürdü."
+
+msgid "Enter an API key first."
+msgstr "Önce bir API anahtarı girin."
+
+msgid "API key was rejected by vatnode."
+msgstr "API anahtarı vatnode tarafından reddedildi."
+
+msgid "VAT number"
+msgstr "KDV numarası"
+
+msgid "Please enter your VAT number."
+msgstr "Lütfen KDV numaranızı girin."
+
+msgid "e.g. DE123456789"
+msgstr "örn. DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "Ülkemiz dışındaki AB şirketleri: KDV'siz alışveriş için KDV numaranızı girin."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "KDV numarası %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "AB KDV"
+
+msgid "VAT number:"
+msgstr "KDV numarası:"
+
+msgid "Status:"
+msgstr "Durum:"
+
+msgid "Reverse charge:"
+msgstr "Tersine yükümlülük:"
+
+msgid "Applied"
+msgstr "Uygulandı"
+
+msgid "Not applied"
+msgstr "Uygulanmadı"
+
+msgid "Registered name:"
+msgstr "Kayıtlı unvan:"
+
+msgid "VIES consultation number:"
+msgstr "VIES sorgu numarası:"
+
+msgid "Checked:"
+msgstr "Denetlendi:"
+
+msgid "Not scheduled"
+msgstr "Zamanlanmadı"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "KDV numarası doğrulanamadı — KDV her zamanki gibi tahsil edildi."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "Tersine yükümlülük yalnızca AB'de yerleşik mağazalar için geçerlidir."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "Bu geçerli bir AB KDV numarasına benzemiyor. Kontrol edin veya alanı boş bırakın."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "KDV numarası %1$s ülkesinde kayıtlı, fatura adresi ise %2$s ülkesinde. İkisi eşleşmelidir."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Yurt içi satış — KDV her zamanki gibi tahsil edilir."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Bu KDV numarası VIES'te kayıtlı değil. Kontrol edin veya KDV ödemek için alanı boş bırakın."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "KDV numarası doğrulandı — tersine yükümlülük geçerli."
+
+msgid "Verified — reverse charge applied"
+msgstr "Doğrulandı — tersine yükümlülük uygulandı"
+
+msgid "Not registered in VIES"
+msgstr "VIES'te kayıtlı değil"
+
+msgid "Invalid format"
+msgstr "Geçersiz biçim"
+
+msgid "VAT country does not match billing country"
+msgstr "KDV numarasının ülkesi fatura ülkesiyle eşleşmiyor"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Yurt içi satış — KDV tahsil edildi"
+
+msgid "Outside the EU VAT area"
+msgstr "AB KDV bölgesinin dışında"
+
+msgid "Not verified — VAT charged"
+msgstr "Doğrulanmadı — KDV tahsil edildi"
+
+msgid "No VAT number provided"
+msgstr "KDV numarası girilmedi"
+
+msgid "requires WooCommerce to be active."
+msgstr "etkin bir WooCommerce gerektirir."

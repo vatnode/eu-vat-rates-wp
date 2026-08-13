@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sl_SI\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Vzdržuje aktualne stopnje DDV v EU v WooCommerce iz baze TEDB Evropske komisije in preverja identifikacijske številke za DDV strank v sistemu VIES za uporabo obrnjene davčne obveznosti."
+
+msgid "EU VAT Rates"
+msgstr "Stopnje DDV v EU"
+
+msgid "Settings"
+msgstr "Nastavitve"
+
+msgid "Get an API key"
+msgstr "Pridobite ključ API"
+
+msgid "Insufficient permissions."
+msgstr "Nezadostna dovoljenja."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "Stopnje DDV v EU in preverjanje VIES"
+
+msgid "EU VAT rates synced successfully."
+msgstr "Stopnje DDV v EU so bile uspešno sinhronizirane."
+
+msgid "Sync failed."
+msgstr "Sinhronizacija ni uspela."
+
+msgid "Settings saved."
+msgstr "Nastavitve so shranjene."
+
+msgid "API key accepted by vatnode."
+msgstr "vatnode je sprejel ključ API."
+
+msgid "API key check failed."
+msgstr "Preverjanje ključa API ni uspelo."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Prodajajte podjetjem v EU brez DDV"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Dodajte ključ API vatnode in vtičnik ob zaključku nakupa preveri identifikacijsko številko za DDV stranke v uradni storitvi VIES. Preverjenim poslovnim kupcem iz drugih držav EU se DDV ne obračuna, dokazilo pa se shrani k naročilu."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Že imate račun vatnode? %s in ga prilepite spodaj."
+
+msgid "Create a key"
+msgstr "Ustvari ključ"
+
+msgid "Get an API Key"
+msgstr "Pridobite ključ API"
+
+msgid "VAT number validation"
+msgstr "Preverjanje identifikacijske številke za DDV"
+
+msgid "vatnode API key"
+msgstr "Ključ API vatnode"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Ključ je shranjen. Pustite polje prazno, da ga obdržite, ali prilepite novega, da ga zamenjate."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Ustvarite ključ v nadzorni plošči %s. Brezplačni paket vključuje mesečno kvoto zahtevkov."
+
+msgid "Key status:"
+msgstr "Stanje ključa:"
+
+msgid "Working"
+msgstr "Deluje"
+
+msgid "Rejected by vatnode"
+msgstr "Zavrnjen s strani vatnode"
+
+msgid "Monthly quota exceeded"
+msgstr "Mesečna kvota je presežena"
+
+msgid "Could not reach vatnode"
+msgstr "vatnode ni dosegljiv"
+
+msgid "Last call failed"
+msgstr "Zadnji klic ni uspel"
+
+msgid "Not checked yet"
+msgstr "Še ni preverjen"
+
+msgid "Checkout"
+msgstr "Zaključek nakupa"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Preverjaj identifikacijske številke za DDV v VIES in uporabi obrnjeno davčno obveznost"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "Polje za identifikacijsko številko za DDV je pri zaključku nakupa vedno prikazano. Brez ključa se številka preveri le po obliki in shrani — DDV se še naprej obračunava."
+
+msgid "Make the VAT number field required"
+msgstr "Naredi polje za identifikacijsko številko za DDV obvezno"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Samo za trgovine izključno za podjetja — potrošniki nimajo identifikacijske številke za DDV."
+
+msgid "Which rate applies"
+msgstr "Katera stopnja velja"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Ta trgovina je registrirana v sistemu vse na enem mestu EU (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Registrirana: potrošnikom iz drugih držav EU se obračuna stopnja njihove države. Ni registrirana: vsem kupcem iz EU se obračuna stopnja %s, ki velja, dokler vaša čezmejna prodaja ostaja pod pragom 10.000 EUR na ravni EU."
+
+msgid "Save Settings"
+msgstr "Shrani nastavitve"
+
+msgid "Remove key"
+msgstr "Odstrani ključ"
+
+msgid "Test Key"
+msgstr "Preizkusi ključ"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "Obrnjena davčna obveznost je aktivna za preverjena podjetja iz EU zunaj vaše države."
+
+msgid "Rate sync"
+msgstr "Sinhronizacija stopenj"
+
+msgid "Auto-sync"
+msgstr "Samodejna sinhronizacija"
+
+msgid "Active — daily"
+msgstr "Aktivna — dnevno"
+
+msgid "Last sync"
+msgstr "Zadnja sinhronizacija"
+
+msgid "Never"
+msgstr "Nikoli"
+
+msgid "Data version"
+msgstr "Različica podatkov"
+
+msgid "Next auto-sync"
+msgstr "Naslednja samodejna sinhronizacija"
+
+msgid "Source"
+msgstr "Vir"
+
+msgid "(European Commission TEDB)"
+msgstr "(TEDB Evropske komisije)"
+
+msgid "Sync Now"
+msgstr "Sinhroniziraj zdaj"
+
+msgid "Current rates (%d countries)"
+msgstr "Trenutne stopnje (%d držav)"
+
+msgid "Country"
+msgstr "Država"
+
+msgid "Code"
+msgstr "Koda"
+
+msgid "Standard"
+msgstr "Splošna"
+
+msgid "Reduced"
+msgstr "Nižja"
+
+msgid "Super-reduced"
+msgstr "Posebej nižja"
+
+msgid "Parking"
+msgstr "Prehodna"
+
+msgid "No vatnode API key configured."
+msgstr "Ključ API vatnode ni nastavljen."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "API vatnode je vrnil HTTP %d."
+
+msgid "Enter an API key first."
+msgstr "Najprej vnesite ključ API."
+
+msgid "API key was rejected by vatnode."
+msgstr "vatnode je zavrnil ključ API."
+
+msgid "VAT number"
+msgstr "Identifikacijska številka za DDV"
+
+msgid "Please enter your VAT number."
+msgstr "Vnesite svojo identifikacijsko številko za DDV."
+
+msgid "e.g. DE123456789"
+msgstr "npr. DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "Podjetja iz EU zunaj naše države: vnesite identifikacijsko številko za DDV za nakup brez DDV."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "Identifikacijska številka za DDV %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "DDV v EU"
+
+msgid "VAT number:"
+msgstr "Identifikacijska številka za DDV:"
+
+msgid "Status:"
+msgstr "Stanje:"
+
+msgid "Reverse charge:"
+msgstr "Obrnjena davčna obveznost:"
+
+msgid "Applied"
+msgstr "Uporabljena"
+
+msgid "Not applied"
+msgstr "Ni uporabljena"
+
+msgid "Registered name:"
+msgstr "Registrirano ime:"
+
+msgid "VIES consultation number:"
+msgstr "Številka poizvedbe VIES:"
+
+msgid "Checked:"
+msgstr "Preverjeno:"
+
+msgid "Not scheduled"
+msgstr "Ni načrtovano"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "Identifikacijske številke za DDV ni bilo mogoče preveriti — DDV je bil obračunan kot običajno."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "Obrnjena davčna obveznost velja samo za trgovine s sedežem v EU."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "To ni videti kot veljavna identifikacijska številka za DDV v EU. Preverite jo ali pustite polje prazno."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "Identifikacijska številka za DDV je registrirana v %1$s, naslov za račun pa je v %2$s. Ujemati se morata."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Domača prodaja — DDV se obračuna kot običajno."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Ta identifikacijska številka za DDV ni registrirana v VIES. Preverite jo ali pustite polje prazno in plačajte DDV."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "Identifikacijska številka za DDV je preverjena — velja obrnjena davčna obveznost."
+
+msgid "Verified — reverse charge applied"
+msgstr "Preverjeno — obrnjena davčna obveznost uporabljena"
+
+msgid "Not registered in VIES"
+msgstr "Ni registrirana v VIES"
+
+msgid "Invalid format"
+msgstr "Neveljavna oblika"
+
+msgid "VAT country does not match billing country"
+msgstr "Država identifikacijske številke za DDV se ne ujema z državo računa"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Domača prodaja — DDV obračunan"
+
+msgid "Outside the EU VAT area"
+msgstr "Zunaj območja DDV v EU"
+
+msgid "Not verified — VAT charged"
+msgstr "Ni preverjeno — DDV obračunan"
+
+msgid "No VAT number provided"
+msgstr "Identifikacijska številka za DDV ni navedena"
+
+msgid "requires WooCommerce to be active."
+msgstr "zahteva aktiven WooCommerce."

@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "根据欧盟委员会 TEDB 数据库，使 WooCommerce 中的欧盟增值税税率保持最新，并通过 VIES 验证客户的增值税号以适用反向征收。"
+
+msgid "EU VAT Rates"
+msgstr "欧盟增值税税率"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Get an API key"
+msgstr "获取 API 密钥"
+
+msgid "Insufficient permissions."
+msgstr "权限不足。"
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "欧盟增值税税率与 VIES 验证"
+
+msgid "EU VAT rates synced successfully."
+msgstr "欧盟增值税税率已同步。"
+
+msgid "Sync failed."
+msgstr "同步失败。"
+
+msgid "Settings saved."
+msgstr "设置已保存。"
+
+msgid "API key accepted by vatnode."
+msgstr "vatnode 已接受该 API 密钥。"
+
+msgid "API key check failed."
+msgstr "API 密钥检查失败。"
+
+msgid "Sell to EU businesses without VAT"
+msgstr "面向欧盟企业免增值税销售"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "添加 vatnode API 密钥后，插件会在结账时通过官方 VIES 服务验证客户的增值税号。位于贵国以外、已验证的欧盟企业买家无需缴纳增值税，验证凭证会随订单保存。"
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "已经有 vatnode 账户？%s 并粘贴到下方。"
+
+msgid "Create a key"
+msgstr "创建密钥"
+
+msgid "Get an API Key"
+msgstr "获取 API 密钥"
+
+msgid "VAT number validation"
+msgstr "增值税号验证"
+
+msgid "vatnode API key"
+msgstr "vatnode API 密钥"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "已保存一个密钥。留空表示保留，粘贴新密钥则会替换。"
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "在 %s 控制台中创建密钥。免费套餐包含每月请求额度。"
+
+msgid "Key status:"
+msgstr "密钥状态："
+
+msgid "Working"
+msgstr "正常"
+
+msgid "Rejected by vatnode"
+msgstr "被 vatnode 拒绝"
+
+msgid "Monthly quota exceeded"
+msgstr "已超出每月额度"
+
+msgid "Could not reach vatnode"
+msgstr "无法连接 vatnode"
+
+msgid "Last call failed"
+msgstr "上次调用失败"
+
+msgid "Not checked yet"
+msgstr "尚未检查"
+
+msgid "Checkout"
+msgstr "结账"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "通过 VIES 验证增值税号并适用反向征收"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "增值税号字段在结账时始终显示。没有密钥时，系统只检查号码格式并保存——增值税仍会照常收取。"
+
+msgid "Make the VAT number field required"
+msgstr "将增值税号设为必填"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "仅适用于纯 B2B 商店——消费者没有增值税号。"
+
+msgid "Which rate applies"
+msgstr "适用哪种税率"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "本店已注册欧盟一站式服务（OSS）"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "已注册：对其他欧盟国家的消费者按其本国税率收取。未注册：对所有欧盟买家按 %s 的税率收取；只要跨境销售额低于欧盟统一的 10,000 欧元门槛，这就是适用的做法。"
+
+msgid "Save Settings"
+msgstr "保存设置"
+
+msgid "Remove key"
+msgstr "移除密钥"
+
+msgid "Test Key"
+msgstr "测试密钥"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "反向征收已对贵国以外经过验证的欧盟企业买家生效。"
+
+msgid "Rate sync"
+msgstr "税率同步"
+
+msgid "Auto-sync"
+msgstr "自动同步"
+
+msgid "Active — daily"
+msgstr "已启用 — 每日"
+
+msgid "Last sync"
+msgstr "上次同步"
+
+msgid "Never"
+msgstr "从未"
+
+msgid "Data version"
+msgstr "数据版本"
+
+msgid "Next auto-sync"
+msgstr "下次自动同步"
+
+msgid "Source"
+msgstr "来源"
+
+msgid "(European Commission TEDB)"
+msgstr "（欧盟委员会 TEDB）"
+
+msgid "Sync Now"
+msgstr "立即同步"
+
+msgid "Current rates (%d countries)"
+msgstr "当前税率（%d 个国家）"
+
+msgid "Country"
+msgstr "国家"
+
+msgid "Code"
+msgstr "代码"
+
+msgid "Standard"
+msgstr "标准"
+
+msgid "Reduced"
+msgstr "低税率"
+
+msgid "Super-reduced"
+msgstr "超低税率"
+
+msgid "Parking"
+msgstr "过渡税率"
+
+msgid "No vatnode API key configured."
+msgstr "尚未配置 vatnode API 密钥。"
+
+msgid "vatnode API returned HTTP %d."
+msgstr "vatnode API 返回 HTTP %d。"
+
+msgid "Enter an API key first."
+msgstr "请先输入 API 密钥。"
+
+msgid "API key was rejected by vatnode."
+msgstr "该 API 密钥被 vatnode 拒绝。"
+
+msgid "VAT number"
+msgstr "增值税号"
+
+msgid "Please enter your VAT number."
+msgstr "请输入您的增值税号。"
+
+msgid "e.g. DE123456789"
+msgstr "例如 DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "我国以外的欧盟企业：输入增值税号即可免增值税购买。"
+
+msgid "VAT number %1$s — %2$s"
+msgstr "增值税号 %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "欧盟增值税"
+
+msgid "VAT number:"
+msgstr "增值税号："
+
+msgid "Status:"
+msgstr "状态："
+
+msgid "Reverse charge:"
+msgstr "反向征收："
+
+msgid "Applied"
+msgstr "已适用"
+
+msgid "Not applied"
+msgstr "未适用"
+
+msgid "Registered name:"
+msgstr "注册名称："
+
+msgid "VIES consultation number:"
+msgstr "VIES 查询编号："
+
+msgid "Checked:"
+msgstr "检查时间："
+
+msgid "Not scheduled"
+msgstr "未安排"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "无法验证增值税号——已照常收取增值税。"
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "反向征收仅适用于设立在欧盟境内的商店。"
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "这看起来不是有效的欧盟增值税号。请核对，或将该字段留空。"
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "增值税号注册于 %1$s，但账单地址在 %2$s。两者必须一致。"
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "国内销售——增值税照常收取。"
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "该增值税号未在 VIES 中注册。请核对，或将该字段留空并支付增值税。"
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "增值税号已验证——适用反向征收。"
+
+msgid "Verified — reverse charge applied"
+msgstr "已验证——已适用反向征收"
+
+msgid "Not registered in VIES"
+msgstr "未在 VIES 中注册"
+
+msgid "Invalid format"
+msgstr "格式无效"
+
+msgid "VAT country does not match billing country"
+msgstr "增值税号所属国家与账单国家不一致"
+
+msgid "Domestic sale — VAT charged"
+msgstr "国内销售——已收取增值税"
+
+msgid "Outside the EU VAT area"
+msgstr "在欧盟增值税区域之外"
+
+msgid "Not verified — VAT charged"
+msgstr "未验证——已收取增值税"
+
+msgid "No VAT number provided"
+msgstr "未提供增值税号"
+
+msgid "requires WooCommerce to be active."
+msgstr "需要启用 WooCommerce。"

@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ga\n"
+"Plural-Forms: nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Coinníonn sé rátaí CBL an AE cothrom le dáta in WooCommerce ó bhunachar sonraí TEDB an Choimisiúin Eorpaigh, agus deimhníonn sé uimhreacha CBL na gcustaiméirí trí VIES chun an muirear aisiompaithe a chur i bhfeidhm."
+
+msgid "EU VAT Rates"
+msgstr "Rátaí CBL an AE"
+
+msgid "Settings"
+msgstr "Socruithe"
+
+msgid "Get an API key"
+msgstr "Faigh eochair API"
+
+msgid "Insufficient permissions."
+msgstr "Níl na ceadanna riachtanacha agat."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "Rátaí CBL an AE agus deimhniú VIES"
+
+msgid "EU VAT rates synced successfully."
+msgstr "Sioncronaíodh rátaí CBL an AE go rathúil."
+
+msgid "Sync failed."
+msgstr "Theip ar an tsioncronú."
+
+msgid "Settings saved."
+msgstr "Sábháladh na socruithe."
+
+msgid "API key accepted by vatnode."
+msgstr "Ghlac vatnode leis an eochair API."
+
+msgid "API key check failed."
+msgstr "Theip ar sheiceáil na heochrach API."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Díol le gnólachtaí an AE gan CBL"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Cuir eochair API vatnode leis agus deimhníonn an breiseán uimhir CBL an chustaiméara le seirbhís oifigiúil VIES ag an tseiceáil amach. Ní ghearrtar CBL ar cheannaitheoirí gnó deimhnithe i dtíortha eile san AE, agus coinnítear an cruthúnas leis an ordú."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "An bhfuil cuntas vatnode agat cheana? %s agus greamaigh thíos í."
+
+msgid "Create a key"
+msgstr "Cruthaigh eochair"
+
+msgid "Get an API Key"
+msgstr "Faigh eochair API"
+
+msgid "VAT number validation"
+msgstr "Deimhniú uimhreach CBL"
+
+msgid "vatnode API key"
+msgstr "Eochair API vatnode"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Tá eochair sábháilte. Fág an réimse folamh chun í a choinneáil, nó greamaigh ceann nua chun í a athsholáthar."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Cruthaigh eochair i do dheais %s. Cuimsíonn an plean saor in aisce cuóta míosúil iarratas."
+
+msgid "Key status:"
+msgstr "Staid na heochrach:"
+
+msgid "Working"
+msgstr "Ag obair"
+
+msgid "Rejected by vatnode"
+msgstr "Diúltaithe ag vatnode"
+
+msgid "Monthly quota exceeded"
+msgstr "Sáraíodh an cuóta míosúil"
+
+msgid "Could not reach vatnode"
+msgstr "Níorbh fhéidir vatnode a bhaint amach"
+
+msgid "Last call failed"
+msgstr "Theip ar an nglao deireanach"
+
+msgid "Not checked yet"
+msgstr "Gan seiceáil fós"
+
+msgid "Checkout"
+msgstr "Seiceáil amach"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Deimhnigh uimhreacha CBL le VIES agus cuir an muirear aisiompaithe i bhfeidhm"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "Taispeántar réimse na huimhreach CBL i gcónaí ag an tseiceáil amach. Gan eochair, ní dhéantar ach formáid na huimhreach a sheiceáil agus í a shábháil — gearrtar CBL fós."
+
+msgid "Make the VAT number field required"
+msgstr "Déan réimse na huimhreach CBL éigeantach"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Do shiopaí gnó amháin — níl uimhir CBL ag tomhaltóirí."
+
+msgid "Which rate applies"
+msgstr "Cén ráta a bhaineann leis"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Tá an siopa seo cláraithe le hAonstad an AE (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Cláraithe: gearrtar ar thomhaltóirí i dtíortha eile san AE ráta a dtíre féin. Gan clárú: gearrtar ráta %s ar gach ceannaitheoir san AE, agus baineann sé sin leis fad is a fhanann do dhíolacháin trasteorann faoin tairseach AE-uile de 10,000 EUR."
+
+msgid "Save Settings"
+msgstr "Sábháil na socruithe"
+
+msgid "Remove key"
+msgstr "Bain an eochair"
+
+msgid "Test Key"
+msgstr "Tástáil an eochair"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "Tá an muirear aisiompaithe gníomhach do ghnólachtaí deimhnithe an AE lasmuigh de do thír."
+
+msgid "Rate sync"
+msgstr "Sioncronú rátaí"
+
+msgid "Auto-sync"
+msgstr "Sioncronú uathoibríoch"
+
+msgid "Active — daily"
+msgstr "Gníomhach — go laethúil"
+
+msgid "Last sync"
+msgstr "An sioncronú deireanach"
+
+msgid "Never"
+msgstr "Riamh"
+
+msgid "Data version"
+msgstr "Leagan na sonraí"
+
+msgid "Next auto-sync"
+msgstr "An chéad sioncronú uathoibríoch eile"
+
+msgid "Source"
+msgstr "Foinse"
+
+msgid "(European Commission TEDB)"
+msgstr "(TEDB an Choimisiúin Eorpaigh)"
+
+msgid "Sync Now"
+msgstr "Sioncronaigh anois"
+
+msgid "Current rates (%d countries)"
+msgstr "Rátaí reatha (%d tír)"
+
+msgid "Country"
+msgstr "Tír"
+
+msgid "Code"
+msgstr "Cód"
+
+msgid "Standard"
+msgstr "Caighdeánach"
+
+msgid "Reduced"
+msgstr "Laghdaithe"
+
+msgid "Super-reduced"
+msgstr "An-laghdaithe"
+
+msgid "Parking"
+msgstr "Idirthréimhseach"
+
+msgid "No vatnode API key configured."
+msgstr "Níl aon eochair API vatnode cumraithe."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "D'fhill API vatnode HTTP %d."
+
+msgid "Enter an API key first."
+msgstr "Cuir eochair API isteach ar dtús."
+
+msgid "API key was rejected by vatnode."
+msgstr "Dhiúltaigh vatnode don eochair API."
+
+msgid "VAT number"
+msgstr "Uimhir CBL"
+
+msgid "Please enter your VAT number."
+msgstr "Cuir d'uimhir CBL isteach le do thoil."
+
+msgid "e.g. DE123456789"
+msgstr "m.sh. DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "Gnólachtaí an AE lasmuigh dár dtír: cuir d'uimhir CBL isteach chun ceannach gan CBL."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "Uimhir CBL %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "CBL an AE"
+
+msgid "VAT number:"
+msgstr "Uimhir CBL:"
+
+msgid "Status:"
+msgstr "Staid:"
+
+msgid "Reverse charge:"
+msgstr "Muirear aisiompaithe:"
+
+msgid "Applied"
+msgstr "Curtha i bhfeidhm"
+
+msgid "Not applied"
+msgstr "Gan cur i bhfeidhm"
+
+msgid "Registered name:"
+msgstr "Ainm cláraithe:"
+
+msgid "VIES consultation number:"
+msgstr "Uimhir chomhairliúcháin VIES:"
+
+msgid "Checked:"
+msgstr "Seiceáilte:"
+
+msgid "Not scheduled"
+msgstr "Gan sceidealú"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "Níorbh fhéidir an uimhir CBL a dheimhniú — gearradh CBL mar is gnách."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "Ní bhaineann an muirear aisiompaithe ach le siopaí atá bunaithe san AE."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "Ní cosúil gur uimhir CBL bhailí de chuid an AE í seo. Seiceáil í, nó fág an réimse folamh."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "Tá an uimhir CBL cláraithe in %1$s ach tá an seoladh billeála in %2$s. Caithfidh siad teacht le chéile."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Díolachán intíre — gearrtar CBL mar is gnách."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Níl an uimhir CBL seo cláraithe in VIES. Seiceáil í, nó fág an réimse folamh chun CBL a íoc."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "Uimhir CBL deimhnithe — baineann an muirear aisiompaithe leis."
+
+msgid "Verified — reverse charge applied"
+msgstr "Deimhnithe — muirear aisiompaithe curtha i bhfeidhm"
+
+msgid "Not registered in VIES"
+msgstr "Gan clárú in VIES"
+
+msgid "Invalid format"
+msgstr "Formáid neamhbhailí"
+
+msgid "VAT country does not match billing country"
+msgstr "Ní thagann tír na huimhreach CBL leis an tír bhilleála"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Díolachán intíre — CBL gearrtha"
+
+msgid "Outside the EU VAT area"
+msgstr "Lasmuigh de limistéar CBL an AE"
+
+msgid "Not verified — VAT charged"
+msgstr "Gan deimhniú — CBL gearrtha"
+
+msgid "No VAT number provided"
+msgstr "Níor tugadh uimhir CBL"
+
+msgid "requires WooCommerce to be active."
+msgstr "teastaíonn WooCommerce gníomhach uaidh."

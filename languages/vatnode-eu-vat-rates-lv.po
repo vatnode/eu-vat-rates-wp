@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lv\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Uztur ES PVN likmes WooCommerce aktuālas no Eiropas Komisijas TEDB datubāzes un pārbauda klientu PVN numurus VIES sistēmā, lai piemērotu apgriezto maksāšanas kārtību."
+
+msgid "EU VAT Rates"
+msgstr "ES PVN likmes"
+
+msgid "Settings"
+msgstr "Iestatījumi"
+
+msgid "Get an API key"
+msgstr "Iegūt API atslēgu"
+
+msgid "Insufficient permissions."
+msgstr "Nepietiekamas atļaujas."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "ES PVN likmes un VIES pārbaude"
+
+msgid "EU VAT rates synced successfully."
+msgstr "ES PVN likmes ir sinhronizētas."
+
+msgid "Sync failed."
+msgstr "Sinhronizācija neizdevās."
+
+msgid "Settings saved."
+msgstr "Iestatījumi saglabāti."
+
+msgid "API key accepted by vatnode."
+msgstr "vatnode pieņēma API atslēgu."
+
+msgid "API key check failed."
+msgstr "API atslēgas pārbaude neizdevās."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Pārdodiet ES uzņēmumiem bez PVN"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Pievienojiet vatnode API atslēgu, un spraudnis pasūtījuma noformēšanas laikā pārbauda klienta PVN numuru oficiālajā VIES pakalpojumā. Pārbaudītiem uzņēmumiem no citām ES valstīm PVN netiek piemērots, un pierādījums tiek saglabāts pie pasūtījuma."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Jums jau ir vatnode konts? %s un ielīmējiet to zemāk."
+
+msgid "Create a key"
+msgstr "Izveidot atslēgu"
+
+msgid "Get an API Key"
+msgstr "Iegūt API atslēgu"
+
+msgid "VAT number validation"
+msgstr "PVN numura pārbaude"
+
+msgid "vatnode API key"
+msgstr "vatnode API atslēga"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Atslēga ir saglabāta. Atstājiet lauku tukšu, lai to paturētu, vai ielīmējiet jaunu, lai to aizstātu."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Izveidojiet atslēgu %s vadības panelī. Bezmaksas plāns ietver ikmēneša pieprasījumu kvotu."
+
+msgid "Key status:"
+msgstr "Atslēgas statuss:"
+
+msgid "Working"
+msgstr "Darbojas"
+
+msgid "Rejected by vatnode"
+msgstr "vatnode noraidīja"
+
+msgid "Monthly quota exceeded"
+msgstr "Ikmēneša kvota pārsniegta"
+
+msgid "Could not reach vatnode"
+msgstr "Nevar sasniegt vatnode"
+
+msgid "Last call failed"
+msgstr "Pēdējais pieprasījums neizdevās"
+
+msgid "Not checked yet"
+msgstr "Vēl nav pārbaudīta"
+
+msgid "Checkout"
+msgstr "Pasūtījuma noformēšana"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Pārbaudīt PVN numurus VIES un piemērot apgriezto maksāšanas kārtību"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "PVN numura lauks vienmēr tiek rādīts pasūtījuma noformēšanā. Bez atslēgas numurs tiek pārbaudīts tikai pēc formāta un saglabāts — PVN joprojām tiek piemērots."
+
+msgid "Make the VAT number field required"
+msgstr "Padarīt PVN numura lauku obligātu"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Tikai veikaliem, kas tirgo vienīgi uzņēmumiem — patērētājiem PVN numura nav."
+
+msgid "Which rate applies"
+msgstr "Kura likme tiek piemērota"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Šis veikals ir reģistrēts ES vienas pieturas aģentūrā (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Reģistrēts: patērētājiem citās ES valstīs tiek piemērota viņu valsts likme. Nav reģistrēts: visiem ES pircējiem tiek piemērota %s likme, kas ir spēkā, kamēr jūsu pārrobežu pārdošana nepārsniedz ES mēroga 10 000 EUR slieksni."
+
+msgid "Save Settings"
+msgstr "Saglabāt iestatījumus"
+
+msgid "Remove key"
+msgstr "Noņemt atslēgu"
+
+msgid "Test Key"
+msgstr "Pārbaudīt atslēgu"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "Apgrieztā maksāšanas kārtība ir aktīva pārbaudītiem ES uzņēmumiem ārpus jūsu valsts."
+
+msgid "Rate sync"
+msgstr "Likmju sinhronizācija"
+
+msgid "Auto-sync"
+msgstr "Automātiskā sinhronizācija"
+
+msgid "Active — daily"
+msgstr "Aktīva — katru dienu"
+
+msgid "Last sync"
+msgstr "Pēdējā sinhronizācija"
+
+msgid "Never"
+msgstr "Nekad"
+
+msgid "Data version"
+msgstr "Datu versija"
+
+msgid "Next auto-sync"
+msgstr "Nākamā automātiskā sinhronizācija"
+
+msgid "Source"
+msgstr "Avots"
+
+msgid "(European Commission TEDB)"
+msgstr "(Eiropas Komisijas TEDB)"
+
+msgid "Sync Now"
+msgstr "Sinhronizēt tagad"
+
+msgid "Current rates (%d countries)"
+msgstr "Pašreizējās likmes (%d valstis)"
+
+msgid "Country"
+msgstr "Valsts"
+
+msgid "Code"
+msgstr "Kods"
+
+msgid "Standard"
+msgstr "Standarta"
+
+msgid "Reduced"
+msgstr "Samazināta"
+
+msgid "Super-reduced"
+msgstr "Īpaši samazināta"
+
+msgid "Parking"
+msgstr "Pārejas"
+
+msgid "No vatnode API key configured."
+msgstr "vatnode API atslēga nav konfigurēta."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "vatnode API atgrieza HTTP %d."
+
+msgid "Enter an API key first."
+msgstr "Vispirms ievadiet API atslēgu."
+
+msgid "API key was rejected by vatnode."
+msgstr "vatnode noraidīja API atslēgu."
+
+msgid "VAT number"
+msgstr "PVN numurs"
+
+msgid "Please enter your VAT number."
+msgstr "Lūdzu, ievadiet savu PVN numuru."
+
+msgid "e.g. DE123456789"
+msgstr "piem., DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "ES uzņēmumi ārpus mūsu valsts: ievadiet savu PVN numuru, lai iegādātos bez PVN."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "PVN numurs %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "ES PVN"
+
+msgid "VAT number:"
+msgstr "PVN numurs:"
+
+msgid "Status:"
+msgstr "Statuss:"
+
+msgid "Reverse charge:"
+msgstr "Apgrieztā maksāšanas kārtība:"
+
+msgid "Applied"
+msgstr "Piemērota"
+
+msgid "Not applied"
+msgstr "Nav piemērota"
+
+msgid "Registered name:"
+msgstr "Reģistrētais nosaukums:"
+
+msgid "VIES consultation number:"
+msgstr "VIES pieprasījuma numurs:"
+
+msgid "Checked:"
+msgstr "Pārbaudīts:"
+
+msgid "Not scheduled"
+msgstr "Nav ieplānota"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "PVN numuru neizdevās pārbaudīt — PVN piemērots kā parasti."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "Apgrieztā maksāšanas kārtība attiecas tikai uz veikaliem, kas reģistrēti ES."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "Šis neizskatās pēc derīga ES PVN numura. Pārbaudiet to vai atstājiet lauku tukšu."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "PVN numurs ir reģistrēts valstī %1$s, bet rēķina adrese ir valstī %2$s. Tām jāsakrīt."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Pārdošana iekšzemē — PVN tiek piemērots kā parasti."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Šis PVN numurs nav reģistrēts VIES. Pārbaudiet to vai atstājiet lauku tukšu, lai samaksātu PVN."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "PVN numurs pārbaudīts — tiek piemērota apgrieztā maksāšanas kārtība."
+
+msgid "Verified — reverse charge applied"
+msgstr "Pārbaudīts — piemērota apgrieztā maksāšanas kārtība"
+
+msgid "Not registered in VIES"
+msgstr "Nav reģistrēts VIES"
+
+msgid "Invalid format"
+msgstr "Nederīgs formāts"
+
+msgid "VAT country does not match billing country"
+msgstr "PVN numura valsts nesakrīt ar rēķina valsti"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Pārdošana iekšzemē — PVN piemērots"
+
+msgid "Outside the EU VAT area"
+msgstr "Ārpus ES PVN teritorijas"
+
+msgid "Not verified — VAT charged"
+msgstr "Nav pārbaudīts — PVN piemērots"
+
+msgid "No VAT number provided"
+msgstr "PVN numurs nav norādīts"
+
+msgid "requires WooCommerce to be active."
+msgstr "prasa aktīvu WooCommerce."

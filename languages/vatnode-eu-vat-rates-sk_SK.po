@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sk_SK\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Udržiava sadzby DPH v EÚ vo WooCommerce aktuálne podľa databázy TEDB Európskej komisie a overuje IČ DPH zákazníkov v systéme VIES, aby uplatnil prenesenie daňovej povinnosti."
+
+msgid "EU VAT Rates"
+msgstr "Sadzby DPH v EÚ"
+
+msgid "Settings"
+msgstr "Nastavenia"
+
+msgid "Get an API key"
+msgstr "Získať API kľúč"
+
+msgid "Insufficient permissions."
+msgstr "Nedostatočné oprávnenia."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "Sadzby DPH v EÚ a overenie VIES"
+
+msgid "EU VAT rates synced successfully."
+msgstr "Sadzby DPH v EÚ boli synchronizované."
+
+msgid "Sync failed."
+msgstr "Synchronizácia zlyhala."
+
+msgid "Settings saved."
+msgstr "Nastavenia boli uložené."
+
+msgid "API key accepted by vatnode."
+msgstr "vatnode prijal API kľúč."
+
+msgid "API key check failed."
+msgstr "Kontrola API kľúča zlyhala."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Predávajte firmám v EÚ bez DPH"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Pridajte API kľúč vatnode a doplnok overí IČ DPH zákazníka v oficiálnej službe VIES pri dokončení objednávky. Overení firemní odberatelia z iných krajín EÚ neplatia DPH a doklad o overení sa uloží k objednávke."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Máte už účet vatnode? %s a vložte ho nižšie."
+
+msgid "Create a key"
+msgstr "Vytvoriť kľúč"
+
+msgid "Get an API Key"
+msgstr "Získať API kľúč"
+
+msgid "VAT number validation"
+msgstr "Overenie IČ DPH"
+
+msgid "vatnode API key"
+msgstr "API kľúč vatnode"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Kľúč je uložený. Ponechajte pole prázdne, ak si ho chcete ponechať, alebo vložte nový a nahraďte ho."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Vytvorte kľúč v paneli %s. Bezplatný plán zahŕňa mesačnú kvótu požiadaviek."
+
+msgid "Key status:"
+msgstr "Stav kľúča:"
+
+msgid "Working"
+msgstr "Funguje"
+
+msgid "Rejected by vatnode"
+msgstr "Zamietnutý službou vatnode"
+
+msgid "Monthly quota exceeded"
+msgstr "Mesačná kvóta bola vyčerpaná"
+
+msgid "Could not reach vatnode"
+msgstr "vatnode nie je dostupný"
+
+msgid "Last call failed"
+msgstr "Posledné volanie zlyhalo"
+
+msgid "Not checked yet"
+msgstr "Zatiaľ neoverené"
+
+msgid "Checkout"
+msgstr "Pokladňa"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Overovať IČ DPH cez VIES a uplatniť prenesenie daňovej povinnosti"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "Pole pre IČ DPH sa v pokladni zobrazuje vždy. Bez kľúča sa číslo iba skontroluje podľa formátu a uloží — DPH sa naďalej účtuje."
+
+msgid "Make the VAT number field required"
+msgstr "Nastaviť pole pre IČ DPH ako povinné"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Len pre čisto B2B obchody — spotrebitelia IČ DPH nemajú."
+
+msgid "Which rate applies"
+msgstr "Ktorá sadzba platí"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Tento obchod je registrovaný v jednotnom kontaktnom mieste EÚ (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Registrovaný: spotrebiteľom z iných krajín EÚ sa účtuje sadzba ich vlastnej krajiny. Neregistrovaný: všetkým kupujúcim z EÚ sa účtuje sadzba %s, ktorá platí, kým váš cezhraničný predaj zostáva pod celoúnijným prahom 10 000 EUR."
+
+msgid "Save Settings"
+msgstr "Uložiť nastavenia"
+
+msgid "Remove key"
+msgstr "Odstrániť kľúč"
+
+msgid "Test Key"
+msgstr "Otestovať kľúč"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "Prenesenie daňovej povinnosti je aktívne pre overené firmy z EÚ mimo vašej krajiny."
+
+msgid "Rate sync"
+msgstr "Synchronizácia sadzieb"
+
+msgid "Auto-sync"
+msgstr "Automatická synchronizácia"
+
+msgid "Active — daily"
+msgstr "Aktívna — denne"
+
+msgid "Last sync"
+msgstr "Posledná synchronizácia"
+
+msgid "Never"
+msgstr "Nikdy"
+
+msgid "Data version"
+msgstr "Verzia údajov"
+
+msgid "Next auto-sync"
+msgstr "Ďalšia automatická synchronizácia"
+
+msgid "Source"
+msgstr "Zdroj"
+
+msgid "(European Commission TEDB)"
+msgstr "(TEDB Európskej komisie)"
+
+msgid "Sync Now"
+msgstr "Synchronizovať teraz"
+
+msgid "Current rates (%d countries)"
+msgstr "Aktuálne sadzby (%d krajín)"
+
+msgid "Country"
+msgstr "Krajina"
+
+msgid "Code"
+msgstr "Kód"
+
+msgid "Standard"
+msgstr "Základná"
+
+msgid "Reduced"
+msgstr "Znížená"
+
+msgid "Super-reduced"
+msgstr "Druhá znížená"
+
+msgid "Parking"
+msgstr "Prechodná"
+
+msgid "No vatnode API key configured."
+msgstr "Nie je nastavený žiadny API kľúč vatnode."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "API vatnode vrátilo HTTP %d."
+
+msgid "Enter an API key first."
+msgstr "Najprv zadajte API kľúč."
+
+msgid "API key was rejected by vatnode."
+msgstr "API kľúč bol službou vatnode zamietnutý."
+
+msgid "VAT number"
+msgstr "IČ DPH"
+
+msgid "Please enter your VAT number."
+msgstr "Zadajte svoje IČ DPH."
+
+msgid "e.g. DE123456789"
+msgstr "napr. DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "Firmy z EÚ mimo našej krajiny: zadajte svoje IČ DPH a nakúpte bez DPH."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "IČ DPH %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "DPH v EÚ"
+
+msgid "VAT number:"
+msgstr "IČ DPH:"
+
+msgid "Status:"
+msgstr "Stav:"
+
+msgid "Reverse charge:"
+msgstr "Prenesenie daňovej povinnosti:"
+
+msgid "Applied"
+msgstr "Uplatnené"
+
+msgid "Not applied"
+msgstr "Neuplatnené"
+
+msgid "Registered name:"
+msgstr "Registrovaný názov:"
+
+msgid "VIES consultation number:"
+msgstr "Číslo overenia VIES:"
+
+msgid "Checked:"
+msgstr "Overené:"
+
+msgid "Not scheduled"
+msgstr "Nenaplánované"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "IČ DPH sa nepodarilo overiť — DPH bola účtovaná ako obvykle."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "Prenesenie daňovej povinnosti sa týka iba obchodov so sídlom v EÚ."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "Toto nevyzerá ako platné IČ DPH v EÚ. Skontrolujte ho alebo nechajte pole prázdne."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "IČ DPH je registrované v krajine %1$s, ale fakturačná adresa je v krajine %2$s. Musia sa zhodovať."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Domáci predaj — DPH sa účtuje ako obvykle."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Toto IČ DPH nie je registrované vo VIES. Skontrolujte ho alebo nechajte pole prázdne a zaplaťte DPH."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "IČ DPH overené — uplatňuje sa prenesenie daňovej povinnosti."
+
+msgid "Verified — reverse charge applied"
+msgstr "Overené — prenesenie daňovej povinnosti uplatnené"
+
+msgid "Not registered in VIES"
+msgstr "Nie je registrované vo VIES"
+
+msgid "Invalid format"
+msgstr "Neplatný formát"
+
+msgid "VAT country does not match billing country"
+msgstr "Krajina IČ DPH sa nezhoduje s fakturačnou krajinou"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Domáci predaj — DPH účtovaná"
+
+msgid "Outside the EU VAT area"
+msgstr "Mimo územia EÚ na účely DPH"
+
+msgid "Not verified — VAT charged"
+msgstr "Neoverené — DPH účtovaná"
+
+msgid "No VAT number provided"
+msgstr "IČ DPH nebolo zadané"
+
+msgid "requires WooCommerce to be active."
+msgstr "vyžaduje aktívny WooCommerce."

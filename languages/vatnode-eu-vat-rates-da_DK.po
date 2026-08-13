@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: da_DK\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Holder EU's momssatser i WooCommerce opdateret fra Europa-Kommissionens TEDB og kontrollerer kundernes momsnumre mod VIES for at anvende omvendt betalingspligt."
+
+msgid "EU VAT Rates"
+msgstr "EU-momssatser"
+
+msgid "Settings"
+msgstr "Indstillinger"
+
+msgid "Get an API key"
+msgstr "Få en API-nøgle"
+
+msgid "Insufficient permissions."
+msgstr "Utilstrækkelige rettigheder."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "EU-momssatser og VIES-kontrol"
+
+msgid "EU VAT rates synced successfully."
+msgstr "EU's momssatser er synkroniseret."
+
+msgid "Sync failed."
+msgstr "Synkroniseringen mislykkedes."
+
+msgid "Settings saved."
+msgstr "Indstillingerne er gemt."
+
+msgid "API key accepted by vatnode."
+msgstr "API-nøglen blev accepteret af vatnode."
+
+msgid "API key check failed."
+msgstr "Kontrollen af API-nøglen mislykkedes."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Sælg til EU-virksomheder uden moms"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Tilføj en API-nøgle fra vatnode, så kontrollerer pluginnet kundens momsnummer mod den officielle VIES-tjeneste ved kassen. Verificerede erhvervskunder i andre EU-lande betaler ingen moms, og dokumentationen gemmes på ordren."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Har du allerede en vatnode-konto? %s og indsæt den nedenfor."
+
+msgid "Create a key"
+msgstr "Opret en nøgle"
+
+msgid "Get an API Key"
+msgstr "Få en API-nøgle"
+
+msgid "VAT number validation"
+msgstr "Kontrol af momsnummer"
+
+msgid "vatnode API key"
+msgstr "vatnode API-nøgle"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Der er gemt en nøgle. Lad feltet stå tomt for at beholde den, eller indsæt en ny for at erstatte den."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Opret en nøgle i dit %s-dashboard. Gratisplanen indeholder en månedlig kvote af forespørgsler."
+
+msgid "Key status:"
+msgstr "Nøglens status:"
+
+msgid "Working"
+msgstr "Virker"
+
+msgid "Rejected by vatnode"
+msgstr "Afvist af vatnode"
+
+msgid "Monthly quota exceeded"
+msgstr "Månedlig kvote overskredet"
+
+msgid "Could not reach vatnode"
+msgstr "Kunne ikke nå vatnode"
+
+msgid "Last call failed"
+msgstr "Seneste kald mislykkedes"
+
+msgid "Not checked yet"
+msgstr "Endnu ikke kontrolleret"
+
+msgid "Checkout"
+msgstr "Kassen"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Kontrollér momsnumre med VIES og anvend omvendt betalingspligt"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "Feltet til momsnummer vises altid ved kassen. Uden en nøgle kontrolleres nummeret kun for format og gemmes — der opkræves stadig moms."
+
+msgid "Make the VAT number field required"
+msgstr "Gør feltet til momsnummer obligatorisk"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Kun for rene B2B-butikker — forbrugere har ikke et momsnummer."
+
+msgid "Which rate applies"
+msgstr "Hvilken sats gælder"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Denne butik er registreret i EU's One Stop Shop (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Registreret: forbrugere i andre EU-lande opkræves deres eget lands sats. Ikke registreret: alle EU-købere opkræves satsen for %s, hvilket gælder, så længe dit grænseoverskridende salg holder sig under EU-grænsen på 10.000 EUR."
+
+msgid "Save Settings"
+msgstr "Gem indstillinger"
+
+msgid "Remove key"
+msgstr "Fjern nøglen"
+
+msgid "Test Key"
+msgstr "Test nøglen"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "Omvendt betalingspligt er aktiv for verificerede EU-virksomheder uden for dit land."
+
+msgid "Rate sync"
+msgstr "Synkronisering af satser"
+
+msgid "Auto-sync"
+msgstr "Automatisk synkronisering"
+
+msgid "Active — daily"
+msgstr "Aktiv — dagligt"
+
+msgid "Last sync"
+msgstr "Seneste synkronisering"
+
+msgid "Never"
+msgstr "Aldrig"
+
+msgid "Data version"
+msgstr "Dataversion"
+
+msgid "Next auto-sync"
+msgstr "Næste automatiske synkronisering"
+
+msgid "Source"
+msgstr "Kilde"
+
+msgid "(European Commission TEDB)"
+msgstr "(Europa-Kommissionens TEDB)"
+
+msgid "Sync Now"
+msgstr "Synkronisér nu"
+
+msgid "Current rates (%d countries)"
+msgstr "Aktuelle satser (%d lande)"
+
+msgid "Country"
+msgstr "Land"
+
+msgid "Code"
+msgstr "Kode"
+
+msgid "Standard"
+msgstr "Normal"
+
+msgid "Reduced"
+msgstr "Reduceret"
+
+msgid "Super-reduced"
+msgstr "Stærkt reduceret"
+
+msgid "Parking"
+msgstr "Parkeringssats"
+
+msgid "No vatnode API key configured."
+msgstr "Der er ikke konfigureret nogen vatnode API-nøgle."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "vatnode API returnerede HTTP %d."
+
+msgid "Enter an API key first."
+msgstr "Indtast først en API-nøgle."
+
+msgid "API key was rejected by vatnode."
+msgstr "API-nøglen blev afvist af vatnode."
+
+msgid "VAT number"
+msgstr "Momsnummer"
+
+msgid "Please enter your VAT number."
+msgstr "Indtast dit momsnummer."
+
+msgid "e.g. DE123456789"
+msgstr "f.eks. DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "EU-virksomheder uden for vores land: indtast dit momsnummer for at købe uden moms."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "Momsnummer %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "EU-moms"
+
+msgid "VAT number:"
+msgstr "Momsnummer:"
+
+msgid "Status:"
+msgstr "Status:"
+
+msgid "Reverse charge:"
+msgstr "Omvendt betalingspligt:"
+
+msgid "Applied"
+msgstr "Anvendt"
+
+msgid "Not applied"
+msgstr "Ikke anvendt"
+
+msgid "Registered name:"
+msgstr "Registreret navn:"
+
+msgid "VIES consultation number:"
+msgstr "VIES-referencenummer:"
+
+msgid "Checked:"
+msgstr "Kontrolleret:"
+
+msgid "Not scheduled"
+msgstr "Ikke planlagt"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "Momsnummeret kunne ikke verificeres — der blev opkrævet moms som normalt."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "Omvendt betalingspligt gælder kun butikker, der er etableret i EU."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "Det ligner ikke et gyldigt EU-momsnummer. Kontrollér det, eller lad feltet stå tomt."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "Momsnummeret er registreret i %1$s, men faktureringsadressen er i %2$s. De skal stemme overens."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Indenlandsk salg — der opkræves moms som normalt."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Dette momsnummer er ikke registreret i VIES. Kontrollér det, eller lad feltet stå tomt for at betale moms."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "Momsnummeret er verificeret — omvendt betalingspligt gælder."
+
+msgid "Verified — reverse charge applied"
+msgstr "Verificeret — omvendt betalingspligt anvendt"
+
+msgid "Not registered in VIES"
+msgstr "Ikke registreret i VIES"
+
+msgid "Invalid format"
+msgstr "Ugyldigt format"
+
+msgid "VAT country does not match billing country"
+msgstr "Momsnummerets land stemmer ikke med faktureringslandet"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Indenlandsk salg — moms opkrævet"
+
+msgid "Outside the EU VAT area"
+msgstr "Uden for EU's momsområde"
+
+msgid "Not verified — VAT charged"
+msgstr "Ikke verificeret — moms opkrævet"
+
+msgid "No VAT number provided"
+msgstr "Der er ikke angivet et momsnummer"
+
+msgid "requires WooCommerce to be active."
+msgstr "kræver, at WooCommerce er aktiveret."

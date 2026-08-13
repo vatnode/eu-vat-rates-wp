@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro_RO\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Menține actualizate cotele de TVA din UE în WooCommerce pe baza bazei de date TEDB a Comisiei Europene și verifică codurile de TVA ale clienților în VIES pentru a aplica taxarea inversă."
+
+msgid "EU VAT Rates"
+msgstr "Cote de TVA din UE"
+
+msgid "Settings"
+msgstr "Setări"
+
+msgid "Get an API key"
+msgstr "Obține o cheie API"
+
+msgid "Insufficient permissions."
+msgstr "Permisiuni insuficiente."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "Cote de TVA din UE și verificare VIES"
+
+msgid "EU VAT rates synced successfully."
+msgstr "Cotele de TVA din UE au fost sincronizate."
+
+msgid "Sync failed."
+msgstr "Sincronizarea a eșuat."
+
+msgid "Settings saved."
+msgstr "Setările au fost salvate."
+
+msgid "API key accepted by vatnode."
+msgstr "Cheia API a fost acceptată de vatnode."
+
+msgid "API key check failed."
+msgstr "Verificarea cheii API a eșuat."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Vinde firmelor din UE fără TVA"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Adaugă o cheie API vatnode și modulul verifică codul de TVA al clientului în serviciul oficial VIES la finalizarea comenzii. Firmele verificate din alte țări ale UE nu plătesc TVA, iar dovada se salvează pe comandă."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Ai deja un cont vatnode? %s și lipește-o mai jos."
+
+msgid "Create a key"
+msgstr "Creează o cheie"
+
+msgid "Get an API Key"
+msgstr "Obține o cheie API"
+
+msgid "VAT number validation"
+msgstr "Verificarea codului de TVA"
+
+msgid "vatnode API key"
+msgstr "Cheie API vatnode"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Există o cheie salvată. Lasă câmpul gol pentru a o păstra sau lipește una nouă pentru a o înlocui."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Creează o cheie în panoul %s. Planul gratuit include o cotă lunară de solicitări."
+
+msgid "Key status:"
+msgstr "Starea cheii:"
+
+msgid "Working"
+msgstr "Funcționează"
+
+msgid "Rejected by vatnode"
+msgstr "Respinsă de vatnode"
+
+msgid "Monthly quota exceeded"
+msgstr "Cota lunară a fost depășită"
+
+msgid "Could not reach vatnode"
+msgstr "vatnode nu poate fi contactat"
+
+msgid "Last call failed"
+msgstr "Ultimul apel a eșuat"
+
+msgid "Not checked yet"
+msgstr "Neverificată încă"
+
+msgid "Checkout"
+msgstr "Finalizarea comenzii"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Verifică codurile de TVA cu VIES și aplică taxarea inversă"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "Câmpul pentru codul de TVA este afișat mereu la finalizarea comenzii. Fără cheie, codul este verificat doar ca format și salvat — TVA-ul se percepe în continuare."
+
+msgid "Make the VAT number field required"
+msgstr "Fă obligatoriu câmpul pentru codul de TVA"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Numai pentru magazinele exclusiv B2B — persoanele fizice nu au cod de TVA."
+
+msgid "Which rate applies"
+msgstr "Ce cotă se aplică"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Acest magazin este înregistrat în ghișeul unic al UE (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Înregistrat: consumatorilor din alte țări ale UE li se aplică cota țării lor. Neînregistrat: tuturor cumpărătorilor din UE li se aplică cota %s, care se aplică atât timp cât vânzările tale transfrontaliere rămân sub pragul de 10.000 EUR la nivelul UE."
+
+msgid "Save Settings"
+msgstr "Salvează setările"
+
+msgid "Remove key"
+msgstr "Elimină cheia"
+
+msgid "Test Key"
+msgstr "Testează cheia"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "Taxarea inversă este activă pentru firmele verificate din UE din afara țării tale."
+
+msgid "Rate sync"
+msgstr "Sincronizarea cotelor"
+
+msgid "Auto-sync"
+msgstr "Sincronizare automată"
+
+msgid "Active — daily"
+msgstr "Activă — zilnic"
+
+msgid "Last sync"
+msgstr "Ultima sincronizare"
+
+msgid "Never"
+msgstr "Niciodată"
+
+msgid "Data version"
+msgstr "Versiunea datelor"
+
+msgid "Next auto-sync"
+msgstr "Următoarea sincronizare automată"
+
+msgid "Source"
+msgstr "Sursă"
+
+msgid "(European Commission TEDB)"
+msgstr "(TEDB al Comisiei Europene)"
+
+msgid "Sync Now"
+msgstr "Sincronizează acum"
+
+msgid "Current rates (%d countries)"
+msgstr "Cote actuale (%d țări)"
+
+msgid "Country"
+msgstr "Țară"
+
+msgid "Code"
+msgstr "Cod"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Reduced"
+msgstr "Redusă"
+
+msgid "Super-reduced"
+msgstr "Foarte redusă"
+
+msgid "Parking"
+msgstr "Intermediară"
+
+msgid "No vatnode API key configured."
+msgstr "Nu este configurată nicio cheie API vatnode."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "API-ul vatnode a returnat HTTP %d."
+
+msgid "Enter an API key first."
+msgstr "Introdu mai întâi o cheie API."
+
+msgid "API key was rejected by vatnode."
+msgstr "Cheia API a fost respinsă de vatnode."
+
+msgid "VAT number"
+msgstr "Cod de TVA"
+
+msgid "Please enter your VAT number."
+msgstr "Te rugăm să introduci codul tău de TVA."
+
+msgid "e.g. DE123456789"
+msgstr "ex. DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "Firme din UE din afara țării noastre: introdu codul de TVA pentru a cumpăra fără TVA."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "Cod de TVA %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "TVA în UE"
+
+msgid "VAT number:"
+msgstr "Cod de TVA:"
+
+msgid "Status:"
+msgstr "Stare:"
+
+msgid "Reverse charge:"
+msgstr "Taxare inversă:"
+
+msgid "Applied"
+msgstr "Aplicată"
+
+msgid "Not applied"
+msgstr "Neaplicată"
+
+msgid "Registered name:"
+msgstr "Denumire înregistrată:"
+
+msgid "VIES consultation number:"
+msgstr "Număr de consultare VIES:"
+
+msgid "Checked:"
+msgstr "Verificat:"
+
+msgid "Not scheduled"
+msgstr "Neprogramată"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "Codul de TVA nu a putut fi verificat — TVA-ul a fost perceput ca de obicei."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "Taxarea inversă se aplică doar magazinelor stabilite în UE."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "Acesta nu pare un cod de TVA valid din UE. Verifică-l sau lasă câmpul gol."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "Codul de TVA este înregistrat în %1$s, dar adresa de facturare este în %2$s. Trebuie să coincidă."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Vânzare internă — TVA-ul se percepe ca de obicei."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Acest cod de TVA nu este înregistrat în VIES. Verifică-l sau lasă câmpul gol pentru a plăti TVA."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "Cod de TVA verificat — se aplică taxarea inversă."
+
+msgid "Verified — reverse charge applied"
+msgstr "Verificat — taxare inversă aplicată"
+
+msgid "Not registered in VIES"
+msgstr "Neînregistrat în VIES"
+
+msgid "Invalid format"
+msgstr "Format nevalid"
+
+msgid "VAT country does not match billing country"
+msgstr "Țara codului de TVA nu corespunde cu țara de facturare"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Vânzare internă — TVA perceput"
+
+msgid "Outside the EU VAT area"
+msgstr "În afara teritoriului TVA al UE"
+
+msgid "Not verified — VAT charged"
+msgstr "Neverificat — TVA perceput"
+
+msgid "No VAT number provided"
+msgstr "Nu a fost furnizat niciun cod de TVA"
+
+msgid "requires WooCommerce to be active."
+msgstr "necesită WooCommerce activ."

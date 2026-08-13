@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: vatnode-eu-vat-rates\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/vatnode-eu-vat-rates\n"
+"PO-Revision-Date: 2026-08-13 12:00+0000\n"
+"Last-Translator: Iurii Rogulia <iurii@rogulia.fi>\n"
+"Language-Team: vatnode <https://wordpress.org/support/plugin/vatnode-eu-vat-rates>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Domain: vatnode-eu-vat-rates\n"
+
+msgid "Keeps WooCommerce EU tax rates up to date from the European Commission TEDB, and validates customer VAT numbers against VIES to apply the reverse charge."
+msgstr "Підтримує ставки ПДВ ЄС у WooCommerce в актуальному стані за базою TEDB Європейської комісії та перевіряє ПДВ-номери клієнтів через VIES для застосування зворотного нарахування."
+
+msgid "EU VAT Rates"
+msgstr "Ставки ПДВ ЄС"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Get an API key"
+msgstr "Отримати ключ API"
+
+msgid "Insufficient permissions."
+msgstr "Недостатньо прав."
+
+msgid "EU VAT Rates and VIES Validation"
+msgstr "Ставки ПДВ ЄС і перевірка через VIES"
+
+msgid "EU VAT rates synced successfully."
+msgstr "Ставки ПДВ ЄС успішно синхронізовано."
+
+msgid "Sync failed."
+msgstr "Синхронізація не вдалася."
+
+msgid "Settings saved."
+msgstr "Налаштування збережено."
+
+msgid "API key accepted by vatnode."
+msgstr "vatnode прийняв ключ API."
+
+msgid "API key check failed."
+msgstr "Перевірка ключа API не вдалася."
+
+msgid "Sell to EU businesses without VAT"
+msgstr "Продавайте компаніям з ЄС без ПДВ"
+
+msgid "Add a vatnode API key and the plugin checks customer VAT numbers against the official VIES service at checkout. Verified EU business buyers outside your country are charged no VAT, and the evidence is stored on the order."
+msgstr "Додайте ключ API vatnode, і плагін перевірить ПДВ-номер покупця в офіційному сервісі VIES під час оформлення замовлення. З підтверджених бізнес-покупців з інших країн ЄС ПДВ не стягується, а підтвердження зберігається в замовленні."
+
+msgid "Already have a vatnode account? %s and paste it below."
+msgstr "Уже маєте обліковий запис vatnode? %s і вставте його нижче."
+
+msgid "Create a key"
+msgstr "Створити ключ"
+
+msgid "Get an API Key"
+msgstr "Отримати ключ API"
+
+msgid "VAT number validation"
+msgstr "Перевірка ПДВ-номера"
+
+msgid "vatnode API key"
+msgstr "Ключ API vatnode"
+
+msgid "A key is stored. Leave this empty to keep it, or paste a new one to replace it."
+msgstr "Ключ збережено. Залиште поле порожнім, щоб зберегти його, або вставте новий, щоб замінити."
+
+msgid "Create a key in your %s dashboard. The free plan includes a monthly request quota."
+msgstr "Створіть ключ у панелі %s. Безкоштовний тариф містить місячну квоту запитів."
+
+msgid "Key status:"
+msgstr "Статус ключа:"
+
+msgid "Working"
+msgstr "Працює"
+
+msgid "Rejected by vatnode"
+msgstr "Відхилено vatnode"
+
+msgid "Monthly quota exceeded"
+msgstr "Місячну квоту вичерпано"
+
+msgid "Could not reach vatnode"
+msgstr "vatnode недоступний"
+
+msgid "Last call failed"
+msgstr "Останній запит не вдався"
+
+msgid "Not checked yet"
+msgstr "Ще не перевірено"
+
+msgid "Checkout"
+msgstr "Оформлення замовлення"
+
+msgid "Verify VAT numbers with VIES and apply the reverse charge"
+msgstr "Перевіряти ПДВ-номери через VIES і застосовувати зворотне нарахування"
+
+msgid "The VAT number field is always shown at checkout. Without a key the number is only format-checked and stored — VAT is still charged."
+msgstr "Поле ПДВ-номера завжди показується під час оформлення замовлення. Без ключа номер лише перевіряється за форматом і зберігається — ПДВ і далі нараховується."
+
+msgid "Make the VAT number field required"
+msgstr "Зробити поле ПДВ-номера обов'язковим"
+
+msgid "Only for B2B-only stores — consumers do not have a VAT number."
+msgstr "Лише для магазинів, що працюють винятково з бізнесом — приватні особи ПДВ-номера не мають."
+
+msgid "Which rate applies"
+msgstr "Яка ставка застосовується"
+
+msgid "This store is registered for the EU One Stop Shop (OSS)"
+msgstr "Цей магазин зареєстрований у системі єдиного вікна ЄС (OSS)"
+
+msgid "Registered: consumers in other EU countries are charged the rate of their own country. Not registered: every EU buyer is charged the %s rate, which is what applies while your cross-border sales stay under the EU-wide 10,000 EUR threshold."
+msgstr "Зареєстрований: споживачам з інших країн ЄС нараховується ставка їхньої власної країни. Не зареєстрований: усім покупцям з ЄС нараховується ставка %s, яка діє, доки транскордонні продажі не перевищили загальноєвропейський поріг у 10 000 EUR."
+
+msgid "Save Settings"
+msgstr "Зберегти налаштування"
+
+msgid "Remove key"
+msgstr "Видалити ключ"
+
+msgid "Test Key"
+msgstr "Перевірити ключ"
+
+msgid "Reverse charge is active for verified EU business buyers outside your country."
+msgstr "Зворотне нарахування діє для підтверджених компаній з ЄС поза межами вашої країни."
+
+msgid "Rate sync"
+msgstr "Синхронізація ставок"
+
+msgid "Auto-sync"
+msgstr "Автоматична синхронізація"
+
+msgid "Active — daily"
+msgstr "Активна — щодня"
+
+msgid "Last sync"
+msgstr "Остання синхронізація"
+
+msgid "Never"
+msgstr "Ніколи"
+
+msgid "Data version"
+msgstr "Версія даних"
+
+msgid "Next auto-sync"
+msgstr "Наступна автоматична синхронізація"
+
+msgid "Source"
+msgstr "Джерело"
+
+msgid "(European Commission TEDB)"
+msgstr "(TEDB Європейської комісії)"
+
+msgid "Sync Now"
+msgstr "Синхронізувати зараз"
+
+msgid "Current rates (%d countries)"
+msgstr "Поточні ставки (%d країн)"
+
+msgid "Country"
+msgstr "Країна"
+
+msgid "Code"
+msgstr "Код"
+
+msgid "Standard"
+msgstr "Основна"
+
+msgid "Reduced"
+msgstr "Знижена"
+
+msgid "Super-reduced"
+msgstr "Наднизька"
+
+msgid "Parking"
+msgstr "Перехідна"
+
+msgid "No vatnode API key configured."
+msgstr "Ключ API vatnode не налаштовано."
+
+msgid "vatnode API returned HTTP %d."
+msgstr "API vatnode повернув HTTP %d."
+
+msgid "Enter an API key first."
+msgstr "Спершу введіть ключ API."
+
+msgid "API key was rejected by vatnode."
+msgstr "Ключ API відхилено vatnode."
+
+msgid "VAT number"
+msgstr "ПДВ-номер"
+
+msgid "Please enter your VAT number."
+msgstr "Введіть свій ПДВ-номер."
+
+msgid "e.g. DE123456789"
+msgstr "наприклад, DE123456789"
+
+msgid "EU businesses outside our country: enter your VAT number to buy without VAT."
+msgstr "Компанії з ЄС поза межами нашої країни: введіть ПДВ-номер, щоб купити без ПДВ."
+
+msgid "VAT number %1$s — %2$s"
+msgstr "ПДВ-номер %1$s — %2$s"
+
+msgid "EU VAT"
+msgstr "ПДВ ЄС"
+
+msgid "VAT number:"
+msgstr "ПДВ-номер:"
+
+msgid "Status:"
+msgstr "Статус:"
+
+msgid "Reverse charge:"
+msgstr "Зворотне нарахування:"
+
+msgid "Applied"
+msgstr "Застосовано"
+
+msgid "Not applied"
+msgstr "Не застосовано"
+
+msgid "Registered name:"
+msgstr "Зареєстрована назва:"
+
+msgid "VIES consultation number:"
+msgstr "Номер запиту VIES:"
+
+msgid "Checked:"
+msgstr "Перевірено:"
+
+msgid "Not scheduled"
+msgstr "Не заплановано"
+
+msgid "VAT number could not be verified — VAT charged as usual."
+msgstr "ПДВ-номер не вдалося перевірити — ПДВ нараховано як зазвичай."
+
+msgid "Reverse charge applies only to stores based in the EU."
+msgstr "Зворотне нарахування застосовується лише до магазинів, зареєстрованих у ЄС."
+
+msgid "This does not look like a valid EU VAT number. Check it, or leave the field empty."
+msgstr "Це не схоже на дійсний ПДВ-номер ЄС. Перевірте його або залиште поле порожнім."
+
+msgid "The VAT number is registered in %1$s but the billing address is in %2$s. They must match."
+msgstr "ПДВ-номер зареєстровано в країні %1$s, а платіжна адреса — у країні %2$s. Вони мають збігатися."
+
+msgid "Domestic sale — VAT is charged as usual."
+msgstr "Продаж усередині країни — ПДВ нараховується як зазвичай."
+
+msgid "This VAT number is not registered in VIES. Check it, or leave the field empty to pay VAT."
+msgstr "Цей ПДВ-номер не зареєстровано у VIES. Перевірте його або залиште поле порожнім, щоб сплатити ПДВ."
+
+msgid "VAT number verified — reverse charge applies."
+msgstr "ПДВ-номер підтверджено — застосовується зворотне нарахування."
+
+msgid "Verified — reverse charge applied"
+msgstr "Підтверджено — зворотне нарахування застосовано"
+
+msgid "Not registered in VIES"
+msgstr "Не зареєстровано у VIES"
+
+msgid "Invalid format"
+msgstr "Хибний формат"
+
+msgid "VAT country does not match billing country"
+msgstr "Країна ПДВ-номера не збігається з країною оплати"
+
+msgid "Domestic sale — VAT charged"
+msgstr "Продаж усередині країни — ПДВ нараховано"
+
+msgid "Outside the EU VAT area"
+msgstr "Поза межами території ПДВ ЄС"
+
+msgid "Not verified — VAT charged"
+msgstr "Не підтверджено — ПДВ нараховано"
+
+msgid "No VAT number provided"
+msgstr "ПДВ-номер не вказано"
+
+msgid "requires WooCommerce to be active."
+msgstr "потребує активного WooCommerce."

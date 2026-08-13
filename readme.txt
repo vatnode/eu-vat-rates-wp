@@ -4,7 +4,7 @@ Tags: vat, vies, vat validation, reverse charge, woocommerce
 Requires at least: 6.3
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 WC requires at least: 8.0
 WC tested up to: 11.0
 License: GPL-2.0-or-later
@@ -140,6 +140,10 @@ Open a thread in the support forum for this plugin. Bugs and feature requests ar
 4. Order screen — VAT number, verification status and registered company name
 
 == Changelog ==
+
+= 1.1.5 =
+* Translated into 34 languages: every official EU language plus Albanian, Arabic, Bosnian, Chinese, Hindi, Portuguese (Brazil), Russian, Serbian, Turkish, Ukrainian and Vietnamese
+* The settings screen, the checkout field and every message shown to a shopper now follow the language of the site
 
 = 1.1.4 =
 * The full EU VAT rate dataset now ships inside the plugin, so rates, country patterns and the settings screen work on a site with no outbound network access at all. The daily refresh only replaces it when a newer dataset is published
