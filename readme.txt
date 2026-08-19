@@ -4,7 +4,7 @@ Tags: vat, vies, vat validation, reverse charge, woocommerce
 Requires at least: 6.3
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 WC requires at least: 8.0
 WC tested up to: 11.0
 License: GPL-2.0-or-later
@@ -140,6 +140,9 @@ Open a thread in the support forum for this plugin. Bugs and feature requests ar
 4. Order screen — VAT number, verification status and registered company name
 
 == Changelog ==
+
+= 1.1.6 =
+* Fixed: the bundled Irish VAT number pattern accepted a few check-letter combinations VIES never issues; the offline format check is now precise for both the old and new Irish number formats
 
 = 1.1.5 =
 * Translated into 34 languages: every official EU language plus Albanian, Arabic, Bosnian, Chinese, Hindi, Portuguese (Brazil), Russian, Serbian, Turkish, Ukrainian and Vietnamese
