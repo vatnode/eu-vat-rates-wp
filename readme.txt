@@ -55,7 +55,9 @@ If the check cannot be made — no key, quota spent, VIES down — the order sti
 
 = Data source =
 
-Rates come from the [European Commission TEDB](https://taxation-customs.ec.europa.eu/tedb/vatRates.html). The dataset is open source and also published on GitHub, npm, PyPI, Packagist and RubyGems. A full copy ships inside the plugin, so nothing has to be downloaded for it to work — the daily refresh exists because rates change by law between plugin releases.
+VAT rates for 45 European countries, checked daily against the European Commission's official [TEDB](https://taxation-customs.ec.europa.eu/tedb/vatRates.html) database and committed publicly whenever a number moves. Maintained by vatnode, an API that validates EU VAT numbers live against VIES.
+
+The dataset is open source and also published on GitHub, npm, PyPI, Packagist and RubyGems. A full copy ships inside the plugin, so nothing has to be downloaded for it to work — the refresh exists because rates change by law between plugin releases. Methodology and sources: [vatnode.dev/data](https://vatnode.dev/data?ref=rates-readme-wp).
 
 == External services ==
 
